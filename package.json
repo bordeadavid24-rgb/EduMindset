@@ -1,0 +1,21 @@
+{
+  "name": "edu-mindset",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "assets": "node scripts/prepare-assets.mjs"
+  },
+  "devDependencies": {
+    "lighthouse": "^13.6.0",
+    "sharp": "^0.35.5",
+    "vite": "^8.3.6"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.2.8",
+    "@phosphor-icons/core": "^2.1.1"
+  }
+}

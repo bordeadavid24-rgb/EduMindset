@@ -1,0 +1,9 @@
+# Prompt to continue this project in Grok
+
+You are continuing the EDU MindSet website in `/Users/lilianab/Desktop/MINA TLC/edumindset`. First read HANDOFF.md, PRODUCT.md, DESIGN.md if present, and docs/*.md. Inspect git status before editing. HANDOFF.md is the live source of completed work, blockers, validation and next steps; update it after meaningful progress.
+
+The user wants an alive, deeply personal Romanian educational landing page representing Alexandru-Constantin Tulică. They explicitly reject generic AI templates, monotonous cards, and forced luxury. Preserve genuine photography, supplied Romanian copy and diacritics, red brand cues, thoughtful typography and restrained responsive interactions. Required areas: home, about/founder, four workshop directions, UnitED coming soon, resources coming soon, contact. Contacts: edumindset8@gmail.com and https://www.instagram.com/edu.mind.set/. Do not invent events, dates, prices, testimonials or resources. Contact form must honestly describe its delivery mechanism.
+
+The parent MINA TLC folder contains an ongoing VIDEO project/render. Do not modify, kill or interfere with it. The video will eventually be used at an EDU MindSet workshop rather than the MINA museum; no museum affiliation should be added.
+
+Use the project's existing stack and commands documented in README.md. Preserve decisions in DESIGN.md, review implementation at desktop and mobile, complete the next tasks in HANDOFF.md, and record exact verification results. The user authorized repo setup and implementation. Chrome originally held GitHub's new repository form for `bordeadavid24-rgb/EduMindset`; inspect HANDOFF.md for whether this has since been created/linked/pushed. Never expose credentials. Continue working autonomously until a reviewable working site is delivered, and be honest about any remaining external setup.

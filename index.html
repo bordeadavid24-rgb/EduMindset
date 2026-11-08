@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f7f8f4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1a201c" media="(prefers-color-scheme: dark)" />
+    <title>EDU MindSet | Educație cu direcție. Învățare cu sens.</title>
+    <meta name="description" content="Învață inteligent. Gândește liber. Evoluează constant. Descoperă EDU MindSet, proiectul educațional creat de Alexandru-Constantin Tulică: workshop-uri, idei și direcții pentru tineri." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ro_RO" />
+    <meta property="og:title" content="EDU MindSet | Contează cum înveți." />
+    <meta property="og:description" content="Educație cu direcție. Învățare cu sens. Evoluție continuă. Un proiect educațional creat de Alexandru-Constantin Tulică." />
+    <meta property="og:image" content="./images/alexandru-laborator-1200.webp" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <script>try { const theme = localStorage.getItem('edumindset-theme'); if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme; } catch {}</script>
+    <link rel="preload" as="image" fetchpriority="high" href="./images/alexandru-laborator-1200.webp" imagesrcset="./images/alexandru-laborator-640.webp 640w, ./images/alexandru-laborator-1200.webp 1200w" imagesizes="(max-width: 767px) 100vw, 45vw" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#continut">Sari la conținut</a>
+    <header class="site-header">
+      <div class="header-inner wrap">
+        <a class="brand" href="#acasa" title="Acasă"><span class="brand-edu">EDU</span><span class="brand-mind">MindSet</span></a>
+        <nav class="desktop-nav" aria-label="Navigare principală">
+          <a href="#despre">Despre noi</a><a href="#workshopuri">Workshop-uri</a><a href="#united">UnitED</a><a href="#resurse">Resurse</a><a href="#contact">Hai să vorbim <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+        </nav>
+        <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Activează aspectul luminos" title="Schimbă aspectul" hidden><i class="ph ph-sun" aria-hidden="true"></i></button>
+        <details class="mobile-nav">
+          <summary>Meniu <i class="ph ph-list" aria-hidden="true"></i></summary>
+          <nav aria-label="Navigare pe mobil"><a href="#acasa">Acasă</a><a href="#despre">Despre noi</a><a href="#workshopuri">Workshop-uri</a><a href="#united">UnitED</a><a href="#resurse">Resurse</a><a href="#contact">Contact</a></nav>
+        </details>
+      </div>
+    </header>
+    <main id="continut">
+      <section class="hero wrap" id="acasa" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">Nu este suficient să înveți.<br /><span>Contează <em>cum.</em></span></h1>
+          <p>EDU MindSet. Un loc pentru întrebări, idei și metode care dau sens învățării.</p>
+          <a class="button" href="#workshopuri">Descoperă workshop-urile <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a>
+        </div>
+        <figure class="hero-photo">
+          <img src="./images/alexandru-laborator-1200.webp" srcset="./images/alexandru-laborator-640.webp 640w, ./images/alexandru-laborator-1200.webp 1200w" sizes="(max-width: 767px) 100vw, 45vw" width="1200" height="1329" alt="Alexandru-Constantin Tulică explorează la microscop, într-o sală de științe." fetchpriority="high" />
+          <figcaption>Învățarea începe cu o întrebare. Și continuă cu tine.</figcaption>
+        </figure>
+      </section>
+
+      <section class="start-section wrap" aria-labelledby="start-title">
+        <div class="start-heading"><h2 id="start-title">De unde vrei să începi?</h2><p>Alege întrebarea care te preocupă acum.</p></div>
+        <div class="topic-explorer" data-explorer>
+          <div class="topic-choices" role="group" aria-label="Alege o direcție de explorat">
+            <button type="button" aria-pressed="true" aria-controls="topic-preview" data-topic="learning"><span>Cum învăț mai bine?</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></button>
+            <button type="button" aria-pressed="false" aria-controls="topic-preview" data-topic="time"><span>Cum îmi găsesc timp?</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></button>
+            <button type="button" aria-pressed="false" aria-controls="topic-preview" data-topic="growth"><span>Cum capăt încredere?</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></button>
+            <button type="button" aria-pressed="false" aria-controls="topic-preview" data-topic="future"><span>Încotro merg de aici?</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></button>
+          </div>
+          <div class="topic-preview" id="topic-preview" role="region" aria-label="O idee de încercat" aria-live="polite" aria-atomic="true">
+            <p class="preview-label">O idee de încercat</p>
+            <h3 data-preview-title>Explică ideea. Cu vorbele tale.</h3>
+            <p data-preview-body>Închide caietul și explică unui prieten ce ai înțeles. Unde te oprești, acolo ai o întrebare bună.</p>
+            <a class="text-link" href="#learning" data-preview-link>Explorează Learning Skills <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <noscript><p>Poți explora toate cele patru direcții în <a href="#workshopuri">programul workshop-urilor</a>.</p></noscript>
+      </section>
+
+      <section class="founder-section wrap section-space" id="despre" aria-labelledby="founder-title">
+        <figure class="founder-photo"><img src="./images/alexandru-portret-1200.webp" srcset="./images/alexandru-portret-640.webp 640w, ./images/alexandru-portret-1200.webp 1200w" sizes="(max-width: 767px) 100vw, 38vw" width="1200" height="896" loading="lazy" alt="Portretul lui Alexandru-Constantin Tulică într-o bibliotecă." /><figcaption>Alexandru-Constantin Tulică, fondator EDU MindSet</figcaption></figure>
+        <div class="founder-copy">
+          <h2 id="founder-title">Salut!<br />Eu sunt <span>Alexandru.</span></h2>
+          <p class="credentials">Profesor în învățământul preuniversitar.<br />Cadru didactic asociat în mediul universitar.<br />Doctor în Inginerie.</p>
+          <p>Am creat EDU MindSet din convingerea că educația înseamnă mai mult decât acumularea de informații. Înseamnă să înțelegi, să pui întrebări, să descoperi, să ai încredere în propriile idei și să găsești direcția potrivită pentru tine.</p>
+          <p>Cred în educația care oferă încredere, deschide perspective și îi ajută pe tineri să-și construiască propriul drum.</p>
+          <details class="reading-details"><summary>Povestea din spatele proiectului <i class="ph ph-plus" aria-hidden="true"></i></summary><div>
+            <p>De-a lungul experienței mele în mediul educațional și universitar, am întâlnit tineri cu potențial, curiozitate și idei extraordinare. Am înțeles că, uneori, nu lipsa capacității îi împiedică să evolueze, ci lipsa unor metode potrivite, a îndrumării și a oportunităților de a-și pune ideile în practică.</p>
+            <p>Așa a apărut EDU MindSet: din dorința de a construi experiențe educaționale relevante, în care învățarea, dezvoltarea personală și gândirea critică să se întâlnească.</p>
+            <p>Bine ai venit în universul EDU MindSet!</p>
+          </div></details>
+        </div>
+      </section>
+
+      <section class="belief-section section-space" aria-labelledby="belief-title">
+        <div class="wrap">
+          <div class="belief-intro"><h2 id="belief-title">Învață inteligent.<br />Gândește liber.<br /><span>Evoluează constant.</span></h2><div><p>Trăim într-o lume în care informația este peste tot. Diferența o face felul în care o înțelegem, o organizăm și o transformăm în ceva util.</p><p>EDU MindSet este un proiect educațional dedicat elevilor, studenților și tuturor celor care cred că educația înseamnă mai mult decât acumularea de informații.</p><p>Prin metode moderne de învățare, workshop-uri aplicate și experiențe dedicate tinerilor, construim contexte în care fiecare poate învăța mai eficient, gândi independent și își poate găsi propria direcție.</p></div></div>
+          <div class="principles">
+            <article><h3>Învățare<br />inteligentă</h3><p>Metode și strategii prin care informația devine mai ușor de înțeles, organizat și aplicat.</p></article>
+            <article><h3>Gândire<br />independentă</h3><p>Curiozitate, gândire critică și capacitatea de a pune întrebări relevante.</p></article>
+            <article><h3>Dezvoltare<br />personală</h3><p>Încredere, responsabilitate, organizare și claritate în construirea propriului parcurs.</p></article>
+          </div>
+          <p class="belief-note">Nu oferim rețete universale pentru succes. Credem în instrumente, experiențe și metode care îi ajută pe tineri să își descopere propriul potențial.</p>
+          <div class="about-details">
+            <details class="reading-details"><summary>Misiunea și povestea EDU MindSet <i class="ph ph-plus" aria-hidden="true"></i></summary><div><h3>Educația începe cu o întrebare: Cum putem face lucrurile mai bine?</h3><p>EDU MindSet a pornit de la o realitate simplă: mulți tineri au dorința de a evolua, dar nu întotdeauna au la dispoziție metodele, instrumentele și îndrumarea potrivite.</p><p>Credem că fiecare persoană are propriul ritm de învățare și că progresul apare atunci când informația este înțeleasă, aplicată și conectată cu realitatea. Nu promovăm învățarea mecanică. Promovăm înțelegerea, explorarea și inițiativa.</p><h4>Misiunea noastră</h4><p>Misiunea EDU MindSet este de a oferi tinerilor instrumente reale pentru învățare eficientă, dezvoltarea încrederii și construirea unei direcții academice și profesionale.</p><p>Ne propunem să transformăm educația într-un proces activ, relevant și conectat la provocările prezentului.</p><h4>Povestea EDU MindSet</h4><p>Într-o lume în care tinerii sunt înconjurați de informații, credem că adevărata valoare constă în capacitatea de a selecta, înțelege, organiza și aplica ceea ce învață. De aceea, construim experiențe care pun accent pe participare, dialog și descoperire.</p><p>EDU MindSet este un proiect despre oameni, idei și direcții.</p></div></details>
+            <details class="reading-details"><summary>Viziunea și valorile noastre <i class="ph ph-plus" aria-hidden="true"></i></summary><div><h3>Ne dorim o generație care:</h3><ul><li>înțelege înainte să memoreze;</li><li>pune întrebări înainte să accepte răspunsuri;</li><li>aplică înainte să reproducă;</li><li>gândește critic și acționează responsabil;</li><li>își construiește propriul drum cu încredere.</li></ul><dl class="values"><div><dt>Claritate.</dt><dd>Informația trebuie să aibă sens.</dd></div><div><dt>Autonomie.</dt><dd>Fiecare tânăr trebuie încurajat să gândească independent.</dd></div><div><dt>Curiozitate.</dt><dd>Întrebările sunt începutul descoperirii.</dd></div><div><dt>Colaborare.</dt><dd>Progresul este mai puternic atunci când construim împreună.</dd></div><div><dt>Autenticitate.</dt><dd>Credem în experiențe reale, idei aplicabile și oameni care inspiră prin ceea ce fac.</dd></div></dl></div></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="audience-section wrap section-space" aria-labelledby="audience-title"><h2 id="audience-title">Propriul tău drum.<br />Un loc de unde să începi.</h2><div class="audiences"><p><strong>Ești elev?</strong> Descoperă cum poți învăța mai eficient.</p><p><strong>Ești student?</strong> Explorează-ți direcția academică și profesională.</p><p><strong>Vrei mai multă autonomie?</strong> Dezvoltă-ți încrederea și propriile idei.</p><p><strong>Ești părinte?</strong> Descoperă experiențe educaționale relevante pentru copilul tău.</p></div><div class="community-note"><h3>Comunitate și colaborare</h3><p>Un spațiu deschis ideilor, inițiativelor și oamenilor care vor să contribuie la o educație cu sens.</p><a class="text-link" href="#contact">Povestește-ne ideea ta <i class="ph ph-arrow-right" aria-hidden="true"></i></a></div><p class="statement">Educația nu trebuie să se oprească la ceea ce știi. Trebuie să te ajute să descoperi <span>ceea ce poți deveni.</span></p></section>
+
+      <section class="workshop-section wrap section-space" id="workshopuri" aria-labelledby="workshop-title">
+        <div class="section-intro"><h2 id="workshop-title">Înveți mai bine<br />atunci când experimentezi.</h2><p>Workshop-urile EDU MindSet sunt experiențe interactive. Nu ești doar spectator: devii parte activă a procesului de învățare.</p><p>Fiecare întâlnire urmărește să ofere instrumente concrete, idei aplicabile și perspective noi.</p></div>
+        <div class="workshop-programme">
+          <details class="workshop" id="learning" open><summary><span class="workshop-name">Learning Skills<span>Învață inteligent</span></span><i class="ph ph-plus" aria-hidden="true"></i></summary><div class="workshop-content"><p>Înțelege, organizează, aplică. Descoperă metode care pot deveni parte din felul tău de a învăța.</p><ul><li>Tehnici moderne de învățare.</li><li>Organizarea și structurarea informației.</li><li>Metode de memorare și înțelegere.</li><li>Strategii de învățare adaptate propriului stil de lucru.</li></ul></div></details>
+          <details class="workshop" id="time"><summary><span class="workshop-name">Time &amp; Productivity<span>Organizează-ți timpul</span></span><i class="ph ph-plus" aria-hidden="true"></i></summary><div class="workshop-content"><p>Fă loc lucrurilor care contează. Construiește un mod de lucru pe care îl poți susține.</p><ul><li>Planificarea activităților.</li><li>Stabilirea priorităților.</li><li>Gestionarea obiectivelor.</li><li>Construirea unor rutine eficiente.</li></ul></div></details>
+          <details class="workshop" id="growth"><summary><span class="workshop-name">Mindset &amp; Personal Growth<span>Descoperă-ți potențialul</span></span><i class="ph ph-plus" aria-hidden="true"></i></summary><div class="workshop-content"><p>Încrederea se construiește și prin încercări. Explorează ce te ajută să mergi mai departe.</p><ul><li>Încredere și autonomie.</li><li>Gestionarea provocărilor.</li><li>Depășirea blocajelor academice.</li><li>Responsabilitate și reziliență.</li></ul></div></details>
+          <details class="workshop" id="future"><summary><span class="workshop-name">Future &amp; Career<span>Construiește-ți direcția</span></span><i class="ph ph-plus" aria-hidden="true"></i></summary><div class="workshop-content"><p>Pune întrebări despre viitorul tău și găsește repere pentru următoarea alegere.</p><ul><li>Orientare academică și profesională.</li><li>Descoperirea competențelor relevante.</li><li>Luarea deciziilor informate.</li><li>Construirea unui parcurs personal coerent.</li></ul></div></details>
+        </div>
+        <aside class="workshop-notice" aria-labelledby="notice-title"><div><p class="availability">În pregătire</p><h3 id="notice-title">Workshop-urile urmează.<br />Află când începem.</h3><p>Pregătim noi experiențe educaționale, relevante și adaptate provocărilor elevilor și studenților de astăzi.</p><a class="text-link" href="https://www.instagram.com/edu.mind.set/" target="_blank" rel="noopener noreferrer">Urmărește @edu.mind.set <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a><p class="small-text">Locurile, temele, perioadele și modalitățile de înscriere vor fi anunțate odată cu lansarea fiecărui workshop.</p></div><a class="qr-link" href="https://www.instagram.com/edu.mind.set/" target="_blank" rel="noopener noreferrer" aria-label="Deschide profilul Instagram EDU MindSet"><img src="./images/instagram-qr.jpeg" width="1080" height="1534" loading="lazy" alt="Codul QR al profilului Instagram @edu.mind.set." /></a></aside>
+      </section>
+
+      <section class="united-section section-space" id="united" aria-labelledby="united-title"><div class="wrap">
+        <div class="united-title"><h2 id="united-title">Unit<span>ED</span></h2><p>Educația care unește direcții.</p></div>
+        <div class="united-grid"><figure><img src="./images/alexandru-dialog-1200.webp" srcset="./images/alexandru-dialog-640.webp 640w, ./images/alexandru-dialog-1200.webp 848w" sizes="(max-width: 767px) 100vw, 48vw" width="848" height="1262" loading="lazy" alt="Alexandru-Constantin Tulică într-un auditoriu." /></figure><div class="united-copy"><p class="availability">Prima ediție, în pregătire</p><h3>Ideile bune încep cu oameni care au ceva de spus.</h3><p>UnitED este o inițiativă dedicată elevilor și studenților care își doresc perspective noi, oameni cu experiențe relevante și dialoguri despre educație și viitor.</p><p><strong>Tema centrală:</strong> Educația ca direcție într-o lume în schimbare.</p><details class="reading-details"><summary>Ce pregătim? <i class="ph ph-plus" aria-hidden="true"></i></summary><div><ul><li>Discursuri inspiraționale.</li><li>Paneluri tematice.</li><li>Sesiuni interactive.</li><li>Dialoguri între generații.</li><li>Întâlniri cu invitați din domenii diferite.</li></ul><p>UnitED nu este doar o conferință. Este un spațiu în care ideile se întâlnesc, perspectivele se completează și educația devine punctul de plecare pentru noi direcții.</p></div></details><a class="text-link" href="https://www.instagram.com/edu.mind.set/" target="_blank" rel="noopener noreferrer">Află noutățile despre UnitED <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></div></div>
+      </div></section>
+
+      <section class="resources-section wrap section-space" id="resurse" aria-labelledby="resources-title"><div><h2 id="resources-title">Idei pe care le poți<br />transforma în acțiuni.</h2><p>Educația continuă și dincolo de workshop-uri. Pregătim materiale care să te ajute să înveți, să te organizezi și să îți dezvolți propriile strategii.</p><p class="resource-signoff">Learn. Apply. Grow.</p></div><div class="resource-index"><p class="availability">Resurse în pregătire</p><ul><li>Articole despre învățarea eficientă</li><li>Ghiduri de organizare și productivitate</li><li>Tehnici și metode de studiu</li><li>Idei despre dezvoltarea personală</li><li>Resurse și instrumente educaționale</li></ul><p class="small-text">Resurse noi vor fi publicate periodic. Urmărește proiectul pentru primele materiale.</p></div></section>
+
+      <section class="contact-section section-space" id="contact" aria-labelledby="contact-title"><div class="wrap contact-grid"><div class="contact-copy"><h2 id="contact-title">Orice direcție nouă<br />începe cu o conversație.</h2><p>Ai întrebări? Vrei să participi la un viitor workshop sau reprezinți o instituție interesată de colaborare?</p><p>Ne-ar face plăcere să aflăm despre inițiativa ta.</p><a class="contact-email" href="mailto:edumindset8@gmail.com">edumindset8@gmail.com <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a><a class="text-link" href="https://www.instagram.com/edu.mind.set/" target="_blank" rel="noopener noreferrer"><i class="ph ph-instagram-logo" aria-hidden="true"></i> @edu.mind.set</a></div>
+        <form id="contact-form" action="mailto:edumindset8@gmail.com" method="post" enctype="text/plain"><div class="form-row"><label for="name">Nume și prenume<input id="name" name="Nume" autocomplete="name" maxlength="120" required placeholder="Cum te numești?" /></label><label for="email">Adresă de email<input id="email" name="Email" type="email" autocomplete="email" maxlength="254" required placeholder="nume@exemplu.ro" /></label></div><label for="subject">Subiectul mesajului<input id="subject" name="Subiect" maxlength="180" required placeholder="Despre ce ai vrea să vorbim?" /></label><label for="message">Mesajul tău<textarea id="message" name="Mesaj" rows="4" maxlength="4000" required placeholder="Spune-ne câteva cuvinte despre ideea ta."></textarea></label><p class="form-note" id="form-note">Formularul deschide un mesaj în aplicația ta de email. Îl poți verifica și trimite de acolo. Datele nu sunt salvate pe acest site.</p><div class="form-actions"><button type="submit" class="button" aria-describedby="form-note">Trimite prin email <i class="ph ph-arrow-up-right" aria-hidden="true"></i></button><button type="button" class="copy-button" id="copy-message" hidden>Copiază mesajul</button></div><p id="form-status" role="status" class="form-status"></p></form>
+      </div></section>
+    </main>
+    <footer class="site-footer wrap"><div><a class="brand" href="#acasa" title="Înapoi la început"><span class="brand-edu">EDU</span><span class="brand-mind">MindSet</span></a><p>Educație cu direcție. Învățare cu sens.<br />Evoluție continuă.</p></div><p>Învață inteligent.<br />Evoluează constant.</p><a href="https://www.instagram.com/edu.mind.set/" target="_blank" rel="noopener noreferrer">Instagram <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></footer>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+/* Phosphor regular icons (MIT), copied from @phosphor-icons/core. Decorative masks inherit text colour. */
+.ph { width: 1em; height: 1em; background-color: currentColor; mask: var(--icon) center / contain no-repeat; -webkit-mask: var(--icon) center / contain no-repeat; }
+.ph-arrow-up-right { --icon: url('./icons/arrow-up-right.svg'); }
+.ph-arrow-down-right { --icon: url('./icons/arrow-down-right.svg'); }
+.ph-arrow-right { --icon: url('./icons/arrow-right.svg'); }
+.ph-list { --icon: url('./icons/list.svg'); }
+.ph-plus { --icon: url('./icons/plus.svg'); }
+.ph-instagram-logo { --icon: url('./icons/instagram-logo.svg'); }
+.ph-sun { --icon: url('./icons/sun.svg'); }
+.ph-moon { --icon: url('./icons/moon.svg'); }
