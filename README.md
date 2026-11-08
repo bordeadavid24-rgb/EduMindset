@@ -51,7 +51,7 @@ Manrope is self-hosted through Fontsource under OFL-1.1. Phosphor icons are MIT 
 ## Before public launch
 
 - Confirm the final domain/host and make Open Graph image URL absolute for that origin.
-- Connect and push the source to the GitHub repository once terminal networking/authentication is available.
+- Source is on https://github.com/bordeadavid24-rgb/EduMindset.
 - Add final workshop details and booking link when supplied.
 - Add the approved video when rendering completes.
 - If requested, configure direct contact-form delivery instead of the transparent email-app handoff.

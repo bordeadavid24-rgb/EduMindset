@@ -11,17 +11,16 @@ Build a distinctive Romanian landing page for EDU MindSet, founded by Alexandru-
 - Started two agents: personality_research and design_direction. Their reports go in `docs/`.
 - Located FIVE Nov 8 WhatsApp assets (user said four): 19.34.13.jpeg (microscope/classroom), -2.jpeg (auditorium), -3.jpeg (library portrait), -4.jpeg (logo, mostly black), 19.36.37.jpeg (Instagram QR).
 - Verified founder roles via university-hosted CV. Instagram feed could not be fetched; no assumed post aesthetics.
-- GitHub repository `bordeadavid24-rgb/EduMindset` was created during the Codex session. Local `origin` is `https://github.com/bordeadavid24-rgb/EduMindset.git`. No push has succeeded from this machine yet.
+- GitHub repository `bordeadavid24-rgb/EduMindset` was created during the Codex session. Source is on `main` at https://github.com/bordeadavid24-rgb/EduMindset. The placeholder README was replaced by the project README.
 - Wrote PRODUCT.md from the explicit brief. README, Node `.gitignore` and the page are in place. No project-wide licence was added.
 
 ## Design direction under development
 Real educational journal / open studio: clear large sans typography, red from existing logo, pale paper, genuine photographs and useful learning interactions. Avoid luxury serif, dashboard cards, invented statistics/testimonials, vague decorative motion. Three pillars and four workshop directions preserve brief meaning. All dates stay forthcoming.
 
 ## Next
-1. Push `main` to `origin` (`https://github.com/bordeadavid24-rgb/EduMindset.git`) when this machine can authenticate to GitHub. The remote is configured. Do not force-push. If GitHub's generated README is the only remote commit, reconcile it before pushing.
-2. Confirm a public host and turn the Open Graph image into an absolute URL for that origin.
-3. Add real workshop dates, place, price and registration only when the user supplies them. Add the finished workshop film only after rendering is approved.
-4. Replace the mailto handoff only if a real delivery service and a revised privacy note are requested.
+1. Confirm a public host and turn the Open Graph image into an absolute URL for that origin.
+2. Add real workshop dates, place, price and registration only when the user supplies them. Add the finished workshop film only after rendering is approved.
+3. Replace the mailto handoff only if a real delivery service and a revised privacy note are requested.
 
 ## Implementation now present
 - `index.html`: complete single page, six required areas, expanded founder story, mission/vision/values, three principles, four audiences, community, 16 workshop bullets, Instagram QR, UnitED programme, resource list, labelled form/footer.
@@ -55,4 +54,4 @@ Reviewed in headless Chrome on 8 November 2026 against `http://127.0.0.1:5173/` 
 - Empty submit shows “Completează acest câmp pentru a pregăti mesajul.” An invalid email shows “Introdu o adresă de email validă.” A 1700-character message does not navigate away; it asks the visitor to copy it. Copy reports success. No “message sent” state.
 - Supplied photos and QR load. Content checklist in `docs/content-coverage.md` is checked, including text inside closed disclosures. No museum affiliation, prices, dates or testimonials were added.
 - Lighthouse 13.6.0 on the production preview, headless Chrome, desktop, `--throttling-method=provided`: performance 100, accessibility 100, best-practices 100, SEO 100. This is an unthrottled local run. It still notes that the hero WebP is somewhat larger than its displayed size and that the stylesheet blocks first render.
-- Git remote `origin` points at `bordeadavid24-rgb/EduMindset`. No local commit had been made at the start of this review. No deployment. No video files touched.
+- Pushed to `main` on https://github.com/bordeadavid24-rgb/EduMindset (`11fc6bd`, on top of the initial README commit). No deployment. No video files touched.
