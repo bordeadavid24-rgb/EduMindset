@@ -22,3 +22,6 @@ Bricolage Grotesque variable: Fontsource, OFL-1.1. Phosphor regular icons: @phos
 
 ## V3 reuse
 V3 introduces no new raster assets. The existing source-derived alpha cutout crosses a logo-red plane in the opening, the library portrait supports the founder letter, the original classroom photograph gives context to the programme on desktop, and the auditorium photograph remains editorial context for UnitED. None is represented as evidence of a past project event. Existing responsive derivatives and provenance remain valid.
+
+## V4 original code-native artwork
+V4 adds inline SVG pen illustrations (book/lightbulb, pencil, question bubble, dialogue bubbles, directional loop and marker circle) authored for this site, plus CSS squared paper, halftone, torn-paper contours and tape. No reference artwork was copied; no new raster image, font or runtime library was added. These are editorial decorations, not Alex's handwriting or physical classroom artifacts. Existing source photos and V2 alpha cutout remain unchanged.

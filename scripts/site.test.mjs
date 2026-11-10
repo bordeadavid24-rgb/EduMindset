@@ -15,15 +15,20 @@ function page() {
 test('learning exercise completes read, recall, reveal and reset without losing focus', () => {
   const { $, window, close } = page();
   assert.equal($('[data-recall-controls]').hidden, false);
+  assert.equal($('[aria-current="step"]').dataset.recallStep, 'read');
   $('#recall-action').click();
   assert.equal($('#recall-words').hidden, true);
   assert.equal($('#recall-question').hidden, false);
+  assert.equal($('[aria-current="step"]').dataset.recallStep, 'recall');
   $('#recall-action').click();
   assert.equal($('#recall-words').hidden, false);
   assert.equal($('#recall-explanation').hidden, false);
+  assert.equal($('[aria-current="step"]').dataset.recallStep, 'reveal');
   $('#recall-reset').click();
   assert.equal($('#recall-explanation').hidden, true);
   assert.equal(window.document.activeElement.id, 'recall-action');
+  assert.equal(window.document.querySelectorAll('[aria-current="step"]').length, 1);
+  assert.equal($('[aria-current="step"]').dataset.recallStep, 'read');
   close();
 });
 

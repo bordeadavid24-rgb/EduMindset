@@ -1,8 +1,18 @@
 # EDU MindSet - live work log and handoff
 
-Updated: 2026-11-10, V3 delivery checkpoint. Project root: `/Users/lilianab/Desktop/MINA TLC/edumindset`.
+Updated: 2026-11-10, V4 delivery checkpoint. Project root: `/Users/lilianab/Desktop/MINA TLC/edumindset`.
 
-## Current V3 work
+## Current V4 work
+
+User asks for a more high-school notebook/comic/collage direction, research then implement for their reaction. Logo red/charcoal, actual photographs and truthful personal content remain. Primary research: docs/v4-research-notes.md. Direction: docs/v4-direction.md.
+
+- Implemented original SVG book/bulb/pencil/dialogue/question illustrations, circled headline, notebook and halftone photographic collage, paper prints/tape, varied principle groupings, and semantic three-stage recall with aria-current following real activity state. No new raster/font/dependency or external runtime request.
+- Four test groups and production build pass. Added current-step/read/recall/reveal/reset assertions. Named-technique guide, DESIGN.md, sidecar, provenance, README and Grok prompt reflect V4.
+- Initial local performance72desktop/94mobile; confirmation100/99, LCP0.4s/2.0s, TBT0/40ms, CLS.001/0. Both sets and uncertainty are preserved in docs/verification-v4.md. Do not claim the async decode hint alone caused improvement.
+- Fresh reviewer first required recapture: the320px screenshot stopped before contact/footer. Replacement320width/tallviewport includes complete contact/footer, with ordinary-height opening evidence retained. Also moved truthful status labels below headings and fixed a narrow UnitED title/doodle collision with a two-row grid. All six final screenshots refreshed. Final independent disposition: ship, no remaining material fixes, all six current captures include the footer. Report: docs/finish-review-v4.md.
+- No native browser/physical-phone session claimed; browser access host remains unavailable. No MINA render interference, deployment, invented details or private personality claims. Next: commit, attempt safe sync and save V4 offline bundle, then wait for user reaction.
+
+## Previous V3 work
 User says V2 still feels too simplistic and wants more personal design, with the logo's original red/black colourway. New private context about Alex must guide presentation only and must not appear as personality claims/praise on the website. User explicitly asks again for Emil Kowalski, Impeccable and taste guidance. This is an authorized redesign pass.
 
 Direction: a personal teaching space, original first-person welcome and supplied photographs, a two-row editorial opening, an open-letter founder area, and a workshop programme with the active-recall method integrated into Learning Skills. See docs/v3-direction.md and docs/v3-design-notes.md. No new factual claims or fabricated personal artifacts. V2 is the preserved historical baseline; V3 is complete locally and ready for user review.

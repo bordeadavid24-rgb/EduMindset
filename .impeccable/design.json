@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-10T08:09:34.495Z",
+  "generatedAt": "2026-11-10T08:41:37.778Z",
   "title": "Design System: EDU MindSet",
   "extensions": {
     "colorMeta": {
@@ -133,6 +133,46 @@
         "displayName": "dark tint",
         "canonical": "#352a27",
         "role": "neutral"
+      },
+      "grid-ink": {
+        "displayName": "grid ink",
+        "canonical": "#dcd8d1",
+        "role": "neutral"
+      },
+      "paper-edge": {
+        "displayName": "paper edge",
+        "canonical": "#c7bfb7",
+        "role": "neutral"
+      },
+      "drawing-paper": {
+        "displayName": "drawing paper",
+        "canonical": "#fffdf7",
+        "role": "neutral"
+      },
+      "tape": {
+        "displayName": "tape",
+        "canonical": "#e1cbb5",
+        "role": "neutral"
+      },
+      "dark-grid-ink": {
+        "displayName": "dark grid ink",
+        "canonical": "#38332f",
+        "role": "neutral"
+      },
+      "dark-paper-edge": {
+        "displayName": "dark paper edge",
+        "canonical": "#665c54",
+        "role": "neutral"
+      },
+      "dark-drawing-paper": {
+        "displayName": "dark drawing paper",
+        "canonical": "#2b2825",
+        "role": "neutral"
+      },
+      "dark-tape": {
+        "displayName": "dark tape",
+        "canonical": "#8f6850",
+        "role": "neutral"
       }
     },
     "typographyMeta": {
@@ -151,9 +191,9 @@
         "purpose": "Scale .98 on button activation."
       },
       {
-        "name": "entrance",
-        "value": "420ms / 520ms",
-        "purpose": "One restrained desktop entrance; disabled for reduced motion."
+        "name": "pen-circle",
+        "value": "640ms 80ms cubic-bezier(.23,1,.32,1)",
+        "purpose": "One desktop-only headline circle draw-on. Fully visible static mark for reduced motion and phone."
       }
     ],
     "breakpoints": [
@@ -187,15 +227,15 @@
     {
       "name": "Active recall",
       "kind": "custom",
-      "description": "Actual V3 active recall markup and relevant responsive styles.",
-      "html": "<div class=\"recall-experiment\" data-recall=\"\">\n          <p class=\"recall-instruction\" id=\"recall-instruction\">Citește cuvintele. Apoi ascunde-le.</p>\n          <div class=\"recall-stage\" aria-live=\"polite\" aria-atomic=\"true\">\n            <div class=\"recall-words\" id=\"recall-words\"><span>curiozitate</span><span>întrebare</span><span>descoperire</span></div>\n            <p class=\"recall-question\" id=\"recall-question\" hidden=\"\">Ce trei cuvinte<br>ai citit?</p>\n          </div>\n          <div class=\"recall-controls\" data-recall-controls=\"\" hidden=\"\"><button type=\"button\" class=\"button button-ink\" id=\"recall-action\" aria-controls=\"recall-words recall-question\">Le-am citit. Le ascund. </button><button type=\"button\" class=\"recall-reset\" id=\"recall-reset\" hidden=\"\">De la început</button></div>\n          <p class=\"recall-explanation\" id=\"recall-explanation\" hidden=\"\"><strong>Tocmai ai încercat reamintirea activă.</strong> Încerci să aduci informația din memorie înainte să o revezi. Poți folosi aceeași idee după o pagină de curs.</p>\n          <noscript><p class=\"recall-explanation\"><strong>Reamintirea activă:</strong> acoperă cuvintele cu mâna și încearcă să le spui fără să te uiți. Apoi verifică. Poți face la fel cu o idee din curs.</p></noscript>\n        </div>",
-      "css": ":host{font-family:\"Bricolage Grotesque Variable\",sans-serif;--paper:#f7f6f2;--surface:#fffefd;--ink:#242323;--muted:#615d5a;--rule:#d4cfcb;--accent:#b3342a;--button:#b3342a;--tint:#f3e9e5;--ease-out:cubic-bezier(.23,1,.32,1);color:var(--ink)}*{box-sizing:border-box}[hidden]{display:none!important}p,h3,ul{margin:0}p{line-height:1.7}button,input,textarea{font:inherit}button{cursor:pointer}:focus-visible{outline:3px solid var(--accent);outline-offset:5px}\n.button { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 54px; padding: 16px 22px; border: 1px solid var(--button); border-radius: 3px; color: #fff; background: var(--button); font-size: 14px; font-weight: 700; line-height: 1.3; text-decoration: none; transition: transform 140ms var(--ease-out), background-color 160ms ease; }\n.button:active { transform: scale(.98); }\n.button-ink { --button: #242323; }\n\n@media (hover: hover) and (pointer: fine) {\n  .button:hover { background: #91281f; border-color: #91281f; }\n  .button-ink:hover { background: #161515; border-color: #161515; }\n}\n.recall-experiment { color: #242323; --ink: #242323; --muted: #615d5a; --paper: #f7eeeb; --accent: #b3342a; margin-top: 24px; padding: 24px 28px; background: #f7eeeb; }\n.recall-instruction { font-size: 14px; line-height: 1.6; min-height: 45px; font-weight: 500; }\n.recall-stage { min-height: 180px; display: flex; align-items: center; padding-block: 20px; }\n.recall-words { display: grid; gap: 5px; font-size: clamp(30px, 3vw, 40px); line-height: 1.16; font-weight: 550; letter-spacing: -.02em; }\n.recall-question { font-size: 36px; line-height: 1.15; letter-spacing: -.025em; }\n.recall-controls { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; }\n.button-ink { --button: #242323; }\n.recall-controls .button { font-size: 13px; gap: 14px; padding-inline: 17px; }\n.recall-reset { color: #242323; background: transparent; border: 0; min-height: 44px; padding: 10px 0; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }\n.recall-explanation { margin-top: 23px; padding-top: 18px; border-top: 1px solid #cdb7b0; font-size: 16px; }\n.recall-explanation strong { display: block; font-weight: 600; margin-bottom: 8px; }\n.recall-experiment :focus-visible { outline-color: #b3342a; }\n@media (max-width: 1100px) and (min-width: 768px) {\n  .recall-experiment { padding-inline: 22px; }\n}\n@media (max-width: 767px) {\n  .recall-experiment { padding: 22px 24px; margin-top: 20px; }\n  .recall-instruction { font-size: 14px; }\n  .recall-stage { min-height: 180px; }\n  .recall-words { font-size: 35px; }\n  .recall-question { font-size: 33px; }\n  .recall-controls .button { font-size: 13px; padding-inline: 15px; gap: 12px; }\n}\n@media (max-width: 359px) {\n  .recall-experiment { padding-inline: 20px; }\n  .recall-words { font-size: 30px; }\n  .recall-controls .button { font-size: 12px; }\n}"
+      "description": "Notebook exercise with semantic three-step sequence. Static read-state preview; live site updates aria-current with the activity.",
+      "html": "<div class=\"recall-experiment\" data-recall=\"\"><ol class=\"recall-steps\" aria-label=\"Pașii exercițiului\"><li data-recall-step=\"read\" aria-current=\"step\">Citești</li><li data-recall-step=\"recall\">Îți amintești</li><li data-recall-step=\"reveal\">Verifici</li></ol>\n          <p class=\"recall-instruction\" id=\"recall-instruction\">Citește cuvintele. Apoi ascunde-le.</p>\n          <div class=\"recall-stage\" aria-live=\"polite\" aria-atomic=\"true\">\n            <div class=\"recall-words\" id=\"recall-words\"><span>curiozitate</span><span>întrebare</span><span>descoperire</span></div>\n            <p class=\"recall-question\" id=\"recall-question\" hidden=\"\">Ce trei cuvinte<br>ai citit?</p>\n          </div>\n          <div class=\"recall-controls\" data-recall-controls=\"\"><button type=\"button\" class=\"button button-ink\" id=\"recall-action\" aria-controls=\"recall-words recall-question\">Le-am citit. Le ascund. </button><button type=\"button\" class=\"recall-reset\" id=\"recall-reset\" hidden=\"\">De la început</button></div>\n          <p class=\"recall-explanation\" id=\"recall-explanation\" hidden=\"\"><strong>Tocmai ai încercat reamintirea activă.</strong> Încerci să aduci informația din memorie înainte să o revezi. Poți folosi aceeași idee după o pagină de curs.</p>\n          \n        </div>",
+      "css": ":host{font-family:\"Bricolage Grotesque Variable\",sans-serif;--paper:#f7f6f2;--surface:#fffefd;--ink:#242323;--muted:#615d5a;--rule:#d4cfcb;--accent:#b3342a;--button:#b3342a;--tint:#f3e9e5;--ease-out:cubic-bezier(.23,1,.32,1);color:var(--ink)}*{box-sizing:border-box}[hidden]{display:none!important}p,h3,ul{margin:0}p{line-height:1.7}button,input,textarea{font:inherit}button{cursor:pointer}:focus-visible{outline:3px solid var(--accent);outline-offset:5px}\n.button { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 54px; padding: 16px 22px; border: 1px solid var(--button); border-radius: 3px; color: #fff; background: var(--button); font-size: 14px; font-weight: 700; line-height: 1.3; text-decoration: none; transition: transform 140ms var(--ease-out), background-color 160ms ease; }\n.button:active { transform: scale(.98); }\n.button-ink { --button: #242323; }\n\n@media (hover: hover) and (pointer: fine) {\n  .button:hover { background: #91281f; border-color: #91281f; }\n  .button-ink:hover { background: #161515; border-color: #161515; }\n}\n.recall-experiment { color: #242323; --ink: #242323; --muted: #615d5a; --paper: #f7eeeb; --accent: #b3342a; margin-top: 24px; padding: 24px 28px; background: #f7eeeb; }\n.recall-instruction { font-size: 14px; line-height: 1.6; min-height: 45px; font-weight: 500; }\n.recall-stage { min-height: 180px; display: flex; align-items: center; padding-block: 20px; }\n.recall-words { display: grid; gap: 5px; font-size: clamp(30px, 3vw, 40px); line-height: 1.16; font-weight: 550; letter-spacing: -.02em; }\n.recall-question { font-size: 36px; line-height: 1.15; letter-spacing: -.025em; }\n.recall-controls { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; }\n.button-ink { --button: #242323; }\n.recall-controls .button { font-size: 13px; gap: 14px; padding-inline: 17px; }\n.recall-reset { color: #242323; background: transparent; border: 0; min-height: 44px; padding: 10px 0; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }\n.recall-explanation { margin-top: 23px; padding-top: 18px; border-top: 1px solid #cdb7b0; font-size: 16px; }\n.recall-explanation strong { display: block; font-weight: 600; margin-bottom: 8px; }\n.recall-experiment :focus-visible { outline-color: #b3342a; }\n@media (max-width: 1100px) and (min-width: 768px) {\n  .recall-experiment { padding-inline: 22px; }\n}\n@media (max-width: 767px) {\n  .recall-experiment { padding: 22px 24px; margin-top: 20px; }\n  .recall-instruction { font-size: 14px; }\n  .recall-stage { min-height: 180px; }\n  .recall-words { font-size: 35px; }\n  .recall-question { font-size: 33px; }\n  .recall-controls .button { font-size: 13px; padding-inline: 15px; gap: 12px; }\n}\n@media (max-width: 359px) {\n  .recall-experiment { padding-inline: 20px; }\n  .recall-words { font-size: 30px; }\n  .recall-controls .button { font-size: 12px; }\n}\n.recall-experiment { color: #242323; --ink: #242323; --muted: #615d5a; --paper: #f7eeeb; --accent: #b3342a; margin-top: 24px; padding: 24px 28px; background: #f7eeeb; }\n.recall-instruction { font-size: 14px; line-height: 1.6; min-height: 45px; font-weight: 500; }\n.recall-stage { min-height: 180px; display: flex; align-items: center; padding-block: 20px; }\n.recall-words { display: grid; gap: 5px; font-size: clamp(30px, 3vw, 40px); line-height: 1.16; font-weight: 550; letter-spacing: -.02em; }\n.recall-question { font-size: 36px; line-height: 1.15; letter-spacing: -.025em; }\n.recall-controls { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; }\n.recall-controls .button { font-size: 13px; gap: 14px; padding-inline: 17px; }\n.recall-reset { color: #242323; background: transparent; border: 0; min-height: 44px; padding: 10px 0; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }\n.recall-explanation { margin-top: 23px; padding-top: 18px; border-top: 1px solid #cdb7b0; font-size: 16px; }\n.recall-explanation strong { display: block; font-weight: 600; margin-bottom: 8px; }\n.recall-experiment :focus-visible { outline-color: #b3342a; }\n@media (max-width: 1100px) and (min-width: 768px) {\n  .recall-experiment { padding-inline: 22px; }\n}\n@media (max-width: 767px) {\n  .recall-experiment { padding: 22px 24px; margin-top: 20px; }\n  .recall-instruction { font-size: 14px; }\n  .recall-stage { min-height: 180px; }\n  .recall-words { font-size: 35px; }\n  .recall-question { font-size: 33px; }\n  .recall-controls .button { font-size: 13px; padding-inline: 15px; gap: 12px; }\n}\n@media (max-width: 359px) {\n  .recall-experiment { padding-inline: 20px; }\n  .recall-words { font-size: 30px; }\n  .recall-controls .button { font-size: 12px; }\n}\n.recall-experiment { position: relative; padding: 28px 28px 30px 43px; background-color: #f7eeeb; background-image: linear-gradient(90deg, transparent 24px, #d7a59e 24px, #d7a59e 25px, transparent 25px); border-radius: 2px 3px 8px 1px; box-shadow: 2px 4px 10px rgb(0 0 0 / .1); }\n.recall-experiment::before { content: ''; position: absolute; left: 9px; top: 28px; bottom: 25px; width: 6px; background-image: radial-gradient(circle, #6d5a54 2px, transparent 2.6px); background-size: 6px 30px; }\n.recall-steps { display: grid; grid-template-columns: .85fr 1.3fr .85fr; list-style: none; gap: 9px; padding: 0 0 24px; margin: 0; }\n.recall-steps li { position: relative; text-align: center; font-size: 13px; font-weight: 500; line-height: 1.3; padding: 11px 3px; border: 1px solid #ad8d83; border-radius: 38% 5% 20% 6% / 8% 36% 7% 30%; }\n.recall-steps li:nth-child(2) { transform: rotate(2deg); }\n.recall-steps li[aria-current=step] { color: #91281f; font-weight: 700; border: 2px solid #b3342a; padding: 10px 2px; background: #fffdf7; }\n.recall-instruction { min-height: 45px; }\n.recall-stage { min-height: 174px; }\n@media (max-width: 1100px) and (min-width: 768px) {\n  .recall-experiment { padding-right: 22px; padding-left: 36px; }\n  .recall-steps { gap: 5px; }\n  .recall-steps li { font-size: 12px; }\n}\n@media (max-width: 767px) {\n  .recall-experiment { padding: 24px 20px 27px 35px; }\n  .recall-steps { gap: 5px; padding-bottom: 22px; }\n  .recall-steps li { font-size: 12px; }\n  .recall-stage { min-height: 174px; }\n  .recall-words { font-size: 33px; }\n  .recall-controls .button { padding-inline: 14px; font-size: 12px; gap: 10px; }\n}\n@media (max-width: 359px) {\n  .recall-experiment { padding-left: 32px; padding-right: 16px; }\n  .recall-steps { grid-template-columns: .8fr 1.25fr .85fr; }\n  .recall-steps li { font-size: 12px; }\n  .recall-words { font-size: 28px; }\n  .recall-controls .button { padding-inline: 11px; gap: 7px; font-size: 12px; }\n}"
     },
     {
       "name": "Workshop disclosure",
       "kind": "custom",
       "description": "Actual V3 workshop disclosure markup and relevant responsive styles.",
-      "html": "<details class=\"workshop\" id=\"time\"><summary><span class=\"workshop-name\">Organizează-ți timpul<span>Time &amp; Productivity</span></span></summary><div class=\"workshop-content\"><p>Fă loc lucrurilor care contează. Construiește un mod de lucru pe care îl poți susține.</p><ul><li>Planificarea activităților.</li><li>Stabilirea priorităților.</li><li>Gestionarea obiectivelor.</li><li>Construirea unor rutine eficiente.</li></ul></div></details>",
+      "html": "<section class=\"workshop-section\" style=\"padding:24px\"><details class=\"workshop\" id=\"time\"><summary><span class=\"workshop-name\">Organizează-ți timpul<span>Time &amp; Productivity</span></span></summary><div class=\"workshop-content\"><p>Fă loc lucrurilor care contează. Construiește un mod de lucru pe care îl poți susține.</p><ul><li>Planificarea activităților.</li><li>Stabilirea priorităților.</li><li>Gestionarea obiectivelor.</li><li>Construirea unor rutine eficiente.</li></ul></div></details></section>",
       "css": ":host{font-family:\"Bricolage Grotesque Variable\",sans-serif;--paper:#f7f6f2;--surface:#fffefd;--ink:#242323;--muted:#615d5a;--rule:#d4cfcb;--accent:#b3342a;--button:#b3342a;--tint:#f3e9e5;--ease-out:cubic-bezier(.23,1,.32,1);color:var(--ink)}*{box-sizing:border-box}[hidden]{display:none!important}p,h3,ul{margin:0}p{line-height:1.7}button,input,textarea{font:inherit}button{cursor:pointer}:focus-visible{outline:3px solid var(--accent);outline-offset:5px}\n\n.workshop-section { background: #252221; color: #f8f4f0; --paper: #252221; --surface: #302b29; --ink: #f8f4f0; --muted: #d3c9c1; --rule: #5b504b; --accent: #f18c7e; --tint: #352c29; }\n.workshop summary { display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 23px 0; cursor: pointer; list-style: none; }\n.workshop summary > .ph { font-size: 24px; }\n.workshop-name { display: flex; flex-direction: column; gap: 9px; font-size: clamp(26px, 2.7vw, 36px); line-height: 1.16; letter-spacing: -.025em; font-weight: 600; }\n.workshop-name > span { font-size: 13px; color: var(--muted); letter-spacing: 0; font-weight: 450; }\n.workshop[open] > summary { color: var(--accent); }\n.workshop[open] > summary > .ph-plus { transform: rotate(45deg); }\n.workshop-content { font-size: 16px; padding-bottom: 26px; }\n.workshop-content > p { color: var(--muted); max-width: 48ch; margin-bottom: 18px; }\n.workshop-content ul { font-size: 16px; }\n.workshop-section :focus-visible { outline-color: #f18c7e; }\n\n@media (hover: hover) and (pointer: fine) {\n  .workshop > summary:hover { color: var(--accent); }\n}\n@media (max-width: 767px) {\n  .workshop summary { padding-block: 22px; }\n  .workshop-name { font-size: 28px; }\n  .workshop-name > span { font-size: 13px; }\n  .workshop-content { padding-bottom: 24px; }\n}"
     },
     {
@@ -205,39 +245,46 @@
       "description": "Actual V3 labelled input markup and relevant responsive styles.",
       "html": "<form><label for=\"name\">Nume și prenume<input id=\"name\" name=\"Nume\" autocomplete=\"name\" maxlength=\"120\" required=\"\" placeholder=\"Cum te numești?\"></label></form>",
       "css": ":host{font-family:\"Bricolage Grotesque Variable\",sans-serif;--paper:#f7f6f2;--surface:#fffefd;--ink:#242323;--muted:#615d5a;--rule:#d4cfcb;--accent:#b3342a;--button:#b3342a;--tint:#f3e9e5;--ease-out:cubic-bezier(.23,1,.32,1);color:var(--ink)}*{box-sizing:border-box}[hidden]{display:none!important}p,h3,ul{margin:0}p{line-height:1.7}button,input,textarea{font:inherit}button{cursor:pointer}:focus-visible{outline:3px solid var(--accent);outline-offset:5px}input, textarea { font: inherit; }input, textarea { outline-offset: 5px; }input, textarea { caret-color: var(--accent); }form label { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; font-size: 14px; font-weight: 650; }input, textarea { min-width: 0; width: 100%; background: var(--paper); color: var(--ink); border: 1px solid var(--rule); border-radius: 3px; padding: 14px; font-size: 16px; font-weight: 400; }input { min-height: 52px; }textarea { min-height: 140px; resize: vertical; }input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; font-size: 14px; }"
+    },
+    {
+      "name": "Original question drawing",
+      "kind": "custom",
+      "description": "Original editorial comic bubble, decorative and outside interaction hit areas.",
+      "html": "<div style=\"position:relative;width:240px;height:180px\"><div class=\"question-comic\" aria-hidden=\"true\"><svg class=\"ink-drawing\" viewBox=\"0 0 210 150\" focusable=\"false\"><path class=\"comic-fill\" d=\"M16 26C38 6 150 0 184 24C210 44 201 89 172 101C149 110 120 109 96 106L62 136L67 107C42 108 16 98 9 79C1 58 0 41 16 26Z\"></path><path class=\"red-pen\" d=\"M176 10L182 1M196 19L207 14M199 35L209 36\"></path><text x=\"104\" y=\"58\" text-anchor=\"middle\">Dar de ce?</text><path class=\"red-pen\" d=\"M50 73C84 68 122 71 157 68\"></path></svg></div></div>",
+      "css": ":host{font-family:\"Bricolage Grotesque Variable\",sans-serif;--accent:#b3342a;--drawing-paper:#fffdf7;color:#242323}\n.ink-drawing { display: block; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }\n.ink-drawing .red-pen { stroke: var(--accent); }\n.ink-drawing text { stroke: none; fill: currentColor; font: 650 22px 'Bricolage Grotesque Variable', sans-serif; }\n.question-comic { position: absolute; z-index: 2; width: 185px; right: -3px; top: 13px; transform: rotate(9deg); pointer-events: none; }\n.comic-fill { fill: var(--drawing-paper); }\n@media (max-width: 1100px) and (min-width: 768px) {\n  .question-comic { width: 145px; top: 3px; right: -7px; }\n}\n@media (max-width: 767px) {\n  .question-comic { width: 124px; top: 0; right: 0; transform: rotate(7deg); }\n  .question-comic text { font-size: 23px; }\n}"
     }
   ],
   "narrative": {
-    "northStar": "A personal teaching space",
-    "overview": "The original red and charcoal identity frames a first-person invitation, an open founder letter and a working programme. Supplied photographs have distinct jobs; the optional recall activity demonstrates participation.",
+    "northStar": "The curious student's notebook",
+    "overview": "Original pen drawings, red-marker emphasis, cut-paper photographic mashups and a semantic comic exercise extend the red/charcoal personal teaching space. All artwork is digital editorial decoration, without pretending to be founder handwriting or real classroom artifacts.",
     "keyCharacteristics": [
-      "Logo red and charcoal",
-      "Photographic compositing",
-      "Open first-person letter",
-      "Programme with embedded learning demonstration",
-      "Responsive native disclosures"
+      "Red pen and charcoal drawings",
+      "Squared-paper and halftone fields",
+      "Real photographic collage",
+      "Open founder letter",
+      "Semantic read/recall/reveal sequence"
     ],
     "rules": [
       {
-        "name": "Identity and contrast",
-        "body": "Logo red is artwork; darker red supports small actions and links.",
-        "section": "colors"
+        "name": "Content before margin art",
+        "body": "Draw around readable text, clear actions and the whole face/instrument.",
+        "section": "typography"
       },
       {
-        "name": "Truth before decoration",
-        "body": "Use supplied words and real photographs without invented personal artifacts or character claims.",
+        "name": "Digital decoration, honest evidence",
+        "body": "Use original SVG; never claim invented handwriting or events as real.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Preserve Romanian copy and diacritics.",
-      "Keep coming-soon status and honest email handoff.",
-      "Keep source-derived cutout provenance."
+      "Keep original Romanian facts, dates-forthcoming state and honest email behavior.",
+      "Reflow the collage for phones and remove peripheral marks as needed.",
+      "Keep the actual source photography and its provenance."
     ],
     "donts": [
-      "Do not publish private personality descriptions or invented testimonials.",
-      "Do not invent workshop dates or booking availability.",
-      "Do not restore discarded V2 blue/yellow identity."
+      "Do not publish private personality descriptions.",
+      "Do not copy reference artwork or invent teacher feedback.",
+      "Do not add perpetual animation or heavy drawing libraries."
     ]
   }
 }

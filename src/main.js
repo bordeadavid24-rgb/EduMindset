@@ -27,6 +27,12 @@ const recallInstruction = document.querySelector('#recall-instruction');
 const recallExplanation = document.querySelector('#recall-explanation');
 const recallReset = document.querySelector('#recall-reset');
 let recallState = 'read';
+function syncRecallSteps() {
+  document.querySelectorAll('[data-recall-step]').forEach((step) => {
+    if (step.dataset.recallStep === recallState) step.setAttribute('aria-current', 'step');
+    else step.removeAttribute('aria-current');
+  });
+}
 recall.querySelector('[data-recall-controls]').hidden = false;
 function resetRecall() {
   recallState = 'read';
@@ -37,6 +43,7 @@ function resetRecall() {
   recallReset.hidden = true;
   recallInstruction.textContent = 'Citește cuvintele. Apoi ascunde-le.';
   recallAction.firstChild.textContent = 'Le-am citit. Le ascund. ';
+  syncRecallSteps();
 }
 recallAction.addEventListener('click', () => {
   if (recallState === 'read') {
@@ -56,6 +63,7 @@ recallAction.addEventListener('click', () => {
     recallInstruction.textContent = 'Compară cu ce ți-ai amintit. Fără note, fără clasament.';
     recallAction.firstChild.textContent = 'Mai încearcă o dată ';
   } else resetRecall();
+  syncRecallSteps();
 });
 recallReset.addEventListener('click', () => { resetRecall(); recallAction.focus(); });
 
