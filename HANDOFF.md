@@ -1,8 +1,24 @@
 # EDU MindSet - live work log and handoff
 
-Updated: 2026-11-10, V2 delivery checkpoint. Project root: `/Users/lilianab/Desktop/MINA TLC/edumindset`.
+Updated: 2026-11-10, V3 delivery checkpoint. Project root: `/Users/lilianab/Desktop/MINA TLC/edumindset`.
 
-## Current V2 delivery
+## Current V3 work
+User says V2 still feels too simplistic and wants more personal design, with the logo's original red/black colourway. New private context about Alex must guide presentation only and must not appear as personality claims/praise on the website. User explicitly asks again for Emil Kowalski, Impeccable and taste guidance. This is an authorized redesign pass.
+
+Direction: a personal teaching space, original first-person welcome and supplied photographs, a two-row editorial opening, an open-letter founder area, and a workshop programme with the active-recall method integrated into Learning Skills. See docs/v3-direction.md and docs/v3-design-notes.md. No new factual claims or fabricated personal artifacts. V2 is the preserved historical baseline; V3 is complete locally and ready for user review.
+
+Implemented: red/charcoal identity, two-row photographic opening, supplied first-person welcome, open founder letter with portrait inset, full charcoal workshop programme with recall integrated into Learning Skills, unboxed resources and asymmetric principles. No new generated assets or dependencies. All four test groups and production build pass. Added nested exercise deep-link and ARIA label integrity coverage. Initial 1440/390 and confirmation 320/820 captures look coherent. Lighthouse desktop performance100/mobile99, accessibility100, CLS0. Confirmed dark390/wide1920 too. Fresh independent reviewer disposition: ship, no material fixes. DESIGN.md, .impeccable/design.json, named-techniques guide and README now reflect V3. Full evidence: docs/verification-v3.md and docs/finish-review-v3.md. Remaining immediate action: commit and attempt safe GitHub synchronization, then record outcome. Browser access host unavailable; no native UI or physical-phone testing claimed.
+
+## V3 delivery summary
+
+- Restored source-logo artwork red #e85448 with accessible action red #b3342a and charcoal. Removed V2 blue/yellow/orange identity.
+- Added original first-person welcome and a twelve-column, two-row photographic opening, separate mobile reading order, open-letter founder layout, and personal portrait inset.
+- Integrated the actual recall exercise into the full charcoal workshop programme. All sixteen original topic bullets, source biography, forthcoming statuses and honest contact behavior remain.
+- No new generated photographs, dependencies, invented personal artifacts or private personality descriptions were published. Existing cutout provenance remains explicit.
+- All tests/build pass, local desktop performance100/mobile99, accessibility100 across captures, CLS0. No public deployment or physical-phone test claimed.
+- Named techniques: docs/DESIGN_TECHNIQUES.md. Continuation: GROK_PROMPT.md. Stop cosmetic iteration after delivery until user feedback.
+
+## Previous V2 delivery
 V2 is implemented, built, tested and independently reviewed, ready for the user's visual reaction. User explicitly asked for more creative educational personality, revised palette, integrated Alex photography, excellent mobile/loading, no em dashes, and names/explanations of techniques.
 
 - Ink blue, pale yellow and selective orange replace V1 red/grey. One self-hosted Bricolage Grotesque variable family handles display/body with optical sizing. Manrope was removed from V2.

@@ -21,7 +21,7 @@ Applied workshops combine learning skills, time management, independent thinking
 Six required areas: Acasă, Despre noi, Workshop-uri, UnitED, Resurse, Contact. Include supplied Romanian copy and founder biography. No confirmed upcoming dates, venue, prices, booking URL or resource downloads. Do not invent them. Contact email edumindset8@gmail.com; Instagram @edu.mind.set. The MINA TLC film will be reused for an EDU MindSet workshop; do not alter ongoing rendering or imply museum affiliation.
 
 ## Brand Commitments
-Personal, alive, authentic; user rejects monotonous AI templates and forced luxury. Real founder photographs, existing logo, supplied QR, Romanian diacritics. User explicitly requests Emil Kowalski, Impeccable, design-taste, and multiple agents to study direction and decide overall design.
+Personal, alive, authentic; user rejects monotonous AI templates and forced luxury. Real founder photographs, existing logo, supplied QR, Romanian diacritics. Latest V3 commitment: retain the original logo red/black colourway and create a more personal, developed teaching-space design. Private descriptions of Alex are design context only and must not become website claims, testimonials or metadata. User explicitly requests Emil Kowalski, Impeccable, design-taste, and multiple agents to study direction and decide overall design.
 
 ## Evidence on Hand
 User's complete Romanian content and founder introduction. Five Nov 8 WhatsApp files: microscope/classroom image, auditorium image, library portrait, logo, Instagram QR. Instagram feed inaccessible to tools at initial research; university-hosted CV confirms educational roles. Research reports in docs/ distinguish facts from inference.

@@ -37,6 +37,10 @@ test('menu Escape restores focus and workshop deep links disclose their content'
   window.location.hash = 'learning';
   window.dispatchEvent(new window.HashChangeEvent('hashchange'));
   assert.equal($('#learning').open, true);
+  $('#learning').open = false;
+  window.location.hash = 'incearca';
+  window.dispatchEvent(new window.HashChangeEvent('hashchange'));
+  assert.equal($('#learning').open, true, 'the exercise link opens its containing programme');
   $('#theme-toggle').click();
   assert.equal(window.document.documentElement.dataset.theme, 'dark');
   close();
@@ -62,6 +66,9 @@ test('all section links and supplied images resolve, with no duplicate IDs or em
   const { window, close } = page();
   const ids = [...window.document.querySelectorAll('[id]')].map((node) => node.id);
   assert.equal(ids.length, new Set(ids).size);
+  for (const node of window.document.querySelectorAll('[aria-labelledby]')) {
+    for (const id of node.getAttribute('aria-labelledby').split(/\s+/)) assert.ok(window.document.getElementById(id), `Missing label: ${id}`);
+  }
   for (const link of window.document.querySelectorAll('a[href^="#"]')) assert.ok(window.document.getElementById(link.hash.slice(1)), link.hash);
   for (const image of window.document.querySelectorAll('img[src]')) assert.ok(existsSync(new URL(`../public/${image.getAttribute('src')}`, import.meta.url)), image.getAttribute('src'));
   for (const source of window.document.querySelectorAll('source[srcset]')) {

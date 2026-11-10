@@ -1,422 +1,176 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-09T21:50:33.749005+00:00",
+  "generatedAt": "2026-11-10T08:09:34.495Z",
   "title": "Design System: EDU MindSet",
   "extensions": {
     "colorMeta": {
       "primary": {
-        "role": "primary",
-        "displayName": "Primary",
-        "canonical": "#2847bd",
-        "tonalRamp": [
-          "oklch(15% 0.1884 266.9)",
-          "oklch(27% 0.1884 266.9)",
-          "oklch(39% 0.1884 266.9)",
-          "oklch(51% 0.1884 266.9)",
-          "oklch(63% 0.1884 266.9)",
-          "oklch(75% 0.1884 266.9)",
-          "oklch(87% 0.1884 266.9)",
-          "oklch(95% 0.1884 266.9)"
-        ]
+        "displayName": "primary",
+        "canonical": "#b3342a",
+        "role": "primary"
       },
       "primary-hover": {
-        "role": "primary",
-        "displayName": "Primary Hover",
-        "canonical": "#1b3191",
-        "tonalRamp": [
-          "oklch(15% 0.1597 267.4)",
-          "oklch(27% 0.1597 267.4)",
-          "oklch(39% 0.1597 267.4)",
-          "oklch(51% 0.1597 267.4)",
-          "oklch(63% 0.1597 267.4)",
-          "oklch(75% 0.1597 267.4)",
-          "oklch(87% 0.1597 267.4)",
-          "oklch(95% 0.1597 267.4)"
-        ]
+        "displayName": "primary hover",
+        "canonical": "#91281f",
+        "role": "neutral"
+      },
+      "brand-red": {
+        "displayName": "brand red",
+        "canonical": "#e85448",
+        "role": "accent"
       },
       "ink": {
-        "role": "neutral",
-        "displayName": "Ink",
-        "canonical": "#18275c",
-        "tonalRamp": [
-          "oklch(15% 0.0969 268.0)",
-          "oklch(27% 0.0969 268.0)",
-          "oklch(39% 0.0969 268.0)",
-          "oklch(51% 0.0969 268.0)",
-          "oklch(63% 0.0969 268.0)",
-          "oklch(75% 0.0969 268.0)",
-          "oklch(87% 0.0969 268.0)",
-          "oklch(95% 0.0969 268.0)"
-        ]
+        "displayName": "ink",
+        "canonical": "#242323",
+        "role": "neutral"
       },
       "muted": {
-        "role": "neutral",
-        "displayName": "Muted",
-        "canonical": "#4b5573",
-        "tonalRamp": [
-          "oklch(15% 0.0509 270.0)",
-          "oklch(27% 0.0509 270.0)",
-          "oklch(39% 0.0509 270.0)",
-          "oklch(51% 0.0509 270.0)",
-          "oklch(63% 0.0509 270.0)",
-          "oklch(75% 0.0509 270.0)",
-          "oklch(87% 0.0509 270.0)",
-          "oklch(95% 0.0509 270.0)"
-        ]
+        "displayName": "muted",
+        "canonical": "#615d5a",
+        "role": "neutral"
       },
       "paper": {
-        "role": "neutral",
-        "displayName": "Paper",
-        "canonical": "#fbf9ef",
-        "tonalRamp": [
-          "oklch(15% 0.0133 97.4)",
-          "oklch(27% 0.0133 97.4)",
-          "oklch(39% 0.0133 97.4)",
-          "oklch(51% 0.0133 97.4)",
-          "oklch(63% 0.0133 97.4)",
-          "oklch(75% 0.0133 97.4)",
-          "oklch(87% 0.0133 97.4)",
-          "oklch(95% 0.0133 97.4)"
-        ]
+        "displayName": "paper",
+        "canonical": "#f7f6f2",
+        "role": "neutral"
       },
       "surface": {
-        "role": "neutral",
-        "displayName": "Surface",
-        "canonical": "#fffef9",
-        "tonalRamp": [
-          "oklch(15% 0.0067 97.3)",
-          "oklch(27% 0.0067 97.3)",
-          "oklch(39% 0.0067 97.3)",
-          "oklch(51% 0.0067 97.3)",
-          "oklch(63% 0.0067 97.3)",
-          "oklch(75% 0.0067 97.3)",
-          "oklch(87% 0.0067 97.3)",
-          "oklch(95% 0.0067 97.3)"
-        ]
+        "displayName": "surface",
+        "canonical": "#fffefd",
+        "role": "neutral"
       },
       "rule": {
-        "role": "neutral",
-        "displayName": "Rule",
-        "canonical": "#c7cbd5",
-        "tonalRamp": [
-          "oklch(15% 0.0145 268.5)",
-          "oklch(27% 0.0145 268.5)",
-          "oklch(39% 0.0145 268.5)",
-          "oklch(51% 0.0145 268.5)",
-          "oklch(63% 0.0145 268.5)",
-          "oklch(75% 0.0145 268.5)",
-          "oklch(87% 0.0145 268.5)",
-          "oklch(95% 0.0145 268.5)"
-        ]
+        "displayName": "rule",
+        "canonical": "#d4cfcb",
+        "role": "neutral"
       },
-      "hero-yellow": {
-        "role": "secondary",
-        "displayName": "Hero Yellow",
-        "canonical": "#f2efb6",
-        "tonalRamp": [
-          "oklch(15% 0.0734 105.2)",
-          "oklch(27% 0.0734 105.2)",
-          "oklch(39% 0.0734 105.2)",
-          "oklch(51% 0.0734 105.2)",
-          "oklch(63% 0.0734 105.2)",
-          "oklch(75% 0.0734 105.2)",
-          "oklch(87% 0.0734 105.2)",
-          "oklch(95% 0.0734 105.2)"
-        ]
+      "soft-field": {
+        "displayName": "soft field",
+        "canonical": "#efebe7",
+        "role": "neutral"
       },
-      "learning-yellow": {
-        "role": "secondary",
-        "displayName": "Learning Yellow",
-        "canonical": "#f1eb8f",
-        "tonalRamp": [
-          "oklch(15% 0.1140 105.2)",
-          "oklch(27% 0.1140 105.2)",
-          "oklch(39% 0.1140 105.2)",
-          "oklch(51% 0.1140 105.2)",
-          "oklch(63% 0.1140 105.2)",
-          "oklch(75% 0.1140 105.2)",
-          "oklch(87% 0.1140 105.2)",
-          "oklch(95% 0.1140 105.2)"
-        ]
+      "tint": {
+        "displayName": "tint",
+        "canonical": "#f3e9e5",
+        "role": "neutral"
       },
-      "pale-blue": {
-        "role": "secondary",
-        "displayName": "Pale Blue",
-        "canonical": "#edf0fb",
-        "tonalRamp": [
-          "oklch(15% 0.0151 273.8)",
-          "oklch(27% 0.0151 273.8)",
-          "oklch(39% 0.0151 273.8)",
-          "oklch(51% 0.0151 273.8)",
-          "oklch(63% 0.0151 273.8)",
-          "oklch(75% 0.0151 273.8)",
-          "oklch(87% 0.0151 273.8)",
-          "oklch(95% 0.0151 273.8)"
-        ]
+      "note-paper": {
+        "displayName": "note paper",
+        "canonical": "#f7eeeb",
+        "role": "neutral"
       },
-      "orange": {
-        "role": "tertiary",
-        "displayName": "Orange",
-        "canonical": "#f4aa69",
-        "tonalRamp": [
-          "oklch(15% 0.1194 61.1)",
-          "oklch(27% 0.1194 61.1)",
-          "oklch(39% 0.1194 61.1)",
-          "oklch(51% 0.1194 61.1)",
-          "oklch(63% 0.1194 61.1)",
-          "oklch(75% 0.1194 61.1)",
-          "oklch(87% 0.1194 61.1)",
-          "oklch(95% 0.1194 61.1)"
-        ]
+      "workshop-charcoal": {
+        "displayName": "workshop charcoal",
+        "canonical": "#252221",
+        "role": "neutral"
       },
-      "founder-blue": {
-        "role": "neutral",
-        "displayName": "Founder Blue",
-        "canonical": "#243d9a",
-        "tonalRamp": [
-          "oklch(15% 0.1547 267.4)",
-          "oklch(27% 0.1547 267.4)",
-          "oklch(39% 0.1547 267.4)",
-          "oklch(51% 0.1547 267.4)",
-          "oklch(63% 0.1547 267.4)",
-          "oklch(75% 0.1547 267.4)",
-          "oklch(87% 0.1547 267.4)",
-          "oklch(95% 0.1547 267.4)"
-        ]
+      "workshop-surface": {
+        "displayName": "workshop surface",
+        "canonical": "#302b29",
+        "role": "neutral"
       },
-      "founder-ink": {
-        "role": "neutral",
-        "displayName": "Founder Ink",
-        "canonical": "#fffdf1",
-        "tonalRamp": [
-          "oklch(15% 0.0159 99.0)",
-          "oklch(27% 0.0159 99.0)",
-          "oklch(39% 0.0159 99.0)",
-          "oklch(51% 0.0159 99.0)",
-          "oklch(63% 0.0159 99.0)",
-          "oklch(75% 0.0159 99.0)",
-          "oklch(87% 0.0159 99.0)",
-          "oklch(95% 0.0159 99.0)"
-        ]
+      "workshop-ink": {
+        "displayName": "workshop ink",
+        "canonical": "#f8f4f0",
+        "role": "neutral"
       },
-      "founder-muted": {
-        "role": "neutral",
-        "displayName": "Founder Muted",
-        "canonical": "#d3ddfc",
-        "tonalRamp": [
-          "oklch(15% 0.0439 271.3)",
-          "oklch(27% 0.0439 271.3)",
-          "oklch(39% 0.0439 271.3)",
-          "oklch(51% 0.0439 271.3)",
-          "oklch(63% 0.0439 271.3)",
-          "oklch(75% 0.0439 271.3)",
-          "oklch(87% 0.0439 271.3)",
-          "oklch(95% 0.0439 271.3)"
-        ]
+      "workshop-muted": {
+        "displayName": "workshop muted",
+        "canonical": "#d3c9c1",
+        "role": "neutral"
       },
-      "founder-accent": {
-        "role": "neutral",
-        "displayName": "Founder Accent",
-        "canonical": "#f5e98d",
-        "tonalRamp": [
-          "oklch(15% 0.1140 101.8)",
-          "oklch(27% 0.1140 101.8)",
-          "oklch(39% 0.1140 101.8)",
-          "oklch(51% 0.1140 101.8)",
-          "oklch(63% 0.1140 101.8)",
-          "oklch(75% 0.1140 101.8)",
-          "oklch(87% 0.1140 101.8)",
-          "oklch(95% 0.1140 101.8)"
-        ]
+      "workshop-rule": {
+        "displayName": "workshop rule",
+        "canonical": "#5b504b",
+        "role": "neutral"
       },
-      "founder-rule": {
-        "role": "neutral",
-        "displayName": "Founder Rule",
-        "canonical": "#6c7fc1",
-        "tonalRamp": [
-          "oklch(15% 0.1030 270.9)",
-          "oklch(27% 0.1030 270.9)",
-          "oklch(39% 0.1030 270.9)",
-          "oklch(51% 0.1030 270.9)",
-          "oklch(63% 0.1030 270.9)",
-          "oklch(75% 0.1030 270.9)",
-          "oklch(87% 0.1030 270.9)",
-          "oklch(95% 0.1030 270.9)"
-        ]
+      "workshop-accent": {
+        "displayName": "workshop accent",
+        "canonical": "#f18c7e",
+        "role": "neutral"
+      },
+      "workshop-tint": {
+        "displayName": "workshop tint",
+        "canonical": "#352c29",
+        "role": "neutral"
       },
       "dark-paper": {
-        "role": "neutral",
-        "displayName": "Dark Paper",
-        "canonical": "#141d36",
-        "tonalRamp": [
-          "oklch(15% 0.0500 267.6)",
-          "oklch(27% 0.0500 267.6)",
-          "oklch(39% 0.0500 267.6)",
-          "oklch(51% 0.0500 267.6)",
-          "oklch(63% 0.0500 267.6)",
-          "oklch(75% 0.0500 267.6)",
-          "oklch(87% 0.0500 267.6)",
-          "oklch(95% 0.0500 267.6)"
-        ]
+        "displayName": "dark paper",
+        "canonical": "#1b1b1b",
+        "role": "neutral"
       },
       "dark-surface": {
-        "role": "neutral",
-        "displayName": "Dark Surface",
-        "canonical": "#1b2744",
-        "tonalRamp": [
-          "oklch(15% 0.0564 265.9)",
-          "oklch(27% 0.0564 265.9)",
-          "oklch(39% 0.0564 265.9)",
-          "oklch(51% 0.0564 265.9)",
-          "oklch(63% 0.0564 265.9)",
-          "oklch(75% 0.0564 265.9)",
-          "oklch(87% 0.0564 265.9)",
-          "oklch(95% 0.0564 265.9)"
-        ]
+        "displayName": "dark surface",
+        "canonical": "#242323",
+        "role": "neutral"
       },
       "dark-ink": {
-        "role": "neutral",
-        "displayName": "Dark Ink",
-        "canonical": "#f6f3df",
-        "tonalRamp": [
-          "oklch(15% 0.0265 99.9)",
-          "oklch(27% 0.0265 99.9)",
-          "oklch(39% 0.0265 99.9)",
-          "oklch(51% 0.0265 99.9)",
-          "oklch(63% 0.0265 99.9)",
-          "oklch(75% 0.0265 99.9)",
-          "oklch(87% 0.0265 99.9)",
-          "oklch(95% 0.0265 99.9)"
-        ]
+        "displayName": "dark ink",
+        "canonical": "#f5f0eb",
+        "role": "neutral"
       },
       "dark-muted": {
-        "role": "neutral",
-        "displayName": "Dark Muted",
-        "canonical": "#c2cbe3",
-        "tonalRamp": [
-          "oklch(15% 0.0349 269.3)",
-          "oklch(27% 0.0349 269.3)",
-          "oklch(39% 0.0349 269.3)",
-          "oklch(51% 0.0349 269.3)",
-          "oklch(63% 0.0349 269.3)",
-          "oklch(75% 0.0349 269.3)",
-          "oklch(87% 0.0349 269.3)",
-          "oklch(95% 0.0349 269.3)"
-        ]
+        "displayName": "dark muted",
+        "canonical": "#c9c1ba",
+        "role": "neutral"
       },
       "dark-rule": {
-        "role": "neutral",
-        "displayName": "Dark Rule",
-        "canonical": "#4e5b7b",
-        "tonalRamp": [
-          "oklch(15% 0.0546 267.2)",
-          "oklch(27% 0.0546 267.2)",
-          "oklch(39% 0.0546 267.2)",
-          "oklch(51% 0.0546 267.2)",
-          "oklch(63% 0.0546 267.2)",
-          "oklch(75% 0.0546 267.2)",
-          "oklch(87% 0.0546 267.2)",
-          "oklch(95% 0.0546 267.2)"
-        ]
+        "displayName": "dark rule",
+        "canonical": "#55504d",
+        "role": "neutral"
       },
       "dark-accent": {
-        "role": "neutral",
-        "displayName": "Dark Accent",
-        "canonical": "#b8c9ff",
-        "tonalRamp": [
-          "oklch(15% 0.0781 271.1)",
-          "oklch(27% 0.0781 271.1)",
-          "oklch(39% 0.0781 271.1)",
-          "oklch(51% 0.0781 271.1)",
-          "oklch(63% 0.0781 271.1)",
-          "oklch(75% 0.0781 271.1)",
-          "oklch(87% 0.0781 271.1)",
-          "oklch(95% 0.0781 271.1)"
-        ]
+        "displayName": "dark accent",
+        "canonical": "#f18c7e",
+        "role": "neutral"
       },
-      "dark-hero": {
-        "role": "neutral",
-        "displayName": "Dark Hero",
-        "canonical": "#263456",
-        "tonalRamp": [
-          "oklch(15% 0.0633 266.1)",
-          "oklch(27% 0.0633 266.1)",
-          "oklch(39% 0.0633 266.1)",
-          "oklch(51% 0.0633 266.1)",
-          "oklch(63% 0.0633 266.1)",
-          "oklch(75% 0.0633 266.1)",
-          "oklch(87% 0.0633 266.1)",
-          "oklch(95% 0.0633 266.1)"
-        ]
+      "dark-soft-field": {
+        "displayName": "dark soft field",
+        "canonical": "#2c2927",
+        "role": "neutral"
       },
       "dark-tint": {
-        "role": "neutral",
-        "displayName": "Dark Tint",
-        "canonical": "#2a395e",
-        "tonalRamp": [
-          "oklch(15% 0.0678 266.3)",
-          "oklch(27% 0.0678 266.3)",
-          "oklch(39% 0.0678 266.3)",
-          "oklch(51% 0.0678 266.3)",
-          "oklch(63% 0.0678 266.3)",
-          "oklch(75% 0.0678 266.3)",
-          "oklch(87% 0.0678 266.3)",
-          "oklch(95% 0.0678 266.3)"
-        ]
+        "displayName": "dark tint",
+        "canonical": "#352a27",
+        "role": "neutral"
       }
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Expressive Display",
-        "purpose": "Hero proposition and major questions. Same variable family as body."
+        "purpose": "Opening invitation; separate fluid phone scale."
       },
-      "body": {
-        "displayName": "Reading Text",
-        "purpose": "Long Romanian prose and form controls, with automatic optical sizing."
+      "letter": {
+        "purpose": "Personal first-person founder copy."
       }
     },
     "shadows": [],
     "motion": [
       {
-        "name": "ease-out",
-        "value": "cubic-bezier(.23, 1, .32, 1)",
-        "purpose": "Strong feedback easing."
-      },
-      {
         "name": "press",
-        "value": "140ms",
-        "purpose": "Subtle .98 button press."
+        "value": "140ms cubic-bezier(.23,1,.32,1)",
+        "purpose": "Scale .98 on button activation."
       },
       {
-        "name": "hero-copy-entry",
-        "value": "420ms",
-        "purpose": "Desktop-only 10px arrival with reduced-motion alternative."
-      },
-      {
-        "name": "hero-image-entry",
-        "value": "520ms 50ms",
-        "purpose": "Desktop-only image entry and delay."
+        "name": "entrance",
+        "value": "420ms / 520ms",
+        "purpose": "One restrained desktop entrance; disabled for reduced motion."
       }
     ],
     "breakpoints": [
       {
-        "name": "narrow",
+        "name": "small",
         "value": "359px"
       },
       {
-        "name": "mobile",
+        "name": "phone",
         "value": "767px"
-      },
-      {
-        "name": "compact-content",
-        "value": "900px"
       },
       {
         "name": "compact-navigation",
         "value": "980px"
       },
       {
-        "name": "small-desktop",
+        "name": "tablet",
         "value": "1100px"
       }
     ]
@@ -426,82 +180,64 @@
       "name": "Primary button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The workshop action: a solid blue control with press, pointer-hover and keyboard-focus feedback.",
-      "html": "<button class=\"ds-primary\">Descoperă workshop-urile <svg aria-hidden=\"true\" width=\"22\" height=\"22\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z\"/></svg></button>",
-      "css": ".ds-primary,.ds-ink{display:inline-flex;align-items:center;justify-content:center;gap:20px;min-height:54px;padding:16px 22px;border:1px solid var(--button,#2847bd);border-radius:3px;color:#fff;background:var(--button,#2847bd);font:700 14px/1.3 'Bricolage Grotesque Variable',sans-serif;text-decoration:none;cursor:pointer;transition:transform 140ms cubic-bezier(.23,1,.32,1),background-color 160ms ease}.ds-primary:active,.ds-ink:active{transform:scale(.98)}@media(hover:hover) and (pointer:fine){.ds-primary:hover{background:#1b3191;border-color:#1b3191}.ds-ink:hover{background:#101a40;border-color:#101a40}}@media(prefers-reduced-motion:reduce){.ds-primary,.ds-ink{transition:none}}.ds-primary:focus-visible,.ds-ink:focus-visible,.ds-recall button:focus-visible,.ds-workshop summary:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-nav summary:focus-visible{outline:3px solid var(--accent,#2847bd);outline-offset:5px}"
+      "description": "Actual V3 primary button markup and relevant responsive styles.",
+      "html": "<a class=\"button\" href=\"#workshopuri\">Descoperă workshop-urile </a>",
+      "css": ":host{font-family:\"Bricolage Grotesque Variable\",sans-serif;--paper:#f7f6f2;--surface:#fffefd;--ink:#242323;--muted:#615d5a;--rule:#d4cfcb;--accent:#b3342a;--button:#b3342a;--tint:#f3e9e5;--ease-out:cubic-bezier(.23,1,.32,1);color:var(--ink)}*{box-sizing:border-box}[hidden]{display:none!important}p,h3,ul{margin:0}p{line-height:1.7}button,input,textarea{font:inherit}button{cursor:pointer}:focus-visible{outline:3px solid var(--accent);outline-offset:5px}\n.button { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 54px; padding: 16px 22px; border: 1px solid var(--button); border-radius: 3px; color: #fff; background: var(--button); font-size: 14px; font-weight: 700; line-height: 1.3; text-decoration: none; transition: transform 140ms var(--ease-out), background-color 160ms ease; }\n.button:active { transform: scale(.98); }\n.button-ink { --button: #242323; }\n\n@media (hover: hover) and (pointer: fine) {\n  .button:hover { background: #91281f; border-color: #91281f; }\n  .button-ink:hover { background: #161515; border-color: #161515; }\n}\n.button-ink { --button: #242323; }"
     },
     {
-      "name": "Ink button",
-      "kind": "button",
-      "refersTo": "button-ink",
-      "description": "The dark action variant used inside the yellow learning exercise.",
-      "html": "<button class=\"ds-ink\" style=\"--button:#18275c\">Le-am citit. Le ascund. <svg aria-hidden=\"true\" width=\"22\" height=\"22\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z\"/></svg></button>",
-      "css": ".ds-primary,.ds-ink{display:inline-flex;align-items:center;justify-content:center;gap:20px;min-height:54px;padding:16px 22px;border:1px solid var(--button,#2847bd);border-radius:3px;color:#fff;background:var(--button,#2847bd);font:700 14px/1.3 'Bricolage Grotesque Variable',sans-serif;text-decoration:none;cursor:pointer;transition:transform 140ms cubic-bezier(.23,1,.32,1),background-color 160ms ease}.ds-primary:active,.ds-ink:active{transform:scale(.98)}@media(hover:hover) and (pointer:fine){.ds-primary:hover{background:#1b3191;border-color:#1b3191}.ds-ink:hover{background:#101a40;border-color:#101a40}}@media(prefers-reduced-motion:reduce){.ds-primary,.ds-ink{transition:none}}.ds-primary:focus-visible,.ds-ink:focus-visible,.ds-recall button:focus-visible,.ds-workshop summary:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-nav summary:focus-visible{outline:3px solid var(--accent,#2847bd);outline-offset:5px}"
-    },
-    {
-      "name": "Recall exercise",
+      "name": "Active recall",
       "kind": "custom",
-      "refersTo": "recall-exercise",
-      "description": "A representative read-state preview. The page script provides read, recall and reveal states; this snippet is a static component preview.",
-      "html": "<section class=\"ds-recall\"><p class=\"ds-instruction\">Citește cuvintele. Apoi ascunde-le.</p><div class=\"ds-stage\"><div class=\"ds-words\"><span>curiozitate</span><span>întrebare</span><span>descoperire</span></div></div><button class=\"ds-ink\" style=\"--button:#18275c\">Le-am citit. Le ascund. <svg aria-hidden=\"true\" width=\"22\" height=\"22\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z\"/></svg></button></section>",
-      "css": ".ds-recall{max-width:560px;background:#f1eb8f;color:#18275c;border:1px solid #18275c;padding:28px 34px;font-family:'Bricolage Grotesque Variable',sans-serif}.ds-instruction{font-size:14px;font-weight:600;line-height:1.7;max-width:45ch;min-height:48px;margin:0}.ds-stage{min-height:192px;display:flex;align-items:center;padding:20px 0}.ds-words{display:grid;gap:4px;font-size:44px;line-height:1.12;font-weight:600;letter-spacing:-.025em}.ds-primary,.ds-ink{display:inline-flex;align-items:center;justify-content:center;gap:20px;min-height:54px;padding:16px 22px;border:1px solid var(--button,#2847bd);border-radius:3px;color:#fff;background:var(--button,#2847bd);font:700 14px/1.3 'Bricolage Grotesque Variable',sans-serif;text-decoration:none;cursor:pointer;transition:transform 140ms cubic-bezier(.23,1,.32,1),background-color 160ms ease}.ds-primary:active,.ds-ink:active{transform:scale(.98)}@media(hover:hover) and (pointer:fine){.ds-primary:hover{background:#1b3191;border-color:#1b3191}.ds-ink:hover{background:#101a40;border-color:#101a40}}@media(prefers-reduced-motion:reduce){.ds-primary,.ds-ink{transition:none}}.ds-primary:focus-visible,.ds-ink:focus-visible,.ds-recall button:focus-visible,.ds-workshop summary:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-nav summary:focus-visible{outline:3px solid var(--accent,#2847bd);outline-offset:5px}.ds-recall button:focus-visible{outline-color:#18275c}@media(max-width:767px){.ds-recall{padding:22px 24px}.ds-words{font-size:37px}.ds-stage{min-height:188px}}"
+      "description": "Actual V3 active recall markup and relevant responsive styles.",
+      "html": "<div class=\"recall-experiment\" data-recall=\"\">\n          <p class=\"recall-instruction\" id=\"recall-instruction\">Citește cuvintele. Apoi ascunde-le.</p>\n          <div class=\"recall-stage\" aria-live=\"polite\" aria-atomic=\"true\">\n            <div class=\"recall-words\" id=\"recall-words\"><span>curiozitate</span><span>întrebare</span><span>descoperire</span></div>\n            <p class=\"recall-question\" id=\"recall-question\" hidden=\"\">Ce trei cuvinte<br>ai citit?</p>\n          </div>\n          <div class=\"recall-controls\" data-recall-controls=\"\" hidden=\"\"><button type=\"button\" class=\"button button-ink\" id=\"recall-action\" aria-controls=\"recall-words recall-question\">Le-am citit. Le ascund. </button><button type=\"button\" class=\"recall-reset\" id=\"recall-reset\" hidden=\"\">De la început</button></div>\n          <p class=\"recall-explanation\" id=\"recall-explanation\" hidden=\"\"><strong>Tocmai ai încercat reamintirea activă.</strong> Încerci să aduci informația din memorie înainte să o revezi. Poți folosi aceeași idee după o pagină de curs.</p>\n          <noscript><p class=\"recall-explanation\"><strong>Reamintirea activă:</strong> acoperă cuvintele cu mâna și încearcă să le spui fără să te uiți. Apoi verifică. Poți face la fel cu o idee din curs.</p></noscript>\n        </div>",
+      "css": ":host{font-family:\"Bricolage Grotesque Variable\",sans-serif;--paper:#f7f6f2;--surface:#fffefd;--ink:#242323;--muted:#615d5a;--rule:#d4cfcb;--accent:#b3342a;--button:#b3342a;--tint:#f3e9e5;--ease-out:cubic-bezier(.23,1,.32,1);color:var(--ink)}*{box-sizing:border-box}[hidden]{display:none!important}p,h3,ul{margin:0}p{line-height:1.7}button,input,textarea{font:inherit}button{cursor:pointer}:focus-visible{outline:3px solid var(--accent);outline-offset:5px}\n.button { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 54px; padding: 16px 22px; border: 1px solid var(--button); border-radius: 3px; color: #fff; background: var(--button); font-size: 14px; font-weight: 700; line-height: 1.3; text-decoration: none; transition: transform 140ms var(--ease-out), background-color 160ms ease; }\n.button:active { transform: scale(.98); }\n.button-ink { --button: #242323; }\n\n@media (hover: hover) and (pointer: fine) {\n  .button:hover { background: #91281f; border-color: #91281f; }\n  .button-ink:hover { background: #161515; border-color: #161515; }\n}\n.recall-experiment { color: #242323; --ink: #242323; --muted: #615d5a; --paper: #f7eeeb; --accent: #b3342a; margin-top: 24px; padding: 24px 28px; background: #f7eeeb; }\n.recall-instruction { font-size: 14px; line-height: 1.6; min-height: 45px; font-weight: 500; }\n.recall-stage { min-height: 180px; display: flex; align-items: center; padding-block: 20px; }\n.recall-words { display: grid; gap: 5px; font-size: clamp(30px, 3vw, 40px); line-height: 1.16; font-weight: 550; letter-spacing: -.02em; }\n.recall-question { font-size: 36px; line-height: 1.15; letter-spacing: -.025em; }\n.recall-controls { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; }\n.button-ink { --button: #242323; }\n.recall-controls .button { font-size: 13px; gap: 14px; padding-inline: 17px; }\n.recall-reset { color: #242323; background: transparent; border: 0; min-height: 44px; padding: 10px 0; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }\n.recall-explanation { margin-top: 23px; padding-top: 18px; border-top: 1px solid #cdb7b0; font-size: 16px; }\n.recall-explanation strong { display: block; font-weight: 600; margin-bottom: 8px; }\n.recall-experiment :focus-visible { outline-color: #b3342a; }\n@media (max-width: 1100px) and (min-width: 768px) {\n  .recall-experiment { padding-inline: 22px; }\n}\n@media (max-width: 767px) {\n  .recall-experiment { padding: 22px 24px; margin-top: 20px; }\n  .recall-instruction { font-size: 14px; }\n  .recall-stage { min-height: 180px; }\n  .recall-words { font-size: 35px; }\n  .recall-question { font-size: 33px; }\n  .recall-controls .button { font-size: 13px; padding-inline: 15px; gap: 12px; }\n}\n@media (max-width: 359px) {\n  .recall-experiment { padding-inline: 20px; }\n  .recall-words { font-size: 30px; }\n  .recall-controls .button { font-size: 12px; }\n}"
     },
     {
       "name": "Workshop disclosure",
       "kind": "custom",
-      "description": "Native expandable programme detail, with an open-state colour and plus rotation.",
-      "html": "<details class=\"ds-workshop\"><summary><span class=\"ds-name\">Learning Skills<span>Învață inteligent</span></span><svg aria-hidden=\"true\" class=\"ds-plus\" width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z\"/></svg></summary><div class=\"ds-content\"><p>Înțelege, organizează, aplică.</p><ul><li>Tehnici moderne de învățare.</li><li>Organizarea și structurarea informației.</li></ul></div></details>",
-      "css": ".ds-workshop{font-family:'Bricolage Grotesque Variable',sans-serif;color:var(--ink,#18275c);border-top:2px solid var(--ink,#18275c);border-bottom:1px solid var(--rule,#c7cbd5)}.ds-workshop summary{padding:25px 0;display:flex;align-items:center;justify-content:space-between;gap:30px;cursor:pointer;list-style:none}.ds-workshop summary::-webkit-details-marker{display:none}.ds-name{display:flex;width:100%;gap:30px;align-items:baseline;justify-content:space-between;font-size:36px;font-weight:600;letter-spacing:-.03em;line-height:1.2}.ds-name>span{font-size:13px;font-weight:500;letter-spacing:0;color:var(--muted,#4b5573)}.ds-plus{flex-shrink:0}.ds-workshop[open] .ds-name{color:var(--accent,#2847bd)}.ds-workshop[open] .ds-plus{transform:rotate(45deg)}.ds-content{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:0 64px 28px 0;font-size:16px;line-height:1.8}.ds-content p,.ds-content ul{margin:0}.ds-content p{color:var(--muted,#4b5573)}@media(hover:hover) and (pointer:fine){.ds-workshop summary:hover .ds-name{color:var(--accent,#2847bd)}}@media(max-width:767px){.ds-workshop summary{gap:14px;padding:22px 0}.ds-name{flex-direction:column;gap:9px;font-size:28px}.ds-content{grid-template-columns:1fr;padding:0 0 24px;gap:18px}}.ds-primary:focus-visible,.ds-ink:focus-visible,.ds-recall button:focus-visible,.ds-workshop summary:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-nav summary:focus-visible{outline:3px solid var(--accent,#2847bd);outline-offset:5px}"
+      "description": "Actual V3 workshop disclosure markup and relevant responsive styles.",
+      "html": "<details class=\"workshop\" id=\"time\"><summary><span class=\"workshop-name\">Organizează-ți timpul<span>Time &amp; Productivity</span></span></summary><div class=\"workshop-content\"><p>Fă loc lucrurilor care contează. Construiește un mod de lucru pe care îl poți susține.</p><ul><li>Planificarea activităților.</li><li>Stabilirea priorităților.</li><li>Gestionarea obiectivelor.</li><li>Construirea unor rutine eficiente.</li></ul></div></details>",
+      "css": ":host{font-family:\"Bricolage Grotesque Variable\",sans-serif;--paper:#f7f6f2;--surface:#fffefd;--ink:#242323;--muted:#615d5a;--rule:#d4cfcb;--accent:#b3342a;--button:#b3342a;--tint:#f3e9e5;--ease-out:cubic-bezier(.23,1,.32,1);color:var(--ink)}*{box-sizing:border-box}[hidden]{display:none!important}p,h3,ul{margin:0}p{line-height:1.7}button,input,textarea{font:inherit}button{cursor:pointer}:focus-visible{outline:3px solid var(--accent);outline-offset:5px}\n\n.workshop-section { background: #252221; color: #f8f4f0; --paper: #252221; --surface: #302b29; --ink: #f8f4f0; --muted: #d3c9c1; --rule: #5b504b; --accent: #f18c7e; --tint: #352c29; }\n.workshop summary { display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 23px 0; cursor: pointer; list-style: none; }\n.workshop summary > .ph { font-size: 24px; }\n.workshop-name { display: flex; flex-direction: column; gap: 9px; font-size: clamp(26px, 2.7vw, 36px); line-height: 1.16; letter-spacing: -.025em; font-weight: 600; }\n.workshop-name > span { font-size: 13px; color: var(--muted); letter-spacing: 0; font-weight: 450; }\n.workshop[open] > summary { color: var(--accent); }\n.workshop[open] > summary > .ph-plus { transform: rotate(45deg); }\n.workshop-content { font-size: 16px; padding-bottom: 26px; }\n.workshop-content > p { color: var(--muted); max-width: 48ch; margin-bottom: 18px; }\n.workshop-content ul { font-size: 16px; }\n.workshop-section :focus-visible { outline-color: #f18c7e; }\n\n@media (hover: hover) and (pointer: fine) {\n  .workshop > summary:hover { color: var(--accent); }\n}\n@media (max-width: 767px) {\n  .workshop summary { padding-block: 22px; }\n  .workshop-name { font-size: 28px; }\n  .workshop-name > span { font-size: 13px; }\n  .workshop-content { padding-bottom: 24px; }\n}"
     },
     {
       "name": "Labelled input",
       "kind": "input",
       "refersTo": "input",
-      "description": "Visible label, readable input text and a clear native keyboard-focus outline.",
-      "html": "<label class=\"ds-label\" for=\"ds-contact-name\">Nume și prenume<input class=\"ds-input\" id=\"ds-contact-name\" name=\"Nume\" autocomplete=\"name\" required placeholder=\"Cum te numești?\" /></label>",
-      "css": ".ds-label{display:flex;flex-direction:column;gap:10px;font:650 14px 'Bricolage Grotesque Variable',sans-serif;color:var(--ink,#18275c)}.ds-input{min-width:0;width:100%;box-sizing:border-box;min-height:52px;border:1px solid var(--rule,#c7cbd5);border-radius:3px;padding:14px;background:var(--paper,#fbf9ef);color:var(--ink,#18275c);font:400 16px 'Bricolage Grotesque Variable',sans-serif;caret-color:var(--accent,#2847bd)}.ds-input::placeholder{color:var(--muted,#4b5573);opacity:1;font-size:14px}.ds-primary:focus-visible,.ds-ink:focus-visible,.ds-recall button:focus-visible,.ds-workshop summary:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-nav summary:focus-visible{outline:3px solid var(--accent,#2847bd);outline-offset:5px}"
-    },
-    {
-      "name": "Navigation",
-      "kind": "nav",
-      "refersTo": "navigation",
-      "description": "Text wordmark, desktop links and a compact native disclosure at smaller widths. The live page also closes the menu on selection or Escape.",
-      "html": "<header class=\"ds-nav\"><a class=\"ds-brand\" href=\"#acasa\"><span class=\"ds-edu\">EDU</span><span class=\"ds-mind\">MindSet</span></a><nav class=\"ds-desktop\" aria-label=\"Navigare principală\"><a href=\"#despre\">Despre noi</a><a href=\"#workshopuri\">Workshop-uri</a><a href=\"#contact\">Hai să vorbim</a></nav><details class=\"ds-mobile\"><summary>Meniu</summary><nav aria-label=\"Navigare pe mobil\"><a href=\"#despre\">Despre noi</a><a href=\"#workshopuri\">Workshop-uri</a><a href=\"#contact\">Contact</a></nav></details></header>",
-      "css": ".ds-nav{position:relative;display:flex;align-items:center;gap:30px;min-height:80px;padding:0 24px;background:var(--paper,#fbf9ef);color:var(--ink,#18275c);font-family:'Bricolage Grotesque Variable',sans-serif}.ds-nav a{color:inherit;text-decoration:none}.ds-brand{display:inline-flex;align-items:center;gap:6px}.ds-edu{font-size:43px;font-weight:800;letter-spacing:-.06em;line-height:1}.ds-mind{writing-mode:vertical-rl;transform:rotate(180deg);font-size:12px;font-weight:800;letter-spacing:-.04em;color:var(--accent,#2847bd)}.ds-desktop{display:flex;gap:28px;margin-left:auto;font-size:13px;font-weight:650}.ds-desktop a{min-height:44px;display:inline-flex;align-items:center}.ds-desktop a:last-child{color:var(--accent,#2847bd)}.ds-mobile{display:none;margin-left:auto}.ds-mobile summary{min-height:44px;display:flex;align-items:center;cursor:pointer;list-style:none;font-size:14px}.ds-mobile nav{display:grid;gap:0;padding:12px 0}.ds-mobile a{display:flex;align-items:center;min-height:48px;font-size:17px}@media(hover:hover) and (pointer:fine){.ds-nav a:hover{text-decoration:underline}}@media(max-width:980px){.ds-desktop{display:none}.ds-mobile{display:block}}@media(max-width:767px){.ds-nav{min-height:68px;padding:0 20px}.ds-edu{font-size:36px}.ds-mind{font-size:12px}}.ds-primary:focus-visible,.ds-ink:focus-visible,.ds-recall button:focus-visible,.ds-workshop summary:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-nav summary:focus-visible{outline:3px solid var(--accent,#2847bd);outline-offset:5px}"
+      "description": "Actual V3 labelled input markup and relevant responsive styles.",
+      "html": "<form><label for=\"name\">Nume și prenume<input id=\"name\" name=\"Nume\" autocomplete=\"name\" maxlength=\"120\" required=\"\" placeholder=\"Cum te numești?\"></label></form>",
+      "css": ":host{font-family:\"Bricolage Grotesque Variable\",sans-serif;--paper:#f7f6f2;--surface:#fffefd;--ink:#242323;--muted:#615d5a;--rule:#d4cfcb;--accent:#b3342a;--button:#b3342a;--tint:#f3e9e5;--ease-out:cubic-bezier(.23,1,.32,1);color:var(--ink)}*{box-sizing:border-box}[hidden]{display:none!important}p,h3,ul{margin:0}p{line-height:1.7}button,input,textarea{font:inherit}button{cursor:pointer}:focus-visible{outline:3px solid var(--accent);outline-offset:5px}input, textarea { font: inherit; }input, textarea { outline-offset: 5px; }input, textarea { caret-color: var(--accent); }form label { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; font-size: 14px; font-weight: 650; }input, textarea { min-width: 0; width: 100%; background: var(--paper); color: var(--ink); border: 1px solid var(--rule); border-radius: 3px; padding: 14px; font-size: 16px; font-weight: 400; }input { min-height: 52px; }textarea { min-height: 140px; resize: vertical; }input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; font-size: 14px; }"
     }
   ],
   "narrative": {
-    "northStar": "Learning in progress",
-    "overview": "A curious, direct educational identity pairs expressive lettering with real photographs of Alexandru and useful opportunities to participate. Blue ink, yellow learning surfaces, and a warm orange counterpoint give the page energy without borrowing a luxury aesthetic. The source-derived hero cutout shares space with typography rather than sitting inside a generic image card.\n\nThis documents the implemented V2 source, replacing V1's red and green-grey system. Page-specific narrative and asset decisions remain in `docs/v2-direction.md`. Final captures are being collected in `.impeccable/review/v2`, including `desktop-final.jpg` and `small-final.jpg`; see `docs/verification-v2.md` for the exact verification evidence and limits.",
+    "northStar": "A personal teaching space",
+    "overview": "The original red and charcoal identity frames a first-person invitation, an open founder letter and a working programme. Supplied photographs have distinct jobs; the optional recall activity demonstrates participation.",
     "keyCharacteristics": [
-      "Expressive display type, clear body copy, and flat coloured surfaces.",
-      "Real photographic subjects integrated with the surrounding composition.",
-      "Learning demonstrated through an optional recall exercise.",
-      "Responsive reflow, native disclosures, and readable interaction states."
+      "Logo red and charcoal",
+      "Photographic compositing",
+      "Open first-person letter",
+      "Programme with embedded learning demonstration",
+      "Responsive native disclosures"
     ],
     "rules": [
       {
-        "name": "The Colour Roles Rule",
-        "body": "Keep each colour's job consistent instead of assigning every section a new palette.",
+        "name": "Identity and contrast",
+        "body": "Logo red is artwork; darker red supports small actions and links.",
         "section": "colors"
       },
       {
-        "name": "The Readable Copy Rule",
-        "body": "Keep explanatory prose legible on mobile instead of shrinking it to preserve a desktop arrangement.",
-        "section": "typography"
+        "name": "Truth before decoration",
+        "body": "Use supplied words and real photographs without invented personal artifacts or character claims.",
+        "section": "elevation"
       }
     ],
     "dos": [
-      "**Do** preserve Romanian diacritics, the founder's full name, and the supplied content archive.",
-      "**Do** keep image variants, crops, and preloads aligned with the actual layout.",
-      "**Do** retain keyboard access, visible focus, reduced-motion support, and no-JavaScript fallbacks.",
-      "**Do** label upcoming workshops and resources honestly and explain the email handoff."
+      "Preserve Romanian copy and diacritics.",
+      "Keep coming-soon status and honest email handoff.",
+      "Keep source-derived cutout provenance."
     ],
     "donts": [
-      "**Don't** restore V1's red/green-grey palette or its interchangeable photo-card rhythm.",
-      "**Don't** use em dashes in new visible copy or supporting guidance.",
-      "**Don't** invent dates, prices, testimonials, partners, attendance figures, registration availability, or downloadable resources.",
-      "**Don't** present the auditorium image as proof of a previous UnitED event or the AI-assisted cutout as an untouched photograph."
+      "Do not publish private personality descriptions or invented testimonials.",
+      "Do not invent workshop dates or booking availability.",
+      "Do not restore discarded V2 blue/yellow identity."
     ]
   }
 }

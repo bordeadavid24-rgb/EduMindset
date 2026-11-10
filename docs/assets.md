@@ -19,3 +19,6 @@ Bricolage Grotesque variable: Fontsource, OFL-1.1. Phosphor regular icons: @phos
 `assets/derived/alex-laborator-cutout-v2.png` is an AI-assisted background-extraction edit made with the built-in image tool, based on the original microscope photograph. Its exact prompt is tracked in the adjacent `.prompt.txt`. The user source is unchanged. The image was inspected against that source before compositing. AVIF and WebP derivatives retain alpha transparency and use the real tabletop base. This is an edited photo asset; it is not described as an untouched documentary original.
 
 `npm run assets:v2` generates widths 360, 640, 960 and 1200, plus 400/800 AVIF portraits and a 360px lossless QR. The AVIF widths are approximately 11/23/41/55 KB. Mobile uses a WebP source for a different decode/transfer tradeoff. Portrait and auditorium photographs retain their source identities.
+
+## V3 reuse
+V3 introduces no new raster assets. The existing source-derived alpha cutout crosses a logo-red plane in the opening, the library portrait supports the founder letter, the original classroom photograph gives context to the programme on desktop, and the auditorium photograph remains editorial context for UnitED. None is represented as evidence of a past project event. Existing responsive derivatives and provenance remain valid.

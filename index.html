@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#fbf9ef" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#141d36" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1b1b1b" media="(prefers-color-scheme: dark)" />
     <title>EDU MindSet | Educație cu direcție. Învățare cu sens.</title>
     <meta name="description" content="Învață inteligent. Gândește liber. Evoluează constant. Descoperă EDU MindSet, proiectul educațional creat de Alexandru-Constantin Tulică: workshop-uri, idei și direcții pentru tineri." />
     <meta property="og:type" content="website" />
@@ -15,8 +15,8 @@
     <meta property="og:image" content="./images/alexandru-laborator-1200.webp" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <script>try { const previewTheme = new URLSearchParams(location.search).get('theme'); const theme = ['light', 'dark'].includes(previewTheme) ? previewTheme : localStorage.getItem('edumindset-theme'); if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme; } catch {}</script>
-    <link rel="preload" as="image" media="(min-width: 768px)" type="image/avif" fetchpriority="high" href="./images/alex-laborator-cutout-960.avif" imagesrcset="./images/alex-laborator-cutout-360.avif 360w, ./images/alex-laborator-cutout-640.avif 640w, ./images/alex-laborator-cutout-960.avif 960w, ./images/alex-laborator-cutout-1200.avif 1200w" imagesizes="(max-width: 767px) min(calc(90vw - 36px), 333px), (min-width: 1440px) 622px, calc(49vw - 52px)" />
-    <link rel="preload" as="image" media="(max-width: 767px)" type="image/webp" fetchpriority="high" href="./images/alex-laborator-cutout-960.webp" imagesrcset="./images/alex-laborator-cutout-360.webp 360w, ./images/alex-laborator-cutout-640.webp 640w, ./images/alex-laborator-cutout-960.webp 960w, ./images/alex-laborator-cutout-1200.webp 1200w" imagesizes="(max-width: 767px) min(calc(90vw - 36px), 333px), (min-width: 1440px) 622px, calc(49vw - 52px)" />
+    <link rel="preload" as="image" media="(min-width: 768px)" type="image/avif" fetchpriority="high" href="./images/alex-laborator-cutout-960.avif" imagesrcset="./images/alex-laborator-cutout-360.avif 360w, ./images/alex-laborator-cutout-640.avif 640w, ./images/alex-laborator-cutout-960.avif 960w, ./images/alex-laborator-cutout-1200.avif 1200w" imagesizes="(max-width: 767px) min(calc(100vw - 48px), 380px), (min-width: 1440px) 590px, 46vw" />
+    <link rel="preload" as="image" media="(max-width: 767px)" type="image/webp" fetchpriority="high" href="./images/alex-laborator-cutout-960.webp" imagesrcset="./images/alex-laborator-cutout-360.webp 360w, ./images/alex-laborator-cutout-640.webp 640w, ./images/alex-laborator-cutout-960.webp 960w, ./images/alex-laborator-cutout-1200.webp 1200w" imagesizes="(max-width: 767px) min(calc(100vw - 48px), 380px), (min-width: 1440px) 590px, 46vw" />
     <link rel="preload" as="font" type="font/woff2" crossorigin href="/src/fonts/bricolage-grotesque-latin-wght-normal.woff2" />
     <link rel="preload" as="font" type="font/woff2" crossorigin href="/src/fonts/bricolage-grotesque-latin-ext-wght-normal.woff2" />
     <link rel="stylesheet" href="/src/style.css" />
@@ -28,34 +28,56 @@
       <div class="header-inner wrap">
         <a class="brand" href="#acasa" title="Acasă"><span class="brand-edu">EDU</span><span class="brand-mind">MindSet</span></a>
         <nav class="desktop-nav" aria-label="Navigare principală">
-          <a href="#despre">Despre noi</a><a href="#workshopuri">Workshop-uri</a><a href="#united">UnitED</a><a href="#resurse">Resurse</a><a href="#contact">Hai să vorbim <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+          <a href="#despre">Despre proiect</a><a href="#workshopuri">Workshop-uri</a><a href="#united">UnitED</a><a href="#resurse">Resurse</a><a href="#contact">Hai să vorbim <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
         </nav>
         <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Activează aspectul luminos" title="Schimbă aspectul" hidden><i class="ph ph-sun" aria-hidden="true"></i></button>
         <details class="mobile-nav">
           <summary>Meniu <i class="ph ph-list" aria-hidden="true"></i></summary>
-          <nav aria-label="Navigare pe mobil"><a href="#acasa">Acasă</a><a href="#despre">Despre noi</a><a href="#workshopuri">Workshop-uri</a><a href="#united">UnitED</a><a href="#resurse">Resurse</a><a href="#contact">Contact</a></nav>
+          <nav aria-label="Navigare pe mobil"><a href="#acasa">Acasă</a><a href="#despre">Despre proiect</a><a href="#workshopuri">Workshop-uri</a><a href="#united">UnitED</a><a href="#resurse">Resurse</a><a href="#contact">Contact</a></nav>
         </details>
       </div>
     </header>
     <main id="continut">
       <section class="hero" id="acasa" aria-labelledby="hero-title">
         <div class="hero-inner wrap">
+          <div class="hero-title"><h1 id="hero-title">Învățarea începe<br />cu o <span>întrebare.</span></h1></div>
           <div class="hero-copy">
-            <h1 id="hero-title">Nu pe de rost.<br /><span>Pe <em>înțeles.</em></span></h1>
-            <p>Nu este suficient să înveți. Contează <strong>cum înveți.</strong> Descoperă metode, pune întrebări și găsește-ți propria direcție.</p>
-            <a class="button" href="#workshopuri">Găsește-ți punctul de plecare <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a>
-            <a class="hero-method-link" href="#incearca">Sau încearcă o metodă, chiar aici <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+            <p class="hero-welcome">Salut! Sunt <strong>Alex.</strong></p>
+            <p>Am creat EDU MindSet din convingerea că educația înseamnă mai mult decât acumularea de informații.</p>
+            <p class="hero-belief">Nu este suficient să înveți.<br /><strong>Contează cum înveți.</strong></p>
+            <div class="hero-actions"><a class="button" href="#workshopuri">Descoperă workshop-urile <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a><a class="hero-method-link" href="#incearca">Încearcă o metodă <i class="ph ph-arrow-right" aria-hidden="true"></i></a></div>
           </div>
           <figure class="hero-scene">
-            <span class="scene-question" aria-hidden="true">?</span>
-            <picture><source media="(max-width: 767px)" type="image/webp" srcset="./images/alex-laborator-cutout-360.webp 360w, ./images/alex-laborator-cutout-640.webp 640w, ./images/alex-laborator-cutout-960.webp 960w, ./images/alex-laborator-cutout-1200.webp 1200w" sizes="min(calc(90vw - 36px), 333px)" /><source type="image/avif" srcset="./images/alex-laborator-cutout-360.avif 360w, ./images/alex-laborator-cutout-640.avif 640w, ./images/alex-laborator-cutout-960.avif 960w, ./images/alex-laborator-cutout-1200.avif 1200w" sizes="(max-width: 767px) min(calc(90vw - 36px), 333px), (min-width: 1440px) 622px, calc(49vw - 52px)" /><img src="./images/alex-laborator-cutout-960.webp" srcset="./images/alex-laborator-cutout-360.webp 360w, ./images/alex-laborator-cutout-640.webp 640w, ./images/alex-laborator-cutout-960.webp 960w, ./images/alex-laborator-cutout-1200.webp 1200w" sizes="(max-width: 767px) min(calc(90vw - 36px), 333px), (min-width: 1440px) 622px, calc(49vw - 52px)" width="1193" height="1318" alt="Alexandru Tulică la microscop, cu mâinile pe instrumentul de lucru." fetchpriority="high" /></picture>
-            <figcaption><span>Cu Alex, fondatorul EDU MindSet.</span><strong>Curiozitatea se pune în practică.</strong></figcaption>
+            <span class="scene-plane" aria-hidden="true"></span>
+            <picture><source media="(max-width: 767px)" type="image/webp" srcset="./images/alex-laborator-cutout-360.webp 360w, ./images/alex-laborator-cutout-640.webp 640w, ./images/alex-laborator-cutout-960.webp 960w, ./images/alex-laborator-cutout-1200.webp 1200w" sizes="min(calc(100vw - 48px), 380px)" /><source type="image/avif" srcset="./images/alex-laborator-cutout-360.avif 360w, ./images/alex-laborator-cutout-640.avif 640w, ./images/alex-laborator-cutout-960.avif 960w, ./images/alex-laborator-cutout-1200.avif 1200w" sizes="(max-width: 767px) min(calc(100vw - 48px), 380px), (min-width: 1440px) 590px, 46vw" /><img src="./images/alex-laborator-cutout-960.webp" srcset="./images/alex-laborator-cutout-360.webp 360w, ./images/alex-laborator-cutout-640.webp 640w, ./images/alex-laborator-cutout-960.webp 960w, ./images/alex-laborator-cutout-1200.webp 1200w" sizes="(max-width: 767px) min(calc(100vw - 48px), 380px), (min-width: 1440px) 590px, 46vw" width="1193" height="1318" alt="Alexandru Tulică la microscop, cu mâinile pe instrumentul de lucru." fetchpriority="high" /></picture>
+            <figcaption><strong>Alexandru-Constantin Tulică</strong><span>Fondator EDU MindSet</span></figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="learning-lab wrap section-space" id="incearca" aria-labelledby="lab-title">
-        <div class="lab-intro"><h2 id="lab-title">Învățarea se învață.<br /><span>Hai să încercăm.</span></h2><p>Un exercițiu mic, înainte de explicațiile mari. Citește cele trei cuvinte și încearcă să le aduci din memorie.</p><a class="text-link" href="#learning">Continuă cu Learning Skills <i class="ph ph-arrow-right" aria-hidden="true"></i></a></div>
+      <section class="founder-section wrap section-space" id="despre" aria-labelledby="founder-title">
+        <div class="founder-heading"><h2 id="founder-title">De ce am creat<br /><span>EDU MindSet.</span></h2><p>O invitație la înțelegere, explorare și inițiativă.</p></div>
+        <div class="founder-inner">
+          <figure class="founder-photo"><picture><source type="image/avif" srcset="./images/alexandru-portret-400.avif 400w, ./images/alexandru-portret-800.avif 800w" sizes="(max-width: 767px) 200px, 300px" /><img src="./images/alexandru-portret-640.webp" srcset="./images/alexandru-portret-640.webp 640w, ./images/alexandru-portret-1200.webp 1200w" sizes="(max-width: 767px) 200px, 300px" width="1200" height="896" loading="lazy" alt="Portretul lui Alexandru-Constantin Tulică într-o bibliotecă." /></picture><figcaption><strong>Alexandru-Constantin Tulică</strong><span>Fondator EDU MindSet</span><p class="credentials">Profesor în învățământul preuniversitar.<br />Cadru didactic asociat în mediul universitar.<br />Doctor în Inginerie.</p></figcaption></figure>
+          <article class="founder-copy">
+            <p class="letter-greeting">Salut!</p>
+            <p>Am creat EDU MindSet din convingerea că educația înseamnă mai mult decât acumularea de informații. Înseamnă să înțelegi, să pui întrebări, să descoperi, să ai încredere în propriile idei și să găsești direcția potrivită pentru tine.</p>
+            <blockquote>„Cred în educația care oferă încredere, deschide perspective și îi ajută pe tineri să-și construiască propriul drum.”</blockquote>
+            <details class="reading-details"><summary>Povestea din spatele proiectului <i class="ph ph-plus" aria-hidden="true"></i></summary><div>
+            <p>De-a lungul experienței mele în mediul educațional și universitar, am întâlnit tineri cu potențial, curiozitate și idei extraordinare. Am înțeles că, uneori, nu lipsa capacității îi împiedică să evolueze, ci lipsa unor metode potrivite, a îndrumării și a oportunităților de a-și pune ideile în practică.</p>
+            <p>Așa a apărut EDU MindSet: din dorința de a construi experiențe educaționale relevante, în care învățarea, dezvoltarea personală și gândirea critică să se întâlnească.</p>
+
+          </div></details>
+            <p class="letter-signoff">Bine ai venit în universul EDU MindSet!<span>Alexandru-Constantin Tulică</span></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="workshop-section section-space" id="workshopuri" aria-labelledby="workshop-title">
+        <div class="wrap workshop-shell">
+        <div class="section-intro"><h2 id="workshop-title">Cu ce întrebare<br />vii la workshop?</h2><p>Workshop-urile EDU MindSet sunt experiențe interactive. Nu ești doar spectator: devii parte activă a procesului de învățare.</p><p>Fiecare întâlnire urmărește să ofere instrumente concrete, idei aplicabile și perspective noi.</p></div>
+        <div class="workshop-programme"><div class="workshop-feature"><details class="workshop" id="learning" open><summary><span class="workshop-name">Învață inteligent<span>Learning Skills</span></span><i class="ph ph-plus" aria-hidden="true"></i></summary><div class="workshop-content"><p>Înțelege, organizează, aplică. Descoperă metode care pot deveni parte din felul tău de a învăța.</p><ul><li>Tehnici moderne de învățare.</li><li>Organizarea și structurarea informației.</li><li>Metode de memorare și înțelegere.</li><li>Strategii de învățare adaptate propriului stil de lucru.</li></ul></div>      <div class="learning-lab" id="incearca" aria-labelledby="lab-title">
+        <div class="lab-intro"><h3 id="lab-title">Hai să încercăm,<br /><span>înainte să explicăm.</span></h3><p>Un exercițiu mic, înainte de explicațiile mari. Citește cele trei cuvinte și încearcă să le aduci din memorie.</p></div>
         <div class="recall-experiment" data-recall>
           <p class="recall-instruction" id="recall-instruction">Citește cuvintele. Apoi ascunde-le.</p>
           <div class="recall-stage" aria-live="polite" aria-atomic="true">
@@ -66,33 +88,10 @@
           <p class="recall-explanation" id="recall-explanation" hidden><strong>Tocmai ai încercat reamintirea activă.</strong> Încerci să aduci informația din memorie înainte să o revezi. Poți folosi aceeași idee după o pagină de curs.</p>
           <noscript><p class="recall-explanation"><strong>Reamintirea activă:</strong> acoperă cuvintele cu mâna și încearcă să le spui fără să te uiți. Apoi verifică. Poți face la fel cu o idee din curs.</p></noscript>
         </div>
-      </section>
-
-      <section class="workshop-section wrap section-space" id="workshopuri" aria-labelledby="workshop-title">
-        <div class="section-intro"><h2 id="workshop-title">Cu ce întrebare<br />vii la workshop?</h2><p>Workshop-urile EDU MindSet sunt experiențe interactive. Nu ești doar spectator: devii parte activă a procesului de învățare.</p><p>Fiecare întâlnire urmărește să ofere instrumente concrete, idei aplicabile și perspective noi.</p></div>
-        <div class="workshop-programme">
-          <details class="workshop" id="learning"><summary><span class="workshop-name">Învață inteligent<span>Learning Skills</span></span><i class="ph ph-plus" aria-hidden="true"></i></summary><div class="workshop-content"><p>Înțelege, organizează, aplică. Descoperă metode care pot deveni parte din felul tău de a învăța.</p><ul><li>Tehnici moderne de învățare.</li><li>Organizarea și structurarea informației.</li><li>Metode de memorare și înțelegere.</li><li>Strategii de învățare adaptate propriului stil de lucru.</li></ul></div></details>
-          <details class="workshop" id="time"><summary><span class="workshop-name">Organizează-ți timpul<span>Time &amp; Productivity</span></span><i class="ph ph-plus" aria-hidden="true"></i></summary><div class="workshop-content"><p>Fă loc lucrurilor care contează. Construiește un mod de lucru pe care îl poți susține.</p><ul><li>Planificarea activităților.</li><li>Stabilirea priorităților.</li><li>Gestionarea obiectivelor.</li><li>Construirea unor rutine eficiente.</li></ul></div></details>
-          <details class="workshop" id="growth"><summary><span class="workshop-name">Descoperă-ți potențialul<span>Mindset &amp; Personal Growth</span></span><i class="ph ph-plus" aria-hidden="true"></i></summary><div class="workshop-content"><p>Încrederea se construiește și prin încercări. Explorează ce te ajută să mergi mai departe.</p><ul><li>Încredere și autonomie.</li><li>Gestionarea provocărilor.</li><li>Depășirea blocajelor academice.</li><li>Responsabilitate și reziliență.</li></ul></div></details>
-          <details class="workshop" id="future"><summary><span class="workshop-name">Construiește-ți direcția<span>Future &amp; Career</span></span><i class="ph ph-plus" aria-hidden="true"></i></summary><div class="workshop-content"><p>Pune întrebări despre viitorul tău și găsește repere pentru următoarea alegere.</p><ul><li>Orientare academică și profesională.</li><li>Descoperirea competențelor relevante.</li><li>Luarea deciziilor informate.</li><li>Construirea unui parcurs personal coerent.</li></ul></div></details>
-        </div>
+      </div></details></div><div class="workshop-other"><details class="workshop" id="time"><summary><span class="workshop-name">Organizează-ți timpul<span>Time &amp; Productivity</span></span><i class="ph ph-plus" aria-hidden="true"></i></summary><div class="workshop-content"><p>Fă loc lucrurilor care contează. Construiește un mod de lucru pe care îl poți susține.</p><ul><li>Planificarea activităților.</li><li>Stabilirea priorităților.</li><li>Gestionarea obiectivelor.</li><li>Construirea unor rutine eficiente.</li></ul></div></details>
+<details class="workshop" id="growth"><summary><span class="workshop-name">Descoperă-ți potențialul<span>Mindset &amp; Personal Growth</span></span><i class="ph ph-plus" aria-hidden="true"></i></summary><div class="workshop-content"><p>Încrederea se construiește și prin încercări. Explorează ce te ajută să mergi mai departe.</p><ul><li>Încredere și autonomie.</li><li>Gestionarea provocărilor.</li><li>Depășirea blocajelor academice.</li><li>Responsabilitate și reziliență.</li></ul></div></details>
+<details class="workshop" id="future"><summary><span class="workshop-name">Construiește-ți direcția<span>Future &amp; Career</span></span><i class="ph ph-plus" aria-hidden="true"></i></summary><div class="workshop-content"><p>Pune întrebări despre viitorul tău și găsește repere pentru următoarea alegere.</p><ul><li>Orientare academică și profesională.</li><li>Descoperirea competențelor relevante.</li><li>Luarea deciziilor informate.</li><li>Construirea unui parcurs personal coerent.</li></ul></div></details><figure class="workshop-context"><img src="./images/alexandru-laborator-640.webp" width="640" height="709" loading="lazy" alt="Alexandru-Constantin Tulică lucrează la microscop într-o sală de științe." /><figcaption>Înțelegere, explorare și inițiativă.</figcaption></figure></div></div>
         <aside class="workshop-notice" aria-labelledby="notice-title"><div><p class="availability">În pregătire</p><h3 id="notice-title">Workshop-urile urmează.<br />Află când începem.</h3><p>Pregătim noi experiențe educaționale, relevante și adaptate provocărilor elevilor și studenților de astăzi.</p><a class="text-link" href="https://www.instagram.com/edu.mind.set/" target="_blank" rel="noopener noreferrer">Urmărește @edu.mind.set <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a><p class="small-text">Locurile, temele, perioadele și modalitățile de înscriere vor fi anunțate odată cu lansarea fiecărui workshop.</p></div><a class="qr-link" href="https://www.instagram.com/edu.mind.set/" target="_blank" rel="noopener noreferrer" aria-label="Deschide profilul Instagram EDU MindSet"><img src="./images/instagram-qr-360.webp" width="360" height="511" loading="lazy" alt="Codul QR al profilului Instagram @edu.mind.set." /></a></aside>
-      </section>
-
-      <section class="founder-section section-space" id="despre" aria-labelledby="founder-title">
-        <div class="wrap founder-inner">
-        <figure class="founder-photo"><picture><source type="image/avif" srcset="./images/alexandru-portret-400.avif 400w, ./images/alexandru-portret-800.avif 800w" sizes="(max-width: 767px) 100vw, 42vw" /><img src="./images/alexandru-portret-1200.webp" srcset="./images/alexandru-portret-640.webp 640w, ./images/alexandru-portret-1200.webp 1200w" sizes="(max-width: 767px) 100vw, 38vw" width="1200" height="896" loading="lazy" alt="Portretul lui Alexandru-Constantin Tulică într-o bibliotecă." /></picture><figcaption><strong>„Cred în educația care oferă încredere.”</strong><span>Alexandru-Constantin Tulică, fondator EDU MindSet</span></figcaption></figure>
-        <div class="founder-copy">
-          <h2 id="founder-title">Salut, sunt Alex.<br /><span>Și eu încep<br />cu o întrebare.</span></h2>
-          <p class="credentials">Profesor în învățământul preuniversitar.<br />Cadru didactic asociat în mediul universitar.<br />Doctor în Inginerie.</p>
-          <p>Am creat EDU MindSet din convingerea că educația înseamnă mai mult decât acumularea de informații. Înseamnă să înțelegi, să pui întrebări, să descoperi, să ai încredere în propriile idei și să găsești direcția potrivită pentru tine.</p>
-          <p>Cred în educația care oferă încredere, deschide perspective și îi ajută pe tineri să-și construiască propriul drum.</p>
-          <details class="reading-details"><summary>Povestea din spatele proiectului <i class="ph ph-plus" aria-hidden="true"></i></summary><div>
-            <p>De-a lungul experienței mele în mediul educațional și universitar, am întâlnit tineri cu potențial, curiozitate și idei extraordinare. Am înțeles că, uneori, nu lipsa capacității îi împiedică să evolueze, ci lipsa unor metode potrivite, a îndrumării și a oportunităților de a-și pune ideile în practică.</p>
-            <p>Așa a apărut EDU MindSet: din dorința de a construi experiențe educaționale relevante, în care învățarea, dezvoltarea personală și gândirea critică să se întâlnească.</p>
-            <p>Bine ai venit în universul EDU MindSet!</p>
-          </div></details>
-        </div>
               </div>
       </section>
 

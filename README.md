@@ -1,6 +1,6 @@
 # EDU MindSet
 
-Romanian landing page for the educational project created by Alexandru-Constantin Tulică. A personal, photograph-led site with an active-recall learning exercise, complete workshop programme, founder story, UnitED, resources and contact.
+Romanian landing page for the educational project created by Alexandru-Constantin Tulică. V3 uses the logo red and charcoal, a first-person photographic invitation, an open founder letter, and a working programme containing an active-recall exercise, alongside UnitED, resources and contact.
 
 ## Run locally
 
@@ -52,7 +52,7 @@ Bricolage Grotesque is self-hosted through Fontsource under OFL-1.1. Phosphor ic
 
 ## Checks and design guide
 
-Run `npm test` for DOM interaction/content integrity checks and `npm run build` for production. Lighthouse results and their limitations are recorded in `docs/verification-v2.md`. `docs/DESIGN_TECHNIQUES.md` explains each named technique in plain English. Local review: `http://127.0.0.1:4175/?theme=light` or `?theme=dark` when that preview is running.
+Run `npm test` for DOM interaction/content integrity checks and `npm run build` for production. Lighthouse results and their limitations are recorded in `docs/verification-v3.md`. `docs/DESIGN_TECHNIQUES.md` explains each named technique in plain English. Local review: `http://127.0.0.1:4175/?theme=light` or `?theme=dark` when that preview is running.
 
 ## Before public launch
 

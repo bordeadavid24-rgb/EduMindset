@@ -1,38 +1,40 @@
 ---
 name: EDU MindSet
-description: A vivid educational identity built around real people, questions, and learning by doing.
+description: A personal teaching space with original red and charcoal identity, real photographs, and learning by doing.
 colors:
-  primary: "#2847bd"
-  primary-hover: "#1b3191"
-  ink: "#18275c"
-  muted: "#4b5573"
-  paper: "#fbf9ef"
-  surface: "#fffef9"
-  rule: "#c7cbd5"
-  hero-yellow: "#f2efb6"
-  learning-yellow: "#f1eb8f"
-  pale-blue: "#edf0fb"
-  orange: "#f4aa69"
-  founder-blue: "#243d9a"
-  founder-ink: "#fffdf1"
-  founder-muted: "#d3ddfc"
-  founder-accent: "#f5e98d"
-  founder-rule: "#6c7fc1"
-  dark-paper: "#141d36"
-  dark-surface: "#1b2744"
-  dark-ink: "#f6f3df"
-  dark-muted: "#c2cbe3"
-  dark-rule: "#4e5b7b"
-  dark-accent: "#b8c9ff"
-  dark-hero: "#263456"
-  dark-tint: "#2a395e"
+  primary: "#b3342a"
+  primary-hover: "#91281f"
+  brand-red: "#e85448"
+  ink: "#242323"
+  muted: "#615d5a"
+  paper: "#f7f6f2"
+  surface: "#fffefd"
+  rule: "#d4cfcb"
+  soft-field: "#efebe7"
+  tint: "#f3e9e5"
+  note-paper: "#f7eeeb"
+  workshop-charcoal: "#252221"
+  workshop-surface: "#302b29"
+  workshop-ink: "#f8f4f0"
+  workshop-muted: "#d3c9c1"
+  workshop-rule: "#5b504b"
+  workshop-accent: "#f18c7e"
+  workshop-tint: "#352c29"
+  dark-paper: "#1b1b1b"
+  dark-surface: "#242323"
+  dark-ink: "#f5f0eb"
+  dark-muted: "#c9c1ba"
+  dark-rule: "#55504d"
+  dark-accent: "#f18c7e"
+  dark-soft-field: "#2c2927"
+  dark-tint: "#352a27"
 typography:
   display:
     fontFamily: "Bricolage Grotesque Variable, sans-serif"
-    fontSize: "clamp(58px, 6.1vw, 88px)"
-    fontWeight: 700
-    lineHeight: 1.04
-    letterSpacing: "-0.035em"
+    fontSize: "clamp(58px, 6.1vw, 82px)"
+    fontWeight: 650
+    lineHeight: 1.06
+    letterSpacing: "-0.04em"
   headline:
     fontFamily: "Bricolage Grotesque Variable, sans-serif"
     fontSize: "clamp(34px, 3.8vw, 54px)"
@@ -50,6 +52,11 @@ typography:
     fontSize: "16px"
     fontWeight: 400
     lineHeight: 1.7
+  letter:
+    fontFamily: "Bricolage Grotesque Variable, sans-serif"
+    fontSize: "18px"
+    fontWeight: 400
+    lineHeight: 1.8
   label:
     fontFamily: "Bricolage Grotesque Variable, sans-serif"
     fontSize: "14px"
@@ -74,9 +81,9 @@ components:
     backgroundColor: "{colors.ink}"
     textColor: "#ffffff"
   recall-exercise:
-    backgroundColor: "{colors.learning-yellow}"
+    backgroundColor: "{colors.note-paper}"
     textColor: "{colors.ink}"
-    padding: "28px 34px"
+    padding: "24px 28px"
   input:
     backgroundColor: "{colors.paper}"
     textColor: "{colors.ink}"
@@ -93,122 +100,125 @@ components:
 
 ## Overview
 
-**Creative North Star: "Learning in progress"**
+**Creative North Star: "A personal teaching space"**
 
-A curious, direct educational identity pairs expressive lettering with real photographs of Alexandru and useful opportunities to participate. Blue ink, yellow learning surfaces, and a warm orange counterpoint give the page energy without borrowing a luxury aesthetic. The source-derived hero cutout shares space with typography rather than sitting inside a generic image card.
+The original red and charcoal identity frames a direct invitation from the founder, his supplied first-person account, and opportunities to try a learning method. Photographs change scale and role across the page: a large source-derived laboratory cutout, a compact eye-contact portrait beside an open letter, and contextual teaching and auditorium photographs.
 
-This documents the implemented V2 source, replacing V1's red and green-grey system. Page-specific narrative and asset decisions remain in `docs/v2-direction.md`. Final captures are being collected in `.impeccable/review/v2`, including `desktop-final.jpg` and `small-final.jpg`; see `docs/verification-v2.md` for the exact verification evidence and limits.
+The V3 system replaces the blue, yellow, and orange V2 identity. Personal authorship comes from the supplied words and images, without invented personality claims, praise, signatures, testimonials, or luxury styling. Surface-specific direction is recorded in `docs/v3-direction.md`. This is source documentation, not a final test report.
 
 **Key Characteristics:**
 
-- Expressive display type, clear body copy, and flat coloured surfaces.
-- Real photographic subjects integrated with the surrounding composition.
-- Learning demonstrated through an optional recall exercise.
-- Responsive reflow, native disclosures, and readable interaction states.
+- Red for identity and action; charcoal and warm neutrals for reading.
+- A shared photographic opening rather than a separate image card.
+- An unboxed first-person letter with a smaller portrait.
+- A worked-through programme containing an optional recall demonstration.
+- Native disclosures, responsive reflow, and explicit interaction states.
 
 ## Colors
 
-Blue supplies identity and action, yellow marks learning, orange adds a small warm emphasis, and the neutral fields support long Romanian text. Exact values are in the frontmatter.
+The palette follows the supplied logo's red and black relationship. Exact values are recorded in the frontmatter.
 
 ### Primary
 
-- **Teaching Blue:** primary actions, links, headline emphasis, and the vertical MindSet wordmark. Its deeper hover shade is limited to pointer feedback.
-- **Ink Blue:** general text, strong rules, and the exercise button.
+- **Action Red:** small text links, buttons, focus outlines, headline emphasis, and the vertical MindSet wordmark. Pointer hover uses its deeper shade.
+- **Artwork Red:** the broad plane behind the hero subject and a principle rule. It is deliberately brighter than the control colour.
 
 ### Secondary
 
-- **Soft Learning Yellow:** hero and UnitED fields.
-- **Recall Yellow:** the exercise surface, preserved with dark ink in either page theme.
-- **Pale Blue:** workshop notices and resources index.
-
-### Tertiary
-
-- **Warm Orange:** the background question mark, headline underline, and a principle rule. It is not the ordinary body-text colour.
+- **Note Paper:** the light recall exercise field, retaining charcoal text even inside the dark programme.
+- **Soft Field:** the UnitED background. **Tint** supplies a related neutral-red tone where needed.
 
 ### Neutral
 
-- **Warm Paper / Light Surface:** page background and contact surface.
-- **Quiet Slate / Fine Rule:** secondary text and structural separators.
-- **Founder Blue:** a deliberate coloured portrait-and-note region, with its own pale text, yellow emphasis, and legible separators.
-- **Dark Paper / Dark Surface:** system or manually selected dark theme, using pale ink and blue accents. The exercise and founder region retain their deliberate colour treatments. The primary button keeps its dark blue fill and white text.
+- **Paper / Surface:** page and contact backgrounds.
+- **Charcoal / Quiet Stone / Fine Rule:** ordinary text, supporting text, and structural separators.
+- **Workshop Charcoal:** a deliberate dark programme region with light text, warm secondary text, and a lighter red accent.
+- **Dark Paper / Dark Surface:** system or selected dark theme with pale text and red emphasis. The workshop region and light exercise keep their own local palettes. Solid action buttons retain dark red with white text.
 
-**The Colour Roles Rule.** Keep each colour's job consistent instead of assigning every section a new palette.
+**The Red Roles Rule.** Use bright red for artwork and darker red for small controls; do not reintroduce a competing blue or yellow identity.
 
 ## Typography
 
 **Display Font:** Bricolage Grotesque Variable, falling back to sans-serif.
 
-**Body Font:** Bricolage Grotesque Variable, falling back to sans-serif. One local Fontsource variable family supplies both roles, with Romanian glyph coverage and automatic optical sizing.
+**Body Font:** the same local variable family, with automatic optical sizing and Romanian glyph coverage.
 
-**Character:** Bricolage gives questions and introductions a warmer, more distinctive voice. Weight, size, spacing, and automatic optical sizing distinguish display from readable prose without loading a second family.
+Weight, scale, and spacing distinguish roles without a second font download. Type remains direct and readable; there is no handwriting or luxury serif layer.
 
 ### Hierarchy
 
-- **Display:** hero proposition with a compact line-height; the second beat uses Teaching Blue and the key word has an orange underline. Mobile uses a separate fluid scale, with a smaller override below 360px.
-- **Headline:** section-level questions. Several sections have deliberate local sizes, including a much larger UnitED wordmark.
-- **Title:** topic names, exercise words, and short subsection headings. Workshop names use a fluid size.
-- **Body:** main paragraphs are usually 16px, with 17px introductions, comfortable leading, and reading widths generally between 43ch and 65ch. Captions and labels remain smaller; the hero caption and vertical wordmark have a 12px minimum in the final source.
-- **Label:** ordinary sentence case for forms, notices, and navigation. There is no separate monospace or handwriting family.
+- **Display:** the hero's two-line proposition, with one red word. Desktop uses the frontmatter scale; mobile has its own fluid size and a narrow-screen override.
+- **Headline:** section introductions. The UnitED name is deliberately much larger than ordinary section headings.
+- **Title:** topic names, recall words, and short subsection headings. The leading learning principle is larger than its two related ideas.
+- **Body:** general copy uses 16px, introductions usually 17px, and the desktop founder letter uses 18px with generous leading. The letter returns to 16px on mobile. Reading widths generally remain between 44ch and 67ch.
+- **Label:** sentence-case navigation, fields, status notes, and captions. The header's vertical wordmark is 12px; the hero caption is 13px. Qualifications are compact factual text.
 
-**The Readable Copy Rule.** Keep explanatory prose legible on mobile instead of shrinking it to preserve a desktop arrangement.
+**The Readable Copy Rule.** Reflow prose on mobile rather than shrinking it to preserve a desktop composition.
 
 ## Layout
 
-The main container is capped at 1280px. Desktop side gutters are 48px, reducing to 32px at 1100px, 20px on mobile, and 16px below 360px. Most main regions use two columns; principles use three and audience statements use a smaller two-column grid.
+The main container is capped at 1280px. Side gutters are 48px on desktop, 32px below 1100px, 20px on mobile, and 16px below 360px. Main section gaps are 104px on desktop and 64px on mobile.
 
-Mobile at 767px reflows the major regions into one column, reduces section gaps, and changes image scale and crop. Navigation also switches to its compact disclosure between 768px and 980px. Additional adjustments occur at 900px and 1100px. There are no fixed text heights. The exercise reserves a minimum stage height to limit jumping between its states.
+The opening uses twelve columns and two rows. The title spans columns 1 to 8, the personal copy occupies columns 1 to 5, and the photographic scene spans columns 6 to 12 across both rows. Controlled grid overlap gives the image and type shared space. Mobile becomes an explicit sequence: proposition, welcome, motivation, actions, photograph, then learning belief.
 
-The sticky header is 80px on desktop and 68px on mobile, with top safe-area padding. Anchor offsets account for the header. Footer padding accommodates the bottom safe area. The mobile workshop notice keeps the clickable Instagram action and hides the scan-oriented QR.
+The founder region combines a portrait up to 300px wide with a wider open letter. On mobile the identity block uses a 116px portrait beside the name and qualifications, reducing to 96px on narrow phones. The programme has a larger Learning Skills column and a second column for the other topics and classroom context. Below 768px it becomes one stack; the secondary classroom photograph and QR are hidden, while text and the Instagram link remain available.
 
+Principles form an asymmetric group: the leading learning idea spans two rows beside the other two. Other reading regions use two columns where appropriate, with single-column mobile layouts. Navigation becomes a compact disclosure below 981px. Additional adjustments occur at 900px and 1100px.
+
+The sticky header is 80px on desktop and 68px on mobile. Safe-area padding protects the top and footer edges; anchor offsets account for the header. Images reserve their proportions, and the exercise reserves a minimum stage height. Text does not depend on fixed-height containers.
 
 ## Elevation & Depth
 
-Surfaces are flat, without decorative box shadows. Depth comes from the hero's transparent subject in front of a large question mark, and from the portrait caption over a restrained dark gradient. These image layers have a purpose: preserving the subject and making the quote readable. The header and skip link use explicit stacking layers.
+Surfaces remain flat, without decorative box shadows. Depth comes from the transparent hero subject in front of a simple red plane, with copy placed on its own readable layer. The founder letter is unboxed. Real image crops and changes of scale supply visual detail without simulated paper, floating stickers, or decorative classroom objects.
 
 ## Shapes
 
-Photographs and coloured content regions use square edges. Buttons and form fields have modest control corners. Fine rules organise disclosures, while a stronger rule starts the workshop programme. The hero's silhouette follows the alpha channel of the source-derived cutout rather than a rounded frame.
+Images and content fields have square edges. Controls have restrained corners. Fine rules organise programme rows, reading disclosures, captions, and resource categories. The hero silhouette follows the alpha channel of the source-derived image. The red plane is a simple rectangular field, not an ornamental shape.
 
 ## Components
 
 ### Buttons
 
-Solid, direct actions with a compact control radius, white text, and a minimum 54px primary height. The recall action uses Ink Blue. Pointer hover darkens the fill; a press scales to .98 over 140ms. Focus uses a visible 3px outline. Hover decoration is restricted to devices with a fine pointer and genuine hover capability.
+Primary actions use Action Red, white text, control corners, and a minimum 54px height. The recall action uses fixed charcoal. Fine-pointer hover darkens the fill; press feedback scales to .98 over 140ms. Keyboard focus is a visible 3px outline, using a locally legible red inside the programme and exercise.
 
 ### Cards / Containers
 
-These are flat content fields rather than elevated cards. The recall region has a dark border and yellow fill. Workshop announcements and resource listings use Pale Blue. Container padding reduces on smaller screens without introducing nested decorative shells.
+The site groups content with space, tone, and rules rather than elevated cards. The programme uses a charcoal field. Its recall exercise uses Note Paper with charcoal text and 24px by 28px desktop padding, reduced on mobile. The resource index is open, with a red top rule rather than a filled card.
 
 ### Inputs / Fields
 
-Visible labels, paper-coloured fills, fine borders, control corners, and 16px input text. Inputs have a minimum 52px height; the message field can be resized vertically. Validation uses native validity feedback with Romanian messages. The form prepares an email draft; no component should imply confirmed delivery.
+Visible labels, paper-coloured fills, fine borders, control corners, and 16px input text. Inputs have a minimum 52px height; the message field can resize vertically. Native validity feedback uses Romanian messages. The form prepares an email draft and offers copying; it never confirms delivery.
 
 ### Navigation
 
-An accessible text wordmark retains the EDU/vertical MindSet arrangement. Desktop links use the same family at a compact weight and at least a 44px hit area. Compact navigation uses native `details` and `summary`, with vertically stacked links. Selecting a link closes the menu; Escape closes it and returns focus to the summary. Theme choice follows system preference unless explicitly selected and stored locally.
+The text wordmark keeps black/charcoal EDU and vertical red MindSet in the light theme. Desktop links have at least a 44px hit area. Compact navigation uses native `details` and `summary`, with vertically stacked links. Link selection closes the menu; Escape closes it and restores focus. Theme preference follows the system unless explicitly selected and stored locally.
 
-### Recall Exercise
+### Founder Letter
 
-A three-state read, recall, and reveal interaction. The words are hidden on request, the prompt replaces them, and reveal includes a plain explanation of reamintire activă. Reset is explicit. It has no timer, scoring, diagnosis, or required personal input. Without JavaScript, the words and a manual exercise explanation remain available.
+A compact portrait, full name, and grouped factual qualifications establish authorship. The supplied first-person text has a greeting, a short enlarged quotation, an optional longer story, and a plain-text signoff. There is no invented signature or additional praise.
 
-### Workshop Disclosures
+### Programme and Recall Exercise
 
-Native summaries show topic names and short explanations. Opening reveals the full supplied programme bullets; the plus rotates into a close cue. Deep links open the relevant workshop. Longer founder, mission, vision, and UnitED content uses related native disclosures.
+Learning Skills is initially open and contains the optional read, recall, and reveal activity. The other three workshop directions remain easy to scan and expand. Opening turns the plus into a close cue. Deep links to a workshop or its contained exercise open the relevant disclosure.
 
-Desktop entry motion uses a 10px vertical shift and partial-opacity arrival. Button feedback uses a strong ease-out curve. Reduced motion removes animation, transitions, and smooth scrolling. Native disclosure content does not depend on an animated height.
+The exercise hides three words on request, invites retrieval, then reveals them with a plain explanation of reamintire activă. It has an explicit reset and no timer, scoring, diagnosis, or required personal input. Static HTML includes a manual no-JavaScript alternative. Longer project and UnitED material uses related native disclosures.
+
+Desktop opening motion uses a 10px shift and partial-opacity arrival with a strong ease-out. Buttons retain short feedback transitions. Reduced motion removes animation, transitions, and smooth scrolling. Disclosure content does not require animated height.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** preserve Romanian diacritics, the founder's full name, and the supplied content archive.
-- **Do** keep image variants, crops, and preloads aligned with the actual layout.
-- **Do** retain keyboard access, visible focus, reduced-motion support, and no-JavaScript fallbacks.
-- **Do** label upcoming workshops and resources honestly and explain the email handoff.
+- **Do** preserve Romanian diacritics, the founder's full name, supplied first-person words, and content archive.
+- **Do** preserve the original red/black identity while keeping small controls legible.
+- **Do** keep responsive image variants, crops, dimensions, and preloads aligned with the actual layout.
+- **Do** retain keyboard access, visible focus, reduced-motion support, and HTML fallbacks.
+- **Do** label forthcoming material honestly and explain the email handoff.
 
 ### Don't:
 
-- **Don't** restore V1's red/green-grey palette or its interchangeable photo-card rhythm.
+- **Don't** publish private character descriptions, inferred personal claims, or invented praise.
+- **Don't** reintroduce V2's blue/yellow/orange palette, decorative question mark, or generic photo-card rhythm.
 - **Don't** use em dashes in new visible copy or supporting guidance.
-- **Don't** invent dates, prices, testimonials, partners, attendance figures, registration availability, or downloadable resources.
-- **Don't** present the auditorium image as proof of a previous UnitED event or the AI-assisted cutout as an untouched photograph.
+- **Don't** invent dates, prices, testimonials, affiliations, attendance figures, registration availability, or downloadable resources.
+- **Don't** imply that the auditorium photograph records a previous UnitED edition or that the AI-assisted cutout is untouched photography.

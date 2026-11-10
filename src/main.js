@@ -7,7 +7,7 @@ function syncThemeButton() {
   const dark = currentTheme() === 'dark';
   themeButton.setAttribute('aria-label', dark ? 'Activează aspectul luminos' : 'Activează aspectul întunecat');
   themeButton.querySelector('i').className = `ph ph-${dark ? 'sun' : 'moon'}`;
-  document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => meta.setAttribute('content', dark ? '#141d36' : '#fbf9ef'));
+  document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => meta.setAttribute('content', dark ? '#1b1b1b' : '#f7f6f2'));
 }
 themeButton.hidden = false;
 syncThemeButton();
@@ -63,7 +63,8 @@ recallReset.addEventListener('click', () => { resetRecall(); recallAction.focus(
 function openLinkedWorkshop(hash = location.hash.slice(1)) {
   if (typeof hash !== 'string') hash = location.hash.slice(1);
   const target = document.getElementById(hash);
-  if (target?.classList.contains('workshop')) target.open = true;
+  const workshop = target?.closest('.workshop');
+  if (workshop) workshop.open = true;
 }
 addEventListener('hashchange', openLinkedWorkshop);
 openLinkedWorkshop();
