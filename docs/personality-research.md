@@ -1,4 +1,4 @@
-# EDU MindSet — personality research
+# EDU MindSet - personality research
 
 Updated: 2026-11-08. Research only; no application or video files changed.
 
@@ -12,7 +12,7 @@ Updated: 2026-11-08. Research only; no application or video files changed.
 - **Instagram limit:** direct retrieval of [@edu.mind.set](https://www.instagram.com/edu.mind.set/) failed; search did not expose its feed. I cannot verify its current colours, posts, audience metrics or workshop announcements. Do not say the site reproduces Instagram's identity unless the local images or browser inspection establish that.
 - **Date trap:** [Biletin's GrowMindSet workshop listing](https://biletin.ro/bilete/growmindset-brain-glow-up-workshop) is dated **4 May 2026** and marked finished. It is not evidence of the upcoming workshop. Do not copy its date, fee, venue, age range or ticket CTA into this landing page. An organizer-submitted historical listing can inform research but is not the source of truth for the new event.
 
-## Design interpretation — recommendations, not verified brand rules
+## Design interpretation - recommendations, not verified brand rules
 
 **Direction: an open workshop with a real teacher.** The defining combination is scientific curiosity plus human encouragement. Students should feel invited to think and try something, while parents can immediately identify the accountable person behind it. The site should have the energy of a conversation already beginning.
 

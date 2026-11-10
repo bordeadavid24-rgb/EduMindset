@@ -1,4 +1,4 @@
-# EDU MindSet — conținut sursă în limba română
+# EDU MindSet - conținut sursă în limba română
 
 Sursă: textul furnizat de utilizator la 8 noiembrie 2026. Arhivă de referință pentru implementare; include toate cele șase secțiuni, textul de subsol și prezentarea completă a fondatorului.
 

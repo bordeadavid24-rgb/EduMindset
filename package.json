@@ -7,15 +7,18 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
-    "assets": "node scripts/prepare-assets.mjs"
+    "assets": "node scripts/prepare-assets.mjs",
+    "test": "node --test scripts/site.test.mjs",
+    "assets:v2": "node scripts/prepare-v2-assets.mjs"
   },
   "devDependencies": {
+    "jsdom": "^31.0.0",
     "lighthouse": "^13.6.0",
     "sharp": "^0.35.5",
     "vite": "^8.3.6"
   },
   "dependencies": {
-    "@fontsource-variable/manrope": "^5.2.8",
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
     "@phosphor-icons/core": "^2.1.1"
   }
 }

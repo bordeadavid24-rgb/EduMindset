@@ -1,6 +1,6 @@
 # EDU MindSet
 
-Romanian landing page for the educational project created by Alexandru-Constantin Tulică. A personal, photograph-led site with a practical topic explorer, complete workshop programme, founder story, UnitED, resources and contact.
+Romanian landing page for the educational project created by Alexandru-Constantin Tulică. A personal, photograph-led site with an active-recall learning exercise, complete workshop programme, founder story, UnitED, resources and contact.
 
 ## Run locally
 
@@ -24,8 +24,8 @@ Production preview: http://127.0.0.1:4173/. Deploy the contents of `dist/` to a 
 
 - `index.html`: semantic Romanian content, native disclosures and contact fields.
 - `src/style.css`: responsive layouts, colour tokens, system light/dark themes and reduced motion.
-- `src/main.js`: topic explorer, workshop deep links, mobile navigation and email handoff.
-- `src/icons/`: six original Phosphor regular SVGs and their MIT licence; CSS masks use current text colour.
+- `src/main.js`: active recall, workshop deep links, mobile navigation and email handoff.
+- `src/icons/`: eight original Phosphor regular SVGs and their MIT licence; CSS masks use current text colour.
 - `public/images/`: responsive supplied photos, source logo and Instagram QR.
 - `docs/CONTENT_RO.md`: full original content supplied by the user.
 - `docs/`: research, asset provenance, coverage and verification notes.
@@ -44,9 +44,15 @@ The MINA TLC film is rendering in a separate project. This website does not touc
 
 ## Assets
 
+V2 adds a source-derived AI-assisted transparent cutout of Alex with the microscope. The PNG and exact image-tool prompt are in `assets/derived/`. Run `npm run assets:v2` to produce alpha AVIF/WebP sizes, portrait/auditorium AVIF and compact QR. Phones use the WebP cutout; desktop prefers AVIF. Only the hero and its required fonts preload. Lower images lazy-load. The QR is replaced by its ordinary Instagram link on mobile.
+
 Three photos and the QR come from user-supplied WhatsApp downloads, 8 November 2026. Source files remain unchanged. Responsive WebP derivatives can be regenerated locally using `npm run assets`; that script uses the explicitly documented Downloads filenames. The black logo JPEG is preserved as brand reference. The readable masthead reconstructs its text/vertical-red arrangement in HTML.
 
-Manrope is self-hosted through Fontsource under OFL-1.1. Phosphor icons are MIT licensed. No project-wide open-source licence is granted for the supplied photographs or branding.
+Bricolage Grotesque is self-hosted through Fontsource under OFL-1.1. Phosphor icons are MIT licensed. No project-wide open-source licence is granted for the supplied photographs or branding.
+
+## Checks and design guide
+
+Run `npm test` for DOM interaction/content integrity checks and `npm run build` for production. Lighthouse results and their limitations are recorded in `docs/verification-v2.md`. `docs/DESIGN_TECHNIQUES.md` explains each named technique in plain English. Local review: `http://127.0.0.1:4175/?theme=light` or `?theme=dark` when that preview is running.
 
 ## Before public launch
 

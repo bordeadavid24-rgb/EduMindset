@@ -7,6 +7,7 @@ function syncThemeButton() {
   const dark = currentTheme() === 'dark';
   themeButton.setAttribute('aria-label', dark ? 'Activează aspectul luminos' : 'Activează aspectul întunecat');
   themeButton.querySelector('i').className = `ph ph-${dark ? 'sun' : 'moon'}`;
+  document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => meta.setAttribute('content', dark ? '#141d36' : '#fbf9ef'));
 }
 themeButton.hidden = false;
 syncThemeButton();
@@ -18,30 +19,45 @@ themeButton.addEventListener('click', () => {
   syncThemeButton();
 });
 
-const topics = {
-  learning: { title: 'Explică ideea. Cu vorbele tale.', body: 'Închide caietul și explică unui prieten ce ai înțeles. Unde te oprești, acolo ai o întrebare bună.', link: 'Explorează Learning Skills' },
-  time: { title: 'Alege un lucru care contează azi.', body: 'Scrie trei lucruri pe care vrei să le faci. Alege-l pe cel mai important și rezervă-i un interval în care să te ocupi doar de el.', link: 'Explorează Time & Productivity' },
-  growth: { title: 'Privește și ce ai reușit deja.', body: 'Gândește-te la o provocare pe care ai depășit-o. Ce te-a ajutat atunci? Notează un lucru pe care îl poți folosi și de data aceasta.', link: 'Explorează Mindset & Personal Growth' },
-  future: { title: 'Începe cu o întrebare, nu cu un verdict.', body: 'Ce activitate îți stârnește curiozitatea? Găsește pe cineva care o practică și întreabă cum arată o zi obișnuită în acel domeniu.', link: 'Explorează Future & Career' },
-};
-
-const explorer = document.querySelector('[data-explorer]');
-const preview = document.querySelector('#topic-preview');
-explorer.querySelectorAll('[data-topic]').forEach((button) => {
-  button.addEventListener('click', (event) => {
-    if (button.getAttribute('aria-pressed') === 'true') return;
-    const topic = topics[button.dataset.topic];
-    explorer.querySelectorAll('[data-topic]').forEach((choice) => choice.setAttribute('aria-pressed', String(choice === button)));
-    preview.querySelector('[data-preview-title]').textContent = topic.title;
-    preview.querySelector('[data-preview-body]').textContent = topic.body;
-    const link = preview.querySelector('[data-preview-link]');
-    link.firstChild.textContent = `${topic.link} `;
-    link.setAttribute('href', `#${button.dataset.topic}`);
-    if (event.detail > 0 && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      preview.animate([{ opacity: 0.5, transform: 'translateY(4px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 180, easing: 'cubic-bezier(.23,1,.32,1)' });
-    }
-  });
+const recall = document.querySelector('[data-recall]');
+const recallAction = document.querySelector('#recall-action');
+const recallWords = document.querySelector('#recall-words');
+const recallQuestion = document.querySelector('#recall-question');
+const recallInstruction = document.querySelector('#recall-instruction');
+const recallExplanation = document.querySelector('#recall-explanation');
+const recallReset = document.querySelector('#recall-reset');
+let recallState = 'read';
+recall.querySelector('[data-recall-controls]').hidden = false;
+function resetRecall() {
+  recallState = 'read';
+  recall.dataset.state = 'read';
+  recallWords.hidden = false;
+  recallQuestion.hidden = true;
+  recallExplanation.hidden = true;
+  recallReset.hidden = true;
+  recallInstruction.textContent = 'Citește cuvintele. Apoi ascunde-le.';
+  recallAction.firstChild.textContent = 'Le-am citit. Le ascund. ';
+}
+recallAction.addEventListener('click', () => {
+  if (recallState === 'read') {
+    recallState = 'recall';
+    recall.dataset.state = 'recall';
+    recallWords.hidden = true;
+    recallQuestion.hidden = false;
+    recallInstruction.textContent = 'Încearcă să le spui fără să te uiți. Ia-ți timpul tău.';
+    recallAction.firstChild.textContent = 'Verifică cele trei cuvinte ';
+  } else if (recallState === 'recall') {
+    recallState = 'reveal';
+    recall.dataset.state = 'reveal';
+    recallWords.hidden = false;
+    recallQuestion.hidden = true;
+    recallExplanation.hidden = false;
+    recallReset.hidden = false;
+    recallInstruction.textContent = 'Compară cu ce ți-ai amintit. Fără note, fără clasament.';
+    recallAction.firstChild.textContent = 'Mai încearcă o dată ';
+  } else resetRecall();
 });
+recallReset.addEventListener('click', () => { resetRecall(); recallAction.focus(); });
 
 // Native details remain usable without JavaScript. Deep links open the relevant topic.
 function openLinkedWorkshop(hash = location.hash.slice(1)) {

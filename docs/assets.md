@@ -12,4 +12,10 @@ All photographic assets are supplied by the user for this landing page. No stock
 
 The logo source has nearly invisible black EDU lettering on a near-black background. The HTML masthead uses accessible text with the same EDU/vertical red MindSet arrangement, rather than shrinking the unreadable JPEG into the header.
 
-Manrope variable: Fontsource, OFL-1.1. Phosphor regular icons: @phosphor-icons/core, MIT, six copied unmodified SVGs in src/icons/ with licence. Favicon is a text E on the brand-red ground, authored in native SVG.
+Bricolage Grotesque variable: Fontsource, OFL-1.1. Phosphor regular icons: @phosphor-icons/core, MIT, eight copied unmodified SVGs in src/icons/ with licence. Favicon is a text E on the brand-blue ground, authored in native SVG.
+
+## V2 source-derived cutout
+
+`assets/derived/alex-laborator-cutout-v2.png` is an AI-assisted background-extraction edit made with the built-in image tool, based on the original microscope photograph. Its exact prompt is tracked in the adjacent `.prompt.txt`. The user source is unchanged. The image was inspected against that source before compositing. AVIF and WebP derivatives retain alpha transparency and use the real tabletop base. This is an edited photo asset; it is not described as an untouched documentary original.
+
+`npm run assets:v2` generates widths 360, 640, 960 and 1200, plus 400/800 AVIF portraits and a 360px lossless QR. The AVIF widths are approximately 11/23/41/55 KB. Mobile uses a WebP source for a different decode/transfer tradeoff. Portrait and auditorium photographs retain their source identities.
