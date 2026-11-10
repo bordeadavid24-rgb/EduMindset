@@ -6,6 +6,13 @@ Updated: 2026-11-10, V5 implementation checkpoint. Project root: `/Users/liliana
 
 User requests a stronger hero with both professionalism and more drawing, plus animation, parallax and scroll-based motion, using the logo red. Implemented as a refinement of the notebook world: one connected learning sketch (Întreabă / Explorează / Aplică), a ruled study sheet behind the existing cutout, and native CSS view-timeline depth on decorative layers only. Text, buttons, caption and the photograph stay in normal document flow. Phones and reduced motion stay still. Evidence: docs/verification-v5.md. Next: the user's visual reaction. Do not start another redesign without that reaction.
 
+## Latest V5 synchronization note
+
+- V5 hero commit: `88c7bef`. It includes the earlier local V2, V3 and V4 commits.
+- `git push origin main` succeeded on 10 November 2026. GitHub `main` moved from `b7a7e04` to `88c7bef`. No force-push. No public deployment.
+- Local preview remains http://127.0.0.1:4175/?theme=light, with `?theme=dark` for the other theme.
+- Launch follow-ups remain: a public host and absolute social image URL, supplied workshop details, the approved film, and optional direct form delivery.
+
 ## Previous V4 work
 
 User asks for a more high-school notebook/comic/collage direction, research then implement for their reaction. Logo red/charcoal, actual photographs and truthful personal content remain. Primary research: docs/v4-research-notes.md. Direction: docs/v4-direction.md.
