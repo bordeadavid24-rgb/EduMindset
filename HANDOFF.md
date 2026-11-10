@@ -1,8 +1,12 @@
 # EDU MindSet - live work log and handoff
 
-Updated: 2026-11-10, V4 delivery checkpoint. Project root: `/Users/lilianab/Desktop/MINA TLC/edumindset`.
+Updated: 2026-11-10, V5 implementation checkpoint. Project root: `/Users/lilianab/Desktop/MINA TLC/edumindset`.
 
-## Current V4 work
+## Current V5 work
+
+User requests a stronger hero with both professionalism and more drawing, plus animation, parallax and scroll-based motion, using the logo red. Implemented as a refinement of the notebook world: one connected learning sketch (Întreabă / Explorează / Aplică), a ruled study sheet behind the existing cutout, and native CSS view-timeline depth on decorative layers only. Text, buttons, caption and the photograph stay in normal document flow. Phones and reduced motion stay still. Evidence: docs/verification-v5.md. Next: the user's visual reaction. Do not start another redesign without that reaction.
+
+## Previous V4 work
 
 User asks for a more high-school notebook/comic/collage direction, research then implement for their reaction. Logo red/charcoal, actual photographs and truthful personal content remain. Primary research: docs/v4-research-notes.md. Direction: docs/v4-direction.md.
 

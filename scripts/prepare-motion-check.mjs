@@ -1,0 +1,4 @@
+import fs from 'node:fs/promises';
+// Generated test fixture is never part of the delivered site: npm run build clears dist/.
+await fs.copyFile('scripts/motion-check.browser.js', 'dist/.motion-check.js');
+await fs.writeFile('dist/.motion-check.html', `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Running hero motion check</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;background:#f7f6f2;color:#242323;font:16px system-ui}iframe{display:block;border:0;width:1440px;height:900px}pre{margin:0;padding:24px;white-space:pre-wrap;overflow-wrap:anywhere}</style></head><body><iframe title="Actual EDU MindSet production page" src="./index.html?theme=light"></iframe><pre role="status">Running actual browser checks…</pre><script type="module" src="./.motion-check.js"></script></body></html>`);
