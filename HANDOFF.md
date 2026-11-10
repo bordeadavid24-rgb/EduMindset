@@ -10,7 +10,7 @@ User asks for a more high-school notebook/comic/collage direction, research then
 - Four test groups and production build pass. Added current-step/read/recall/reveal/reset assertions. Named-technique guide, DESIGN.md, sidecar, provenance, README and Grok prompt reflect V4.
 - Initial local performance72desktop/94mobile; confirmation100/99, LCP0.4s/2.0s, TBT0/40ms, CLS.001/0. Both sets and uncertainty are preserved in docs/verification-v4.md. Do not claim the async decode hint alone caused improvement.
 - Fresh reviewer first required recapture: the320px screenshot stopped before contact/footer. Replacement320width/tallviewport includes complete contact/footer, with ordinary-height opening evidence retained. Also moved truthful status labels below headings and fixed a narrow UnitED title/doodle collision with a two-row grid. All six final screenshots refreshed. Final independent disposition: ship, no remaining material fixes, all six current captures include the footer. Report: docs/finish-review-v4.md.
-- No native browser/physical-phone session claimed; browser access host remains unavailable. No MINA render interference, deployment, invented details or private personality claims. Next: commit, attempt safe sync and save V4 offline bundle, then wait for user reaction.
+- No native browser/physical-phone session claimed; browser access host remains unavailable. No MINA render interference, deployment, invented details or private personality claims. V4 source/design/tests/docs committed as fbc3147. GitHub push failed DNS again (Could not resolve host: github.com); work is local, not confirmed pushed or deployed. Verified offline history bundle: /Users/lilianab/Desktop/MINA TLC/EDUMINDSET-V4.bundle. Next: user visual reaction; synchronize safely when network returns.
 
 ## Previous V3 work
 User says V2 still feels too simplistic and wants more personal design, with the logo's original red/black colourway. New private context about Alex must guide presentation only and must not appear as personality claims/praise on the website. User explicitly asks again for Emil Kowalski, Impeccable and taste guidance. This is an authorized redesign pass.
@@ -125,3 +125,12 @@ Reviewed in headless Chrome on 8 November 2026 against `http://127.0.0.1:5173/` 
 - Current local preview: http://127.0.0.1:4175/?theme=light (HTTP200); dark via ?theme=dark.
 - Complete offline history is saved in /Users/lilianab/Desktop/MINA TLC/EDUMINDSET-V3.bundle; use git bundle verify before importing.
 - Next action is user/Alex visual feedback. For synchronization when network works: fetch origin, inspect divergence, integrate any real remote changes, then push main. Never force-push unknown work. Launch follow-ups: final host/absolute social image URL, supplied event details and booking, approved video, optional real form delivery.
+
+## Latest V4 synchronization note
+
+- Primary V4 commit fbc3147; follow-up status commit records this outcome. Working checkout is the primary handoff.
+- git push origin main failed DNS on 10 November 2026. No V2/V3/V4 upstream synchronization or public deployment is confirmed.
+- Complete offline bundle: /Users/lilianab/Desktop/MINA TLC/EDUMINDSET-V4.bundle. Verify before import. V2/V3 bundles remain preserved.
+- Local preview http://127.0.0.1:4175/?theme=light returned HTTP200 after final build. Use ?theme=dark for the alternate theme.
+- Final independent review: ship for local user reaction. All tests/build pass. No remaining material fix is assigned. Keep physical-phone testing and launch/event/video/form-service follow-ups visible.
+- When network works: fetch, inspect divergence, integrate real remote changes, then push. Never force-push unknown changes.
