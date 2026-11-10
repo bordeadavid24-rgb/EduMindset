@@ -41,15 +41,15 @@ Build a distinctive Romanian landing page for EDU MindSet, founded by Alexandru-
 - GitHub repository `bordeadavid24-rgb/EduMindset` was created during the Codex session. Source is on `main` at https://github.com/bordeadavid24-rgb/EduMindset. The placeholder README was replaced by the project README.
 - Wrote PRODUCT.md from the explicit brief. README, Node `.gitignore` and the page are in place. No project-wide licence was added.
 
-## Design direction under development
+## Historical V1 design direction
 Real educational journal / open studio: clear large sans typography, red from existing logo, pale paper, genuine photographs and useful learning interactions. Avoid luxury serif, dashboard cards, invented statistics/testimonials, vague decorative motion. Three pillars and four workshop directions preserve brief meaning. All dates stay forthcoming.
 
-## Next
+## Later launch follow-ups recorded during V1
 1. Confirm a public host and turn the Open Graph image into an absolute URL for that origin.
 2. Add real workshop dates, place, price and registration only when the user supplies them. Add the finished workshop film only after rendering is approved.
 3. Replace the mailto handoff only if a real delivery service and a revised privacy note are requested.
 
-## Implementation now present
+## Historical V1 implementation
 - `index.html`: complete single page, six required areas, expanded founder story, mission/vision/values, three principles, four audiences, community, 16 workshop bullets, Instagram QR, UnitED programme, resource list, labelled form/footer.
 - `src/style.css`: responsive teaching-studio / open laboratory notebook direction, Manrope, dark-red accent, system and explicit light/dark themes, mobile layout and menu, reduced motion.
 - `src/main.js`: four practical topic previews, selected state, deep links opening native workshop disclosures, mobile menu Escape/link closing, stored light/dark choice, mailto form with encoded fields, copy fallback and a length guard. No fake delivery claim or backend.
@@ -82,3 +82,12 @@ Reviewed in headless Chrome on 8 November 2026 against `http://127.0.0.1:5173/` 
 - Supplied photos and QR load. Content checklist in `docs/content-coverage.md` is checked, including text inside closed disclosures. No museum affiliation, prices, dates or testimonials were added.
 - Lighthouse 13.6.0 on the production preview, headless Chrome, desktop, `--throttling-method=provided`: performance 100, accessibility 100, best-practices 100, SEO 100. This is an unthrottled local run. It still notes that the hero WebP is somewhat larger than its displayed size and that the stylesheet blocks first render.
 - Pushed to `main` on https://github.com/bordeadavid24-rgb/EduMindset (`11fc6bd`, on top of the initial README commit). No deployment. No video files touched.
+
+## Final synchronization note, 10 November 2026
+
+- Primary V2 source/design/tests/docs commit: `3a20dfc` (`Rework EDU MindSet around active learning and integrated photography`).
+- `git push origin main` was attempted and failed: `Could not resolve host: github.com`. V2 is NOT confirmed pushed; do not assume the GitHub website has this version. The final status-documentation commit is also local.
+- Production preview at http://127.0.0.1:4175/?theme=light returned HTTP 200. Existing server PID18030 is bound to 127.0.0.1:4175; it was reused rather than stopped. If it no longer runs, use `npm run preview -- --port 4175`.
+- Offline repository bundle: `/Users/lilianab/Desktop/MINA TLC/EDUMINDSET-V2.bundle`, containing current local history. Use `git bundle verify` before importing. The normal working checkout remains the primary handoff.
+- `GROK_PROMPT.md` and `docs/DESIGN_TECHNIQUES.md` are current. Fresh reviewer says ship for user review. No further unsolicited cosmetic iteration is pending.
+- Next synchronization action when networking works: fetch origin, inspect divergence, integrate any real remote changes, then push main. Never force-push over unknown work.
