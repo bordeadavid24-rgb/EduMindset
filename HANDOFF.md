@@ -11,7 +11,7 @@ User requested a whole-project inspection, completion of remaining agent work, a
 - Added EDUMINDSET_SITE_URL support, .env.example, .nvmrc24 and generated dist/_headers for supporting static hosts. Source masters/provenance stay outside the deployed bundle, and fonts use actual bundled URLs. Design sidecar and stale docs reconciled.
 - Fresh Chrome/Lighthouse launch cannot start. Native browser observation was of an old cached tab, so no fresh visual/motion/performance certification is claimed. npm audit and git fetch fail terminal DNS. Historical scores and old audit are not current results.
 - USER_TODO.md is the full owner checklist. docs/verification-current.md is the authoritative current verification. README has deployment/build settings. Public host/address, Alex final review, contact ownership and real-phone checks remain owner actions; events/video/UnitED/resources/direct-send form are later optional content/features.
-- Immediate finalization: commit all reviewed work, attempt safe push, verify offline source bundle and create clean release ZIP; append exact observed outcome below. Do not interfere with active browser tabs for unrelated projects or the MINA render.
+- Local source/release commit:561f16e. Final normal git push failed DNS to github.com. Latest changes are local, not confirmed upstream. Release ZIP is created and integrity-tested. Final offline bundle and synchronization record below are authoritative. Do not interfere with active browser tabs for unrelated projects or the MINA render.
 
 ## Prior V5 checkpoint, 10 November2026
 
@@ -156,3 +156,13 @@ Reviewed in headless Chrome on 8 November 2026 against `http://127.0.0.1:5173/` 
 - Local preview http://127.0.0.1:4175/?theme=light returned HTTP200 after final build. Use ?theme=dark for the alternate theme.
 - Final independent review: ship for local user reaction. All tests/build pass. No remaining material fix is assigned. Keep physical-phone testing and launch/event/video/form-service follow-ups visible.
 - When network works: fetch, inspect divergence, integrate real remote changes, then push. Never force-push unknown changes.
+
+## Final synchronization and artifacts, 12 November2026
+
+- Primary reviewed source/design/tests/docs commit:561f16e. A follow-up documentation commit records the final outcome.
+- git fetch and git push origin main failed DNS (Could not resolve host: github.com). The latest Nov12 changes are NOT confirmed on GitHub; Nov10 V5 remains the last recorded successful push. Never force-push unknown remote work.
+- Clean static release ZIP: /Users/lilianab/Desktop/MINA TLC/EDUMINDSET-RELEASE-2026-11-12.zip, tested with unzip -t. SHA256: 9d354a739854e4f63d03ce99ac5e690328dc77bbc772d36bf4ecf54be4eb6c39. A matching .sha256 file is alongside. No QA fixtures, source masters, prompt notes or unpublished font copies are in the archive.
+- Complete offline repository history bundle: /Users/lilianab/Desktop/MINA TLC/EDUMINDSET-2026-11-12.bundle. It includes the final status commit; git bundle verify confirms it before delivery. Previous V2/V3/V4 bundles are preserved.
+- Current final-build HTML SHA256:dd0b5b7787354cc214ca6605d66d9e4beb769bd9d79df48750b4a83e35c7c5c4. Release-check result: .impeccable/release-checks.json (ignored local evidence),55 passing file/HTTP checks, no fresh browser claim. Eight test groups pass and production build succeeds.
+- Public site URL is still unconfigured. The release is for the current teaser/preview; set EDUMINDSET_SITE_URL and rebuild once the real HTTPS address is chosen. No public deployment was made.
+- Remaining owner checklist: USER_TODO.md. Latest verification limits: docs/verification-current.md. Grok continuation: GROK_PROMPT.md. No further cosmetic iteration is assigned. Fresh browser/performance, dependency audit and GitHub synchronization must be retried when the environment permits them.
