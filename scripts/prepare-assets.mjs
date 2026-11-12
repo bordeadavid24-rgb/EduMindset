@@ -5,7 +5,9 @@ import { resolve } from 'node:path';
 // User-supplied assets, copied only from these explicitly identified files.
 const downloads = '/Users/lilianab/Downloads';
 const output = resolve('public/images');
+const sources = resolve('assets/source');
 await mkdir(output, { recursive: true });
+await mkdir(sources, { recursive: true });
 const photos = [
   ['WhatsApp Image 2026-11-08 at 19.34.13.jpeg', 'alexandru-laborator'],
   ['WhatsApp Image 2026-11-08 at 19.34.13-2.jpeg', 'alexandru-dialog'],
@@ -17,6 +19,6 @@ for (const [source, name] of photos) {
       .webp({ quality: 84 }).toFile(resolve(output, `${name}-${width}.webp`));
   }
 }
-await copyFile(resolve(downloads, 'WhatsApp Image 2026-11-08 at 19.34.13-4.jpeg'), resolve(output, 'logo-source.jpeg'));
-await copyFile(resolve(downloads, 'WhatsApp Image 2026-11-08 at 19.36.37.jpeg'), resolve(output, 'instagram-qr.jpeg'));
+await copyFile(resolve(downloads, 'WhatsApp Image 2026-11-08 at 19.34.13-4.jpeg'), resolve(sources, 'logo-source.jpeg'));
+await copyFile(resolve(downloads, 'WhatsApp Image 2026-11-08 at 19.36.37.jpeg'), resolve(sources, 'instagram-qr.jpeg'));
 console.log('Prepared 3 responsive photos, original logo, and Instagram QR.');

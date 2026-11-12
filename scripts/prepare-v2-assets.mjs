@@ -15,5 +15,5 @@ for (const [name, source] of [
     await sharp(source).resize({ width, withoutEnlargement: true }).avif({ quality: 54, effort: 5 }).toFile(`public/images/${name}-${width}.avif`);
   }
 }
-await sharp('public/images/instagram-qr.jpeg').resize({ width: 360 }).webp({ lossless: true }).toFile('public/images/instagram-qr-360.webp');
+await sharp('assets/source/instagram-qr.jpeg').resize({ width: 360 }).webp({ lossless: true }).toFile('public/images/instagram-qr-360.webp');
 console.log('Prepared responsive AVIF/WebP alpha cutout, photo variants and compact lossless QR.');

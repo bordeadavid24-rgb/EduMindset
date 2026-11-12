@@ -1,10 +1,21 @@
 # EDU MindSet - live work log and handoff
 
-Updated: 2026-11-10, V5 implementation checkpoint. Project root: `/Users/lilianab/Desktop/MINA TLC/edumindset`.
+Updated: 2026-11-12, current release checkpoint. Project root: `/Users/lilianab/Desktop/MINA TLC/edumindset`.
 
-## Current V5 work
+## Authoritative current state, 12 November2026
 
-User requests a stronger hero with both professionalism and more drawing, plus animation, parallax and scroll-based motion, using the logo red. Implemented as a refinement of the notebook world: one connected learning sketch (Întreabă / Explorează / Aplică), a ruled study sheet behind the existing cutout, and native CSS view-timeline depth on decorative layers only. Text, buttons, caption and the photograph stay in normal document flow. Phones and reduced motion stay still. Evidence: docs/verification-v5.md. Next: the user's visual reaction. Do not start another redesign without that reaction.
+User requested a whole-project inspection, completion of remaining agent work, and a full owner to-do list. Preserved later working-tree motion/CSP/mail/asset cleanup beyond already-pushed V5. Required content is complete. No new redesign or video/render modification.
+
+- Eight behavior/build-helper test groups pass; production build succeeds;55 release/HTTP checks pass via node scripts/verify-landing.mjs. Separate configured-URL build verified absolute social metadata/canonical and exact header generation. No test domain leaks into the final release.
+- Added a manual motion stop/start control and offscreen/hidden time-animation suspension. CSP remains strict. Replaced the now-blocked iframe QA with a top-level same-policy production copy; final build removes generated QA fixtures.
+- Added EDUMINDSET_SITE_URL support, .env.example, .nvmrc24 and generated dist/_headers for supporting static hosts. Source masters/provenance stay outside the deployed bundle, and fonts use actual bundled URLs. Design sidecar and stale docs reconciled.
+- Fresh Chrome/Lighthouse launch cannot start. Native browser observation was of an old cached tab, so no fresh visual/motion/performance certification is claimed. npm audit and git fetch fail terminal DNS. Historical scores and old audit are not current results.
+- USER_TODO.md is the full owner checklist. docs/verification-current.md is the authoritative current verification. README has deployment/build settings. Public host/address, Alex final review, contact ownership and real-phone checks remain owner actions; events/video/UnitED/resources/direct-send form are later optional content/features.
+- Immediate finalization: commit all reviewed work, attempt safe push, verify offline source bundle and create clean release ZIP; append exact observed outcome below. Do not interfere with active browser tabs for unrelated projects or the MINA render.
+
+## Prior V5 checkpoint, 10 November2026
+
+User asked for a live animation that is actually visible, and for the scroll parallax to last. The hero now draws its circle, learning sketch, and orbit route in linear pen strokes (1.8s, then the map, then a 2.8s route). The bubble, route, paper, sheet, and halftone keep drifting after that. Scroll depth runs on `scroll(root)` from 0 to 160vh: the photograph rises 130px and the route 210px, while the red paper only lags 36px so the name stays clear. Headline, buttons, and caption stay still. Phones and reduced motion stay still, with the drawing already complete. Checked in headless Chrome on the local preview. Evidence: docs/verification-v5.md. This motion change is in the working tree. A later cleanup removed the unused book rules, the unpublished font copies, and the prompt notes that were being served from `public/images`. The built page now carries a strict content-security policy, and the email handoff strips line breaks before it opens `mailto:edumindset8@gmail.com`. Do not start another redesign.
 
 ## Latest V5 synchronization note
 

@@ -9,7 +9,9 @@
     "preview": "vite preview --host 127.0.0.1",
     "assets": "node scripts/prepare-assets.mjs",
     "test": "node --test scripts/site.test.mjs",
-    "assets:v2": "node scripts/prepare-v2-assets.mjs"
+    "assets:v2": "node scripts/prepare-v2-assets.mjs",
+    "verify:release": "node scripts/verify-landing.mjs",
+    "qa:prepare": "node scripts/prepare-motion-check.mjs"
   },
   "devDependencies": {
     "jsdom": "^31.0.0",

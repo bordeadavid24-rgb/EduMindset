@@ -114,7 +114,7 @@ components:
 
 The original red and charcoal identity frames a direct invitation from the founder, his supplied first-person account, and opportunities to try a learning method. Photographs change scale and role across the page: a large source-derived laboratory cutout, a compact eye-contact portrait beside an open letter, and contextual teaching and auditorium photographs.
 
-V5 refines the notebook world into a more integrated learning composition: an original question-to-application diagram, a ruled study sheet behind the photograph, and small differences in decorative scroll depth. The real subject, words, actions, and factual caption stay stationary within the document. New marks remain editorial artwork, never Alex's personal handwriting or classroom artifacts. No private personality claims, praise, signatures, or testimonials are added. Surface direction is in `docs/v5-direction.md`; source documentation here does not claim final motion or performance verification.
+V5 refines the notebook world into a more integrated learning composition: an original question-to-application diagram, a ruled study sheet behind the photograph, and visible native root-scroll depth. The photograph and decorative layers shift at different rates; headline, words, actions, map labels, and factual caption retain their normal document positions. New marks remain editorial artwork, never Alex's personal handwriting or classroom artifacts. No private personality claims, praise, signatures, or testimonials are added. Surface direction is in `docs/v5-direction.md`; source documentation here does not claim final motion or performance verification.
 
 **Key Characteristics:**
 
@@ -124,7 +124,7 @@ V5 refines the notebook world into a more integrated learning composition: an or
 - A worked-through programme containing an optional recall demonstration.
 - Native disclosures, responsive reflow, and explicit interaction states.
 - One coherent charcoal/red SVG line vocabulary and lightweight CSS materials.
-- Native view-timeline depth confined to four decorative layers, with complete static fallbacks.
+- Root-scroll depth on the photograph and decorative layers, with still phone/reduced-motion fallbacks and static depth when unsupported.
 
 ## Colors
 
@@ -224,18 +224,22 @@ A real ordered list shows the three stages: Citești, Îți amintești, Verifici
 
 ### Hero Illustration and Motion
 
-The hero learning map combines an original three-node SVG with a semantic ordered list. Source photograph, headline, body, buttons, map labels, and factual name/teacher/engineering caption do not receive independent scroll displacement.
+The hero learning map combines an original three-node SVG with a semantic ordered list. The headline, body, buttons, map labels, and factual name stay in normal document flow. The photograph moves with the scroll, as the near layer.
 
-On desktop with no reduced-motion preference, the existing circled-word path draws once over 640ms with an 80ms delay. The learning sketch has one 640ms clip-path reveal with a 120ms delay. These entrances affect artwork; the source photograph and reading controls are immediately visible.
+On desktop with no reduced-motion preference, the circled word draws once over 1.8s. The learning sketch then draws from the question to the application, and the orbit route draws around the photograph over 2.8s. These are linear pen strokes. While the page is still, the question bubble, route, red paper, study sheet, and halftone keep a slow drift of roughly 12 to 26px. The drift uses the `translate` property, so it does not fight the scroll transform. Reading text and buttons do not drift.
 
-A feature-checked named hero view timeline drives four decorative transforms over `exit 0%` to `exit 100%`, using linear progress:
+A feature-checked root scroll timeline maps that same desktop range from `0vh` to `160vh`, with linear progress. The movement therefore starts at the first scroll and is still going after the hero has begun to leave:
 
-- Study sheet: 0 to 32px vertically, rotation 3 to 1 degrees.
-- Red paper: 0 to 54px, rotation -4 to -1 degrees.
-- Orbit route: 0 to -44px, rotation 0 to -4 degrees.
-- Question bubble: 0 to -28px, rotation 5 to 1 degrees.
+- Photograph: 0 to -130px.
+- Study sheet: 0 to 42px, rotation 3 to 1.5 degrees.
+- Red paper: 0 to 36px, rotation -4 to -2.5 degrees. It stays behind the name.
+- Orbit route: 0 to -210px, rotation 0 to -7 degrees.
+- Question bubble: 0 to -120px, rotation 5 to 1 degrees.
+- Halftone: 0 to -80px.
 
-The hero clips decorative overflow. There is no pinning, scroll interception, JavaScript scroll listener, or runtime animation library. Under 768px, with reduced motion, or without the required view-timeline/range support, depth remains static and the composition stays complete. Reduced motion also removes draw-on and smooth scrolling. This describes the implemented CSS contract; it does not establish successful execution across browsers or a final performance result.
+The hero caption includes a native stop/start button for desktop users without a reduced-motion preference. `src/motion.js` controls it for the current page session. Manual stop removes all hero animations, including scroll depth, and leaves pen paths complete. Time-based pen entrances and decorative drift pause while the hero is offscreen, using IntersectionObserver where available, or while the document is hidden. This suspension does not replace the separate scroll timeline. The control is hidden on phones and when reduced motion is requested.
+
+The hero clips decorative overflow. There is no pinning, scroll interception, JavaScript scroll listener, or runtime animation library. Under 768px or with reduced motion, the drawing and layers are complete and still. Without supported scroll timelines, scroll depth is absent, but the eligible desktop pen entrance and idle drift still play. Reduced motion also removes smooth scrolling. This describes source behavior as reviewed on 12 November 2026; current checks and their limits belong in `docs/verification-current.md`. This source record does not itself claim a browser pass.
 
 ## Do's and Don'ts
 
@@ -247,7 +251,7 @@ The hero clips decorative overflow. There is no pinning, scroll interception, Ja
 - **Do** identify marks and paper treatments as new editorial artwork rather than personal artifacts.
 - **Do** keep responsive image variants, crops, dimensions, and preloads aligned with the actual layout.
 - **Do** retain keyboard access, visible focus, reduced-motion support, and HTML fallbacks.
-- **Do** keep all reading content, actions, labels, and source photography stable while decorative planes supply depth.
+- **Do** keep the headline, buttons, labels, and caption still. Let the photograph and the paper planes move apart.
 - **Do** label forthcoming material honestly and explain the email handoff.
 
 ### Don't:
@@ -255,7 +259,7 @@ The hero clips decorative overflow. There is no pinning, scroll interception, Ja
 - **Don't** publish private character descriptions, inferred personal claims, or invented praise.
 - **Don't** reintroduce V2's blue/yellow/orange palette or generic photo-card rhythm.
 - **Don't** copy reference artwork, fabricate handwriting or signatures, or claim the drawings belong to Alex.
-- **Don't** add a font, raster texture, drawing library, or looping animation just to support the collage.
+- **Don't** add a font, raster texture, or drawing library. A loop stays on decorative paper, never on the headline, buttons, or caption.
 - **Don't** use em dashes in new visible copy or supporting guidance.
 - **Don't** invent dates, prices, testimonials, affiliations, attendance figures, registration availability, or downloadable resources.
 - **Don't** imply that the auditorium photograph records a previous UnitED edition or that the AI-assisted cutout is untouched photography.

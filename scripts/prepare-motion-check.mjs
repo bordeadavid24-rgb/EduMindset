@@ -1,4 +1,7 @@
 import fs from 'node:fs/promises';
-// Generated test fixture is never part of the delivered site: npm run build clears dist/.
+// Top-level production copy: same built scripts/styles/CSP, plus QA-only external assets.
+// npm run build removes all three generated fixtures before packaging or deployment.
+const page = await fs.readFile('dist/index.html', 'utf8');
 await fs.copyFile('scripts/motion-check.browser.js', 'dist/.motion-check.js');
-await fs.writeFile('dist/.motion-check.html', `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Running hero motion check</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;background:#f7f6f2;color:#242323;font:16px system-ui}iframe{display:block;border:0;width:1440px;height:900px}pre{margin:0;padding:24px;white-space:pre-wrap;overflow-wrap:anywhere}</style></head><body><iframe title="Actual EDU MindSet production page" src="./index.html?theme=light"></iframe><pre role="status">Running actual browser checks…</pre><script type="module" src="./.motion-check.js"></script></body></html>`);
+await fs.writeFile('dist/.motion-check.css', '.qa-report{position:fixed;z-index:1000;inset:auto 0 0;padding:12px 24px;margin:0;max-height:120px;overflow:auto;background:#f7f6f2;border-top:1px solid #d4cfcb;color:#242323;font:14px monospace}');
+await fs.writeFile('dist/.motion-check.html', page.replace('</head>', '<link rel="stylesheet" href="./.motion-check.css" /></head>').replace('</body>', '<pre id="qa-report" class="qa-report" role="status">Running production checks…</pre><script type="module" src="./.motion-check.js"></script></body>'));

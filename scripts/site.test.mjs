@@ -1,14 +1,22 @@
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { JSDOM } from 'jsdom';
+import { buildDraft, RECIPIENT } from '../src/mail.js';
+import { contentSecurityPolicy } from './csp.mjs';
+import { normalizeSiteUrl, publicMetadata, hostHeaders } from './release.mjs';
 
 const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
-const script = readFileSync(new URL('../src/main.js', import.meta.url), 'utf8').replace("import './icons.css';", '');
+const mailSource = readFileSync(new URL('../src/mail.js', import.meta.url), 'utf8').replaceAll('export ', '');
+const motionSource = readFileSync(new URL('../src/motion.js', import.meta.url), 'utf8').replaceAll('export ', '');
+const script = readFileSync(new URL('../src/main.js', import.meta.url), 'utf8')
+  .replace("import './icons.css';\n", '')
+  .replace("import { buildDraft, RECIPIENT } from './mail.js';\n", '')
+  .replace("import { setupHeroMotion } from './motion.js';\n", '');
 function page() {
   const dom = new JSDOM(html, { url: 'https://edumindset.test/', runScripts: 'outside-only', pretendToBeVisual: true });
   dom.window.matchMedia = () => ({ matches: false, addEventListener() {} });
-  dom.window.eval(script);
+  dom.window.eval(`${mailSource}\n${motionSource}\n${script}`);
   return { window: dom.window, $: (selector) => dom.window.document.querySelector(selector), close: () => dom.window.close() };
 }
 
@@ -85,4 +93,87 @@ test('all section links and supplied images resolve, with no duplicate IDs or em
   assert.equal(html.includes('\u2014'), false);
   assert.equal(script.includes('\u2014'), false);
   close();
+});
+
+test('mail handoff stays on the real address and drops header breaks', () => {
+  const draft = buildDraft({
+    name: 'Ana\r\nBcc: evil@example.com',
+    email: 'ana@exemplu.ro',
+    subject: 'Salut\nBcc: evil@example.com',
+    message: 'Linie unu\r\nLinie doi',
+  });
+  assert.equal(draft.href.startsWith(`mailto:${RECIPIENT}?`), true);
+  assert.equal(draft.href.includes('\n'), false);
+  assert.equal(draft.href.includes('\r'), false);
+  assert.equal(draft.subject.includes('Bcc:'), true);
+  assert.match(draft.body, /Linie unu\nLinie doi/);
+  assert.equal(draft.tooLong, false);
+});
+
+test('published files do not expose prompts, source masters, or loose links', () => {
+  const published = readdirSync(new URL('../public/images', import.meta.url));
+  assert.equal(published.some((name) => name.endsWith('.json')), false);
+  assert.equal(published.includes('instagram-qr.jpeg'), false);
+  assert.equal(published.includes('logo-source.jpeg'), false);
+  assert.equal(existsSync(new URL('../assets/source/instagram-qr.jpeg', import.meta.url)), true);
+  assert.equal(existsSync(new URL('../assets/source/logo-source.jpeg', import.meta.url)), true);
+  for (const link of html.matchAll(/<a\b[^>]*target="_blank"[^>]*>/g)) {
+    assert.match(link[0], /rel="noopener noreferrer"/);
+  }
+  const policy = contentSecurityPolicy(html);
+  assert.match(policy, /script-src 'self' 'sha256-/);
+  assert.doesNotMatch(policy, /unsafe-inline|unsafe-eval|frame-ancestors/);
+  assert.match(policy, /form-action mailto:/);
+  assert.match(html, /name="referrer" content="strict-origin-when-cross-origin"/);
+  assert.equal(html.includes('/src/fonts/'), false);
+  assert.equal(html.includes('hero-book'), false);
+});
+
+
+test('motion control stops decoration and responds to offscreen, hidden and preference changes', () => {
+  const dom = new JSDOM(html, { runScripts: 'outside-only', pretendToBeVisual: true });
+  const queries = new Map();
+  dom.window.matchMedia = (query) => {
+    const media = { matches: query.includes('min-width'), handlers: [], addEventListener(_event, fn) { this.handlers.push(fn); } };
+    queries.set(query, media);
+    return media;
+  };
+  let notify;
+  dom.window.IntersectionObserver = class { constructor(fn) { notify = fn; } observe() {} };
+  dom.window.eval(motionSource + '\nsetupHeroMotion();');
+  const hero = dom.window.document.querySelector('.hero');
+  const button = dom.window.document.querySelector('#motion-toggle');
+  assert.equal(button.hidden, false);
+  button.click();
+  assert.equal(hero.hasAttribute('data-motion-disabled'), true);
+  assert.match(button.textContent, /Pornește/);
+  button.click();
+  assert.equal(hero.hasAttribute('data-motion-disabled'), false);
+  notify([{ isIntersecting: false }]);
+  assert.equal(hero.hasAttribute('data-motion-suspended'), true);
+  notify([{ isIntersecting: true }]);
+  assert.equal(hero.hasAttribute('data-motion-suspended'), false);
+  Object.defineProperty(dom.window.document, 'hidden', { value: true, configurable: true });
+  dom.window.document.dispatchEvent(new dom.window.Event('visibilitychange'));
+  assert.equal(hero.hasAttribute('data-motion-suspended'), true);
+  const reduced = queries.get('(prefers-reduced-motion: reduce)');
+  reduced.matches = true; reduced.handlers.forEach(fn => fn());
+  assert.equal(button.hidden, true);
+  dom.window.close();
+});
+
+test('release metadata uses a confirmed HTTPS address and headers match the hashed page policy', () => {
+  assert.equal(normalizeSiteUrl(''), null);
+  assert.equal(publicMetadata(html, null), html);
+  const address = normalizeSiteUrl('https://example.test/EduMindset');
+  assert.equal(address, 'https://example.test/EduMindset/');
+  for (const bad of ['http://example.test', 'javascript:alert(1)', 'https://me:secret@example.test', 'https://example.test/?query=1', 'https://example.test/#section']) assert.throws(() => normalizeSiteUrl(bad));
+  const published = publicMetadata(html, address);
+  assert.match(published, /property="og:image" content="https:\/\/example.test\/EduMindset\/images\/alexandru-laborator-1200.webp"/);
+  assert.match(published, /rel="canonical" href="https:\/\/example.test\/EduMindset\/"/);
+  assert.equal(contentSecurityPolicy(published), contentSecurityPolicy(html));
+  const headers = hostHeaders(contentSecurityPolicy(published));
+  assert.match(headers, /X-Frame-Options: DENY/);
+  assert.match(headers, /frame-ancestors 'none'/);
+  assert.doesNotMatch(headers, /unsafe-inline|unsafe-eval/);
 });

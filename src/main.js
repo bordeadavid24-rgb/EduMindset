@@ -1,4 +1,8 @@
 import './icons.css';
+import { buildDraft, RECIPIENT } from './mail.js';
+import { setupHeroMotion } from './motion.js';
+
+setupHeroMotion();
 
 const themeButton = document.querySelector('#theme-toggle');
 const systemTheme = matchMedia('(prefers-color-scheme: dark)');
@@ -98,11 +102,13 @@ const fields = [...form.querySelectorAll('input, textarea')];
 form.noValidate = true;
 fields.forEach((field) => field.addEventListener('input', () => field.setCustomValidity('')));
 function emailDraft() {
-  const name = form.elements.namedItem('Nume').value.trim();
-  const email = form.elements.namedItem('Email').value.trim();
-  const subject = form.elements.namedItem('Subiect').value.trim().replace(/[\r\n]+/g, ' ');
-  const message = form.elements.namedItem('Mesaj').value.trim();
-  return { subject, body: `Nume: ${name}\nEmail: ${email}\n\n${message}` };
+  const draft = buildDraft({
+    name: form.elements.namedItem('Nume').value,
+    email: form.elements.namedItem('Email').value,
+    subject: form.elements.namedItem('Subiect').value,
+    message: form.elements.namedItem('Mesaj').value,
+  });
+  return draft;
 }
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -113,21 +119,20 @@ form.addEventListener('submit', (event) => {
   });
   if (!form.reportValidity()) return;
   const draft = emailDraft();
-  const mailto = `mailto:edumindset8@gmail.com?subject=${encodeURIComponent(draft.subject)}&body=${encodeURIComponent(draft.body)}`;
   copyButton.hidden = false;
   // Some mail apps drop very long mailto URLs. Keep the message on the page instead.
-  if (mailto.length > 1800) {
+  if (draft.tooLong) {
     status.textContent = 'Mesajul este prea lung pentru a fi deschis direct. Copiază-l și trimite-l din aplicația ta de email către edumindset8@gmail.com.';
     return;
   }
   status.textContent = 'Mesajul este pregătit. Trimite-l din aplicația de email. Dacă aplicația nu se deschide, copiază mesajul și trimite-l la edumindset8@gmail.com.';
   // A mailto handoff cannot confirm delivery; never display a sent state.
-  location.href = mailto;
+  location.href = draft.href;
 });
 copyButton.addEventListener('click', async () => {
   const draft = emailDraft();
   try {
-    await navigator.clipboard.writeText(`Către: edumindset8@gmail.com\nSubiect: ${draft.subject}\n\n${draft.body}`);
+    await navigator.clipboard.writeText(`Către: ${RECIPIENT}\nSubiect: ${draft.subject}\n\n${draft.body}`);
     status.textContent = 'Mesaj copiat. Îl poți lipi în emailul tău către edumindset8@gmail.com.';
   } catch {
     status.textContent = 'Copierea automată nu este disponibilă. Selectează textul din formular și copiază-l în emailul tău către edumindset8@gmail.com.';

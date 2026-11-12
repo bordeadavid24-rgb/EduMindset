@@ -15,6 +15,7 @@
   --brand-red: #e85448;
   --note-paper: #f7eeeb;
   --ease-out: cubic-bezier(.23, 1, .32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   color-scheme: light;
   color: var(--ink);
   background: var(--paper);
@@ -478,8 +479,6 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; fon
 .marker-circle { position: absolute; inset: -9% -8% -10%; width: 116%; height: 119%; color: var(--accent); stroke-width: 2.1; pointer-events: none; }
 .hero-title .marked-word { color: var(--accent); }
 .hero-actions { position: relative; }
-.hero-book { position: absolute; width: 125px; left: 315px; top: 3px; transform: rotate(-9deg); pointer-events: none; }
-.hero-book .ink-drawing { stroke-width: 2.3; }
 .hero-scene { padding-top: 80px; }
 .scene-plane { bottom: 66px; left: 8%; right: 0; height: 38%; transform: rotate(-4deg); background: var(--brand-red); clip-path: polygon(2% 3%,18% 0,29% 3%,46% 1%,63% 3%,79% 0,98% 2%,100% 22%,98% 41%,100% 60%,98% 76%,99% 97%,83% 100%,61% 97%,42% 100%,21% 98%,0 100%,2% 81%,0 63%,2% 42%,0 21%); }
 .scene-halftone { position: absolute; right: -8px; top: 25%; width: 34%; height: 40%; background-image: radial-gradient(var(--accent) 1.4px, transparent 1.6px); background-size: 9px 9px; opacity: .45; transform: rotate(8deg); clip-path: polygon(12% 0,100% 9%,86% 100%,0 90%); }
@@ -540,12 +539,11 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; fon
 .resource-index::before { content: ''; position: absolute; top: -12px; right: 40px; width: 72px; height: 25px; background: var(--tape); transform: rotate(-7deg); opacity: .85; }
 .hero-title, .hero-copy, .hero-scene picture { animation: none; }
 @media (prefers-reduced-motion: no-preference) and (min-width: 768px) {
-  .marker-circle path { stroke-dasharray: 1; animation: pen-circle 640ms 80ms var(--ease-out) both; }
+  .marker-circle path { stroke-dasharray: 1; animation: pen-circle 1.8s 40ms linear both; }
   @keyframes pen-circle { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
 }
 @media (max-width: 1100px) and (min-width: 768px) {
   .hero-title { grid-column: 1 / 10; }
-  .hero-book { left: 230px; top: 20px; width: 88px; }
   .hero-scene { padding-top: 100px; }
   .question-comic { width: 145px; top: 3px; right: -7px; }
   .scene-halftone { right: 0; }
@@ -568,7 +566,6 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; fon
   .hero-title h1 { font-weight: 650; }
   .marker-circle { inset: -4% -6% -8%; width: 112%; height: 112%; stroke-width: 2.5; }
   .hero-actions { margin-top: 3px; }
-  .hero-book { width: 78px; left: auto; right: 4px; top: 40px; transform: rotate(-12deg); }
   .hero-scene { padding-top: 38px; }
   .question-comic { width: 124px; top: 0; right: 0; transform: rotate(7deg); }
   .question-comic text { font-size: 23px; }
@@ -612,7 +609,6 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; fon
   .resource-index { padding: 26px 24px; margin-top: 8px; }
 }
 @media (max-width: 359px) {
-  .hero-book { width: 62px; top: 50px; right: 0; }
   .hero::before { top: 468px; }
   .founder-photo { grid-template-columns: 98px 1fr; gap: 19px; }
   .section-intro h2 { padding-right: 0; }
@@ -652,21 +648,41 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; fon
 .scene-halftone { top: 25%; right: 3px; width: 29%; height: 37%; opacity: .3; }
 .scene-orbit { inset: 53px -9px 98px -3%; height: calc(100% - 151px); }
 .question-comic { width: 190px; top: 5px; right: 3px; transform: rotate(5deg); }
-.hero-scene figcaption { margin-top: 18px; background: transparent; border-top: 1px solid var(--paper-edge); border-bottom: 0; transform: none; padding: 16px 0 0 5%; line-height: 1.65; }
+.hero-scene figcaption { z-index: 3; margin-top: 18px; background: var(--paper); border-top: 1px solid var(--paper-edge); border-bottom: 0; transform: none; padding: 16px 0 0 5%; line-height: 1.65; }
 .hero-scene figcaption > span { color: var(--muted); text-align: right; }
 @media (prefers-reduced-motion: no-preference) and (min-width: 768px) {
-  .learning-sketch { animation: sketch-arrival 640ms 120ms var(--ease-out) both; }
-  @keyframes sketch-arrival { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0); } }
-  @supports (animation-timeline: view()) and (animation-range: exit 0% exit 100%) {
-    .hero { view-timeline-name: --hero-depth; view-timeline-axis: block; }
-    .scene-sheet { animation: sheet-depth 1ms linear both; animation-timeline: --hero-depth; animation-range: exit 0% exit 100%; }
-    .scene-plane { animation: paper-depth 1ms linear both; animation-timeline: --hero-depth; animation-range: exit 0% exit 100%; }
-    .scene-orbit { animation: route-depth 1ms linear both; animation-timeline: --hero-depth; animation-range: exit 0% exit 100%; }
-    .question-comic { animation: question-depth 1ms linear both; animation-timeline: --hero-depth; animation-range: exit 0% exit 100%; }
-    @keyframes sheet-depth { from { transform: translateY(0) rotate(3deg); } to { transform: translateY(32px) rotate(1deg); } }
-    @keyframes paper-depth { from { transform: translateY(0) rotate(-4deg); } to { transform: translateY(54px) rotate(-1deg); } }
-    @keyframes route-depth { from { transform: translateY(0) rotate(0); } to { transform: translateY(-44px) rotate(-4deg); } }
-    @keyframes question-depth { from { transform: translateY(0) rotate(5deg); } to { transform: translateY(-28px) rotate(1deg); } }
+  .learning-sketch path, .scene-orbit path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: pen-line 1.35s linear both; }
+  .learning-sketch > g:nth-child(2) path { animation-duration: 1.2s; animation-delay: 80ms; }
+  .learning-sketch > g:nth-child(3) path { animation-duration: 1.2s; animation-delay: 520ms; }
+  .learning-sketch > g:nth-child(4) path { animation-duration: 1.2s; animation-delay: 980ms; }
+  .learning-sketch > g:nth-child(1) path { animation-duration: .8s; animation-delay: 1.7s; }
+  .scene-orbit path:nth-child(1) { animation-duration: 2.8s; animation-delay: 120ms; }
+  .scene-orbit path:nth-child(2) { animation-duration: .8s; animation-delay: 2.2s; }
+  .scene-orbit path:nth-child(3) { animation-duration: .7s; animation-delay: 2.6s; }
+  .scene-halftone { animation: dot-float 4.8s var(--ease-in-out) infinite alternate; }
+  .scene-sheet { animation: sheet-float 5.4s var(--ease-in-out) infinite alternate; }
+  .scene-plane { animation: paper-float 4.2s var(--ease-in-out) infinite alternate; }
+  .scene-orbit { animation: route-float 3.6s var(--ease-in-out) infinite alternate; }
+  .question-comic { animation: question-float 2.8s var(--ease-in-out) infinite alternate; }
+  @keyframes pen-line { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+  @keyframes dot-float { from { translate: 0 0; } to { translate: 14px -20px; } }
+  @keyframes sheet-float { from { translate: 0 0; } to { translate: 0 -14px; } }
+  @keyframes paper-float { from { translate: 0 0; } to { translate: 0 18px; } }
+  @keyframes route-float { from { translate: 0 0; } to { translate: -10px 24px; } }
+  @keyframes question-float { from { translate: 16px 0; } to { translate: -10px -12px; } }
+  @supports (animation-timeline: scroll()) and (animation-range: 0vh 160vh) {
+    .scene-halftone { animation: dot-float 4.8s var(--ease-in-out) infinite alternate, dot-depth 1ms linear both; animation-timeline: auto, scroll(root block); animation-range: normal, 0vh 160vh; }
+    .scene-sheet { animation: sheet-float 5.4s var(--ease-in-out) infinite alternate, sheet-depth 1ms linear both; animation-timeline: auto, scroll(root block); animation-range: normal, 0vh 160vh; }
+    .scene-plane { animation: paper-float 4.2s var(--ease-in-out) infinite alternate, paper-depth 1ms linear both; animation-timeline: auto, scroll(root block); animation-range: normal, 0vh 160vh; }
+    .scene-orbit { animation: route-float 3.6s var(--ease-in-out) infinite alternate, route-depth 1ms linear both; animation-timeline: auto, scroll(root block); animation-range: normal, 0vh 160vh; }
+    .question-comic { animation: question-float 2.8s var(--ease-in-out) infinite alternate, question-depth 1ms linear both; animation-timeline: auto, scroll(root block); animation-range: normal, 0vh 160vh; }
+    .hero-scene picture { animation: photo-depth 1ms linear both; animation-timeline: scroll(root block); animation-range: 0vh 160vh; }
+    @keyframes dot-depth { from { transform: translateY(0) rotate(8deg); } to { transform: translateY(-80px) rotate(14deg); } }
+    @keyframes sheet-depth { from { transform: translateY(0) rotate(3deg); } to { transform: translateY(42px) rotate(1.5deg); } }
+    @keyframes paper-depth { from { transform: translateY(0) rotate(-4deg); } to { transform: translateY(36px) rotate(-2.5deg); } }
+    @keyframes route-depth { from { transform: translateY(0) rotate(0); } to { transform: translateY(-210px) rotate(-7deg); } }
+    @keyframes question-depth { from { transform: translateY(0) rotate(5deg); } to { transform: translateY(-120px) rotate(1deg); } }
+    @keyframes photo-depth { from { transform: translateY(0); } to { transform: translateY(-130px); } }
   }
 }
 @media (min-width: 768px) and (max-width: 1100px) {
@@ -708,3 +724,12 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; fon
 
 /* User-pinned logo colour: artwork and primary fills use the exact source red. */
 .hero-title .marked-word, .marker-circle { color: var(--brand-red); }
+
+/* Continuous decoration can be stopped and does not run offscreen or in a hidden tab. */
+.motion-toggle { display: block; min-height: 44px; margin-left: auto; padding: 9px 0; border: 0; background: transparent; color: var(--accent); font: inherit; font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }
+.hero[data-motion-suspended] :is(.scene-sheet, .scene-plane, .scene-orbit, .scene-halftone, .question-comic) { animation-play-state: paused, running; }
+.hero[data-motion-suspended] :is(.marker-circle, .learning-sketch, .scene-orbit) path { animation-play-state: paused; }
+.hero[data-motion-disabled] :is(.scene-sheet, .scene-plane, .scene-orbit, .scene-halftone, .question-comic, .hero-scene picture),
+.hero[data-motion-disabled] :is(.marker-circle, .learning-sketch, .scene-orbit) path { animation: none !important; }
+.hero[data-motion-disabled] :is(.marker-circle, .learning-sketch, .scene-orbit) path { stroke-dashoffset: 0; }
+@media (min-width: 768px) and (max-width: 1100px) { .motion-toggle { margin-left: 0; } }

@@ -5,9 +5,9 @@ Latest request: strengthen the hero, combine professionalism with MORE drawing, 
 Reading this as a confident teacher-led educational publication with a richer illustrated learning diagram and layered paper composition. Design variance8, motion intensity5, density5. Professionalism comes from hierarchy, clear controls, factual roles and composition; drawings remain original editorial marks.
 
 ## Motion thesis
-- Purpose: explanation and spatial consistency. The focal moment connects a question, exploration and application, then separates photograph, sheet and drawn route into distinct physical depths as the hero leaves the viewport.
-- Entrance: short single focal art sequence, content and source photo immediately visible; existing marker plus illustration reveal. No repeated section fade/slide recipe.
-- Scroll: named native CSS view timeline on the hero. Transform-only bounded parallax of decorative layers and the photograph on desktop/tablet. Headline, paragraph, buttons and factual caption do not move independently of the document. Natural scroll; no pinning or scroll interception.
+- Purpose: explanation and spatial consistency. The pen draws the question, the exploration, and the route while you look. Scroll then separates the photograph and the route from the paper behind them.
+- Entrance: a linear pen stroke you can watch, then a small continuous drift on the paper only. Headline, buttons, and caption stay still.
+- Scroll: native CSS `scroll(root)` from 0 to 160vh. The photograph and route rise; the red paper lags a short distance so it does not cover the name. Natural scroll; no pinning or scroll interception.
 - Phones: linear composition and still layers, smaller diagram. Reduced-motion preference disables displacement and draw-on. Unsupported timeline browsers get a complete static composition.
 - Feedback: existing140ms press feedback remains. Recall, keyboard/menu/form state changes stay immediate. No dependency, rAF loop or scroll event handler.
 
