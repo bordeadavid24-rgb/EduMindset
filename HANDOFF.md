@@ -1,8 +1,20 @@
 # EDU MindSet - live work log and handoff
 
-Updated: 2026-11-12, current release checkpoint. Project root: `/Users/lilianab/Desktop/MINA TLC/edumindset`.
+Updated: 2026-11-13, anniversary planning checkpoint. Project root: `/Users/lilianab/Desktop/MINA TLC/edumindset`.
 
-## Authoritative current state, 12 November2026
+## Authoritative latest decisions, 13 November2026
+
+Alex has agreed to the existing base website. New direction: release the full website on EDU MindSet's first anniversary, preceded by a standout countdown experience. The user thinks the date is25 November, but it is NOT confirmed. Candidate target25 November2026, Europe/Bucharest; exact date/year/hour must be confirmed with Alex before configuring a timer. Do not assume midnight or publish an original founding date as fact.
+
+User will verify contact details tomorrow,14 November2026. Preferred address:edumindset.ro; .com/.app or another branded fallback acceptable, with a strong zero-cost preference. No domain availability, ownership, purchase or paid budget has been confirmed. Free hosting/subdomain and paid custom-domain registration are different; current official direct RoTLD price is12 EUR plus VAT/year, checked13 November. No domain or hosting action was taken.
+
+Proposed concept, awaiting reaction: **Un an. Un nou capitol.** A living red/charcoal notebook countdown with developing pen artwork, a brief daily learning challenge and shareable notebook card, then an anniversary unfold into the accepted full site. User asked for a SHORT IDEA FIRST; do not implement or publish the countdown until the concept/scope discussion. No follower-growth guarantee, fake community activity or new contact capture by default.
+
+Detailed durable plan and ownership matrix: docs/ANNIVERSARY_LAUNCH_PLAN.md. USER_TODO marks base approval complete, contacts due14 November, domain/time decisions pending, and workshop/video/UnitED/resources/other optional content deferred until AFTER publication. Existing Nov12 release ZIP contains the full website, NOT a countdown build. Keep it as a full-site artifact; do not upload it as the proposed prelaunch page.
+
+This is a documentation/planning update only. No application code, final deadline, domain environment setting or public deployment has changed. Prior verification/synchronization limits below remain historical until retried. GROK_PROMPT points to this plan so another AI knows what the user owns and what it should implement next.
+
+## Prior authoritative technical state, 12 November2026
 
 User requested a whole-project inspection, completion of remaining agent work, and a full owner to-do list. Preserved later working-tree motion/CSP/mail/asset cleanup beyond already-pushed V5. Required content is complete. No new redesign or video/render modification.
 

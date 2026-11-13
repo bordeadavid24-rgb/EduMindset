@@ -1,23 +1,31 @@
 # EDU MindSet: your remaining checklist
 
-Updated 12 November 2026. The current site can be published as an introduction with forthcoming workshops. You do not have to wait for a workshop date, the film, UnitED, articles or a direct-send contact form.
+Updated13 November2026. Alex has approved the existing base website, according to the user. The new priority is an anniversary countdown before the full website release. The user thinks the anniversary is25 November; exact date/year/hour is still unconfirmed. See docs/ANNIVERSARY_LAUNCH_PLAN.md for the proposed concept and the owner/AI split. Workshop, film, UnitED, resources and other optional work are explicitly deferred until after publication.
 
-## Before publishing the current teaser
+## Immediate decisions for the anniversary launch
 
-- [ ] **Review this version with Alex.** Check the Romanian copy, name and qualifications, actual photographs, edited hero cutout, logo red, and desktop drawing/parallax. The hero cutout is an AI-assisted edit of the supplied microscope photograph. Confirm this is the version he wants to represent EDU MindSet publicly.
+- [x] Alex has agreed to the current base website. Do not repeat that approval request for the same version.
+- [ ] Confirm with Alex the exact anniversary date, target year and launch hour in Europe/Bucharest. Candidate25 November2026 is not yet a configured deadline.
+- [ ] React to the countdown concept and confirm a public countdown-first experience versus an inline timer on an already-public full site. The AI will implement after this discussion.
+- [ ] Verify contacts on14 November2026, as you said you would do tomorrow. The website currently uses edumindset8@gmail.com and @edu.mind.set.
+- [ ] Choose a domain/hosting cost route after availability checking:edumindset.ro preferred; .com/.app alternatives are usually paid too. A branded pages.dev subdomain may be a zero-cost option if its name is available. No purchase/budget is approved.
+
+## Hosting and publication checklist
+
+- [x] **Base-site review with Alex completed.** Reported by the user on13 November2026. The new countdown concept is a separate, still-open discussion.
 - [ ] **Confirm the public contact destinations are correct and monitored.** The site uses `edumindset8@gmail.com` and `https://www.instagram.com/edu.mind.set/`. The on-page QR opens Instagram. No new address or social account needs creating if these are already correct.
-- [ ] **Choose the public hosting account and site address.** A custom domain is optional. Use a static host, either connected to the existing GitHub repository or accepting the prepared release ZIP. The repository already exists: `https://github.com/bordeadavid24-rgb/EduMindset`. Do not recreate it. A Git-connected deployment must wait until the new local commits are pushed; otherwise it will build the older upstream version. The prepared ZIP already contains the newest build and can be used for a direct upload.
+- [ ] **Choose the public hosting account and site address.** A custom domain is optional. Use a static host, either connected to the existing GitHub repository or accepting the prepared release ZIP. The repository already exists: `https://github.com/bordeadavid24-rgb/EduMindset`. Do not recreate it. A Git-connected deployment must wait until the new local commits are pushed; otherwise it will build the older upstream version. The12 November ZIP remains the existing full-site build. Deploy a new countdown artifact only after it exists and the concept/release flow is agreed.
 - [ ] **Set the final public URL before the final public build.** On a Git-connected host, set `EDUMINDSET_SITE_URL` to the full HTTPS site address, including any repository subpath. Build command: `npm run build`; output: `dist`; tested Node version:24. The build then creates absolute social-image and canonical URLs automatically. If you use a direct ZIP upload first, send back the generated public address so the final archive can be rebuilt for that address. The current archive intentionally assumes no domain.
 - [ ] **Check the live version on a real phone and desktop before sharing it.** Check menu, text wrapping, image crops, scrolling, the recall exercise, light/dark appearance and the desktop stop/start motion control. Tap Instagram and email. For the form, confirm that your email app opens a draft to the correct address; sending happens in that app. Check the copy fallback if no mail app is configured. Physical-phone behavior has not been verified in this environment.
 - [ ] **Share the final URL when satisfied.** Put it in the Instagram bio and workshop communications if desired. A website QR can be prepared once the address is fixed; the existing site QR remains an Instagram QR.
 
 ## Deployment details already prepared for you
 
-No more page construction or repository setup is required for the teaser. The release includes local fonts, responsive images, real project content, source-asset cleanup, a CSP and a generated `_headers` file. Cloudflare Pages and Netlify can use that file; other hosts may require their own header configuration. Final hosted behavior still needs checking on the chosen service.
+The accepted full site is constructed. The proposed countdown has not been built. The existing full-site release includes local fonts, responsive images, real project content, source-asset cleanup, a CSP and a generated `_headers` file. Cloudflare Pages and Netlify can use that file; other hosts may require their own header configuration. Final hosted behavior still needs checking on the chosen service.
 
-Use `EDUMINDSET-RELEASE-2026-11-12.zip` from the parent MINA TLC folder for a direct static upload. `index.html` must end up at the site's root, beside `assets/`, `images/` and `_headers`, not inside an extra nested folder. The archive is the current teaser build; its social URLs should be finalized once the public address is known.
+`EDUMINDSET-RELEASE-2026-11-12.zip` contains the full website, not the new countdown. Do not upload it as the anniversary prelaunch page. The AI should prepare a new, correct archive after the countdown and host/address are agreed. For any eventual direct static upload: `index.html` must end up at the site's root, beside `assets/`, `images/` and `_headers`, not inside an extra nested folder. The archive is the current teaser build; its social URLs should be finalized once the public address is known.
 
-## When the first workshop is ready
+## After publication: when the first workshop is ready
 
 Send the confirmed details together so the announcement and registration can be added in one pass:
 
@@ -31,14 +39,14 @@ Send the confirmed details together so the announcement and registration can be 
 
 Until then, the current forthcoming labels and Instagram announcement link are intentional.
 
-## When the film is approved
+## After publication: when the film is approved
 
 - [ ] Supply the final approved EDU MindSet workshop film and say where it should appear: this landing page, a workshop page, the workshop itself, or several places.
 - [ ] Supply a preferred poster frame and captions/transcript if available. Hosting, compression and playback integration can then be completed for the actual file.
 
 The MINA video/render work was not modified by this website audit. The website does not imply affiliation with the MINA museum.
 
-## Later content and optional features
+## After publication: later content and optional features
 
 - [ ] **UnitED:** provide the first edition's real date, location, programme, confirmed speakers and registration destination when ready. The current coming-soon section can stay until then.
 - [ ] **Resources:** provide actual approved articles, guides, PDFs or links, with titles and short descriptions. The site currently promises forthcoming resources, not downloads that do not exist.

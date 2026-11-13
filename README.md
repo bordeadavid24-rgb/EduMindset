@@ -2,7 +2,9 @@
 
 Romanian landing page for the educational project created by Alexandru-Constantin Tulică. Current V5 combines the original red/charcoal identity, real photographs, an open founder letter, notebook/comic artwork, a three-stage recall exercise, and a visible illustrated hero with native CSS scroll depth.
 
-Updated 12 November 2026. Implementation and verification are distinct: read `HANDOFF.md` for the latest working-tree/synchronization state, `docs/verification-current.md` for current checks and limits, and `docs/verification-v5.md` for historical V5 evidence. The remaining user inputs are listed in `USER_TODO.md`.
+Latest planning update13 November2026: Alex approved the base site; an anniversary countdown is proposed but not implemented. Candidate25 November still needs date/year/hour confirmation. See `docs/ANNIVERSARY_LAUNCH_PLAN.md` for decisions, owner tasks and AI next steps.
+
+Technical verification checkpoint12 November2026. Implementation and verification are distinct: read `HANDOFF.md` for the latest working-tree/synchronization state, `docs/verification-current.md` for current checks and limits, and `docs/verification-v5.md` for historical V5 evidence. The remaining user inputs are listed in `USER_TODO.md`.
 
 ## Run locally
 
