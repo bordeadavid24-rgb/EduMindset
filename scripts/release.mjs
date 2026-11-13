@@ -14,11 +14,12 @@ export function normalizeSiteUrl(value) {
   return url.href;
 }
 const attribute = (value) => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;');
-export function publicMetadata(html, siteUrl) {
+export function publicMetadata(html, siteUrl, pagePath = '') {
   if (!siteUrl) return html;
   const image = attribute(new URL('images/alexandru-laborator-1200.webp', siteUrl).href);
+  const pageUrl = attribute(new URL(pagePath, siteUrl).href);
   return html.replace(/(<meta property="og:image" content=")[^"]*("\s*\/>)/, `$1${image}$2`)
-    .replace('</head>', `    <meta property="og:url" content="${attribute(siteUrl)}" />\n    <link rel="canonical" href="${attribute(siteUrl)}" />\n  </head>`);
+    .replace('</head>', `    <meta property="og:url" content="${pageUrl}" />\n    <link rel="canonical" href="${pageUrl}" />\n  </head>`);
 }
 export function hostHeaders(policy) {
   return '/*\n' + Object.entries({ ...SECURITY_HEADERS, 'Content-Security-Policy': `${policy}; frame-ancestors 'none'` })

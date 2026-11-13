@@ -12,8 +12,9 @@ function productionCsp(siteUrl) {
     configResolved(config) { outputDir = resolve(config.root, config.build.outDir); },
     transformIndexHtml: {
       order: 'post',
-      handler(source) {
-        const html = publicMetadata(source, siteUrl);
+      handler(source, context) {
+        const pagePath = context.filename.endsWith('countdown.html') ? 'countdown.html' : '';
+        const html = publicMetadata(source, siteUrl, pagePath);
         const policy = contentSecurityPolicy(html);
         return html.replace('<head>', `<head>\n    <meta http-equiv="Content-Security-Policy" content="${policy}" />`);
       },
@@ -42,7 +43,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), 'EDUMINDSET_');
   const siteUrl = normalizeSiteUrl(process.env.EDUMINDSET_SITE_URL || env.EDUMINDSET_SITE_URL);
   return {
-    base: './', appType: 'mpa', build: { target: 'es2022' },
+    base: './', appType: 'mpa', build: { target: 'es2022', rollupOptions: { input: { main: resolve('index.html'), countdown: resolve('countdown.html') } } },
     plugins: [productionCsp(siteUrl), previewSecurityHeaders()],
     server: { port: 5173, strictPort: true },
     preview: { port: 4173, strictPort: true, headers: SECURITY_HEADERS },

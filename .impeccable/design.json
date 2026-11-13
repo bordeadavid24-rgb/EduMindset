@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-12T12:42:47.754Z",
+  "generatedAt": "2026-11-13T21:41:35.449814Z",
   "title": "Design System: EDU MindSet",
   "extensions": {
     "colorMeta": {
@@ -191,9 +191,28 @@
       },
       "letter": {
         "purpose": "Personal first-person founder copy."
+      },
+      "countdown-display": {
+        "displayName": "Countdown title",
+        "purpose": "Separate countdown.html title; 750 weight. At <=700px use clamp(42px,8.5vw,60px), line-height 1.02, preserving a 42px narrow-phone minimum."
+      },
+      "countdown-number": {
+        "displayName": "Countdown numerals",
+        "purpose": "Four inline time units with tabular figures. At <=700px use clamp(32px,9vw,56px); below 360px use 32px. Unit labels remain 12px."
       }
     },
-    "shadows": [],
+    "shadows": [
+      {
+        "name": "countdown-cover",
+        "value": "0 16px 45px #17161529",
+        "purpose": "Countdown paper opening against the existing red outer field."
+      },
+      {
+        "name": "countdown-reflection-sheet",
+        "value": "0 15px 35px #17161524",
+        "purpose": "Local reflection page; 1deg desktop tilt, upright on phones."
+      }
+    ],
     "motion": [
       {
         "name": "press",
@@ -214,6 +233,21 @@
         "name": "drift",
         "value": "2.8s–5.4s alternate",
         "purpose": "Decorative translate only; paused offscreen/hidden and manually stoppable."
+      },
+      {
+        "name": "countdown-pen",
+        "value": "1.2s underline; 1.8s route; 800ms stamp settle",
+        "purpose": "One desktop entrance above 700px with no reduced-motion preference. No idle drift on this route."
+      },
+      {
+        "name": "countdown-depth",
+        "value": "scroll(root block), 0vh 110vh",
+        "purpose": "Supported eligible desktops: squared backing +50px, rotation 5deg to 9deg; doodle -65px. Photograph and reading content remain still. Manual stop removes route animations."
+      },
+      {
+        "name": "countdown-rehearsal",
+        "value": "500ms cubic-bezier(.23,1,.32,1)",
+        "purpose": "Page-open treatment when the labelled trial launch state appears. Reduced motion removes animations, transitions and smooth scrolling; hidden tabs pause CSS animations and stop scheduled ticks."
       }
     ],
     "breakpoints": [
@@ -232,6 +266,14 @@
       {
         "name": "tablet",
         "value": "1100px"
+      },
+      {
+        "name": "countdown-phone",
+        "value": "700px"
+      },
+      {
+        "name": "countdown-tablet",
+        "value": "1000px"
       }
     ]
   },
@@ -279,6 +321,21 @@
       "description": "Static eligible-desktop example of the pause/resume control.",
       "html": "<button class=\"motion-toggle\" type=\"button\" id=\"motion-toggle\" aria-controls=\"hero-scene\">Oprește animația</button>",
       "css": ":host{font-family:\"Bricolage Grotesque Variable\",sans-serif;--paper:#f7f6f2;--surface:#fffefd;--ink:#242323;--muted:#615d5a;--rule:#d4cfcb;--accent:#b3342a;--button:#e85448;--brand-red:#e85448;--drawing-paper:#fffdf7;--paper-edge:#c7bfb7;--ease-out:cubic-bezier(.23,1,.32,1);color:#242323}*{box-sizing:border-box}[hidden]{display:none!important}p,h3,ul{margin:0}p{line-height:1.7}button,input,textarea{font:inherit}button{cursor:pointer}:focus-visible{outline:3px solid var(--accent);outline-offset:5px}\n.motion-toggle { display: block; min-height: 44px; margin-left: auto; padding: 9px 0; border: 0; background: transparent; color: var(--accent); font: inherit; font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }\n@media (min-width: 768px) and (max-width: 1100px) { .motion-toggle { margin-left: 0; } }"
+    },
+    {
+      "name": "Countdown units",
+      "kind": "custom",
+      "description": "Four equal columns on a single paper field; the actual route updates its timer from the unconfirmed mock date. The red seconds annotation clears the unit label.",
+      "html": "<div class=\"ds-countdown\" role=\"timer\" aria-live=\"off\" aria-label=\"11 zile, 2 ore, 30 minute, 45 secunde\"><div><strong>11</strong><span>zile</span></div><div><strong>02</strong><span>ore</span></div><div><strong>30</strong><span>minute</span></div><div class=\"ds-countdown-seconds\"><strong>45<svg viewBox=\"0 0 180 150\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path d=\"M149 19C117 1 35 0 12 39C-14 80 21 135 88 137C151 140 187 97 171 52C164 34 149 23 135 20\"/></svg></strong><span>secunde</span></div></div>",
+      "css": ".ds-countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--paper,#f7f6f2);color:var(--ink,#242323);padding:20px 10px;font-family:\"Bricolage Grotesque Variable\",sans-serif}.ds-countdown>div{display:flex;flex-direction:column;align-items:center;border-left:1px solid var(--rule,#d4cfcb);padding:0 8px}.ds-countdown>div:first-child{border-left:0}.ds-countdown strong{position:relative;font-size:clamp(32px,8vw,68px);font-weight:700;line-height:1.1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}.ds-countdown span{font-size:12px;letter-spacing:.05em;margin-top:6px}.ds-countdown-seconds{color:var(--accent,#b3342a)}.ds-countdown svg{position:absolute;inset:-6px -6px;width:calc(100% + 12px);height:calc(100% + 10px);fill:none;stroke:var(--brand-red,#e85448);stroke-width:1.5;pointer-events:none}"
+    },
+    {
+      "name": "Countdown reflection sheet",
+      "kind": "custom",
+      "refersTo": "countdown-reflection-sheet",
+      "description": "Taped local-only reflection form with 16px input, codepoint count and a route-specific red action. The running route generates the actual PNG result.",
+      "html": "<div class=\"ds-reflection\"><div class=\"ds-reflection-meta\">Întrebarea zilei <span>~30 sec</span></div><h3>Ce ai înțeles abia după ce ai încercat?</h3><label for=\"ds-reflection-thought\">Gândul tău</label><textarea id=\"ds-reflection-thought\" rows=\"3\" placeholder=\"Eu mă întreb…\" aria-describedby=\"ds-reflection-help\"></textarea><p id=\"ds-reflection-help\">Rămâne în browserul tău. Nu îl trimitem și nu îl salvăm.</p><button type=\"button\">Fă-i loc pe o pagină</button></div>",
+      "css": ".ds-reflection{position:relative;background:var(--paper,#f7f6f2);color:var(--ink,#242323);padding:30px 32px 28px;font-family:\"Bricolage Grotesque Variable\",sans-serif;box-shadow:0 15px 35px #17161524}.ds-reflection:before{content:\"\";position:absolute;top:-11px;left:40%;width:75px;height:24px;background:#e1cbb5eb;transform:rotate(-6deg);clip-path:polygon(2% 0,100% 2%,97% 100%,0 93%)}.ds-reflection-meta{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--rule,#d4cfcb);padding-bottom:16px;font-size:12px;color:var(--accent,#b3342a)}.ds-reflection h3{font-size:27px;line-height:1.16;letter-spacing:-.025em;font-weight:650;margin:22px 0}.ds-reflection label{display:block;font-size:12px;font-weight:650;margin-bottom:8px}.ds-reflection textarea{width:100%;box-sizing:border-box;resize:vertical;min-height:106px;background:var(--surface,#fffefd);color:var(--ink,#242323);border:1px solid var(--rule,#d4cfcb);border-radius:0;padding:12px;font:16px/1.6 \"Bricolage Grotesque Variable\",sans-serif}.ds-reflection p{font-size:12px;line-height:1.6;color:var(--muted,#615d5a)}.ds-reflection button{min-height:52px;border:1px solid var(--brand-red,#e85448);border-radius:3px;padding:14px 20px;background:var(--brand-red,#e85448);color:#171615;font:700 14px/1.4 \"Bricolage Grotesque Variable\",sans-serif;cursor:pointer;transition:transform 140ms cubic-bezier(.23,1,.32,1),background-color 160ms ease}.ds-reflection button:active{transform:scale(.98)}.ds-reflection textarea:focus-visible,.ds-reflection button:focus-visible{outline:3px solid currentColor;outline-offset:5px}@media(hover:hover) and (pointer:fine){.ds-reflection button:hover{background:#ed6a60}}@media(prefers-reduced-motion:reduce){.ds-reflection button{transition:none}}"
     }
   ],
   "narrative": {
@@ -301,6 +358,11 @@
         "name": "Digital decoration, honest evidence",
         "body": "Use original SVG; never claim invented handwriting or events as real.",
         "section": "elevation"
+      },
+      {
+        "name": "Countdown preview scope",
+        "body": "Extend the existing notebook world on countdown.html only. Keep the mock deadline unconfirmed, the mobile timer directly below the title, daily-copy promises consistent with seven rotating prompts, and preview the same locally generated PNG used for export. No publishing or domain registration is authorized.",
+        "section": "layout"
       }
     ],
     "dos": [

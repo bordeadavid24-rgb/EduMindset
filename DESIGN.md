@@ -71,6 +71,18 @@ typography:
     fontFamily: "Bricolage Grotesque Variable, sans-serif"
     fontSize: "14px"
     fontWeight: 650
+  countdown-display:
+    fontFamily: "Bricolage Grotesque Variable, sans-serif"
+    fontSize: "clamp(58px, 7.1vw, 96px)"
+    fontWeight: 750
+    lineHeight: 0.97
+    letterSpacing: "-0.04em"
+  countdown-number:
+    fontFamily: "Bricolage Grotesque Variable, sans-serif"
+    fontSize: "clamp(60px, 8.4vw, 116px)"
+    fontWeight: 700
+    lineHeight: 1.1
+    letterSpacing: "-0.04em"
 rounded:
   control: "3px"
 spacing:
@@ -100,6 +112,15 @@ components:
     rounded: "{rounded.control}"
     padding: "14px"
     height: "52px"
+  countdown-button:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.primary-ink}"
+    rounded: "{rounded.control}"
+    padding: "14px 20px"
+  countdown-reflection-sheet:
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.ink}"
+    padding: "30px 32px 28px"
   navigation:
     backgroundColor: "{colors.paper}"
     textColor: "{colors.ink}"
@@ -126,6 +147,8 @@ V5 refines the notebook world into a more integrated learning composition: an or
 - One coherent charcoal/red SVG line vocabulary and lightweight CSS materials.
 - Root-scroll depth on the photograph and decorative layers, with still phone/reduced-motion fallbacks and static depth when unsupported.
 
+The separate `countdown.html` preview extends this notebook world with a red outer cover, a punched paper opening, an inline clock, and a daily reflection sheet. It shares the accepted site's font, palette, source-derived Alex cutout, and original comic strokes. Its mock 25 November 2026, 00:00 Europe/Bucharest target remains explicitly unconfirmed; it does not replace `index.html` or establish an approved anniversary claim. This is a route-specific extension rather than a replacement identity.
+
 ## Colors
 
 The palette follows the supplied logo's red and black relationship. Exact values are recorded in the frontmatter.
@@ -150,6 +173,8 @@ The palette follows the supplied logo's red and black relationship. Exact values
 
 **The Exact Red Rule.** Keep the pinned logo red on primary fills and the large hero emphasis. Use the darker same-hue red for small links and the small vertical wordmark. Do not substitute a different hue or reintroduce a blue/yellow identity.
 
+On the countdown route, Exact Logo Red also fills the outer page field. Near-black header, invitation, and footer copy sits directly on that red; Paper and Surface carry the reading and reflection regions. The preview notice is near-black with light text. Small clock/date emphasis uses Link Red, switching to the established pale accent in dark paper regions. The outer red remains red in both themes. The exported Story keeps its light Drawing Paper and charcoal palette regardless of the current page theme.
+
 ## Typography
 
 **Display Font:** Bricolage Grotesque Variable, falling back to sans-serif.
@@ -168,6 +193,10 @@ Weight, scale, and spacing distinguish roles without a second font download. Typ
 
 **The Readable Copy Rule.** Reflow prose on mobile rather than shrinking it to preserve a desktop composition.
 
+### Countdown route hierarchy
+
+The countdown display and numerals use the two additional frontmatter roles without changing the main page's type scale. At widths up to 1000px, the headline becomes `clamp(58px, 8vw, 80px)` and the timer `clamp(60px, 10vw, 96px)`. At 700px and below, the headline is `clamp(42px, 8.5vw, 60px)` with 1.02 leading, and numerals are `clamp(32px, 9vw, 56px)`. At narrow phone widths these clamps retain a 42px headline minimum and a 32px timer minimum. Numerals use tabular figures to avoid width changes on each tick. Unit labels are 12px with .05em tracking. The reflection heading is 27px desktop and 25px phone; phone explanatory prose is 14px, captions/metadata and plain controls 12px, primary controls 14px, and the textarea 16px. The short invitation measures follow their specific roles rather than a long-form reading width.
+
 ## Layout
 
 The main container is capped at 1280px. Side gutters are 48px on desktop, 32px below 1100px, 20px on mobile, and 16px below 360px. Main section gaps are 104px on desktop and 64px on mobile.
@@ -182,11 +211,19 @@ On phones UnitED uses two rows: the wordmark first, then its subtitle beside an 
 
 The sticky header is 80px on desktop and 68px on mobile. Safe-area padding protects the top and footer edges; anchor offsets account for the header. Images reserve their proportions, and the exercise reserves a minimum stage height. Text does not depend on fixed-height containers. Decorative overlaps and drawings have smaller mobile versions; the hero halftone disappears on mobile, and the programme sketch disappears below 360px. Illustration space is kept separate from the main reading and action regions.
 
+### Countdown route composition
+
+The preview container caps at 1248px with 48px side gutters, changes to 32px below 1000px, and to 16px at 700px. The header is a simple 94px row, becoming 72px on phones, without the main site's sticky navigation. The paper opening has a narrow 25px punched spine and `22px 58px 0 76px` padding; phone spine width is 17px and padding is `14px 22px 0 38px`, reducing again below 360px.
+
+Desktop pairs a `1.2fr 1fr` title-and-photo composition with a four-column clock across the full paper width. The daily reflection sits below in an `.8fr 1.2fr` split with a 74px gap and 96px top separation. At 700px the cover becomes an explicit grid: title, timer, context beside a 112px founder image, invitation, then the lower rule and rehearsal action. The mobile timer directly follows the title. The small top motion-control row is hidden, and the founder's circular stamp is removed. Reflection becomes one column with 30px separation and 54px top margin; its paper is upright, and the main form/export buttons fill the available width. The preview notice is status information above the header, not an eyebrow above the title.
+
 ## Elevation & Depth
 
 Most content remains flat. Photographic layering places the real hero subject above a ruled study sheet, irregular red paper plane, halftone patch, and original orbit stroke. The study sheet replaces the broad squared hero background and has a margin rule and a second lower paper edge. The caption is a stationary factual name-and-roles block rather than a rotated strip. The founder and other photo prints use light borders and modest rotation. The founder print has a small shadow (`2px 6px 14px rgb(30 20 10 / .08)`), while the recall note uses `2px 4px 10px rgb(0 0 0 / .1)`. These establish thin paper layers rather than floating app cards.
 
 Squared-paper and dotted fields are CSS gradients. Tape strips and torn edges are CSS pseudo-elements and clipping contours. They are new digital treatments, never claimed as photographed personal materials.
+
+The countdown route uses a broad paper shadow (`0 16px 45px #17161529`) and a lighter reflection-sheet shadow (`0 15px 35px #17161524`) against the red cover field. The reflection sheet tilts 1 degree on desktop and is flat on phones. A fine offset edge, CSS punched holes, squared paper, and a translucent tape strip supply the material cues. These are original digital page treatments. They introduce no raster texture or new source photograph.
 
 ## Shapes
 
@@ -241,6 +278,22 @@ The hero caption includes a native stop/start button for desktop users without a
 
 The hero clips decorative overflow. There is no pinning, scroll interception, JavaScript scroll listener, or runtime animation library. Under 768px or with reduced motion, the drawing and layers are complete and still. Without supported scroll timelines, scroll depth is absent, but the eligible desktop pen entrance and idle drift still play. Reduced motion also removes smooth scrolling. This describes source behavior as reviewed on 12 November 2026; current checks and their limits belong in `docs/verification-current.md`. This source record does not itself claim a browser pass.
 
+### Countdown Clock and Rehearsal
+
+Four equal inline columns use thin vertical rules rather than separate cards. A red oval annotates the seconds numeral and must clear its unit label. The visible clock has `role="timer"` with live announcements off; its accessible label is updated with all four units. Values are calculated from the fixed ISO timestamp and clamp at zero. The clock yields to a clearly labelled preview launch state at expiry or through the reversible rehearsal button; that state links to the accepted full site. There is no automatic redirect or registration action. Without JavaScript, the explicit demonstrative date and script explanation remain visible.
+
+### Countdown Reflection and Story Image
+
+The taped paper sheet has date/effort metadata, one question, a hint, a visible textarea label, a 160-codepoint counter, and a clear local-only explanation. Seven prompts rotate by calendar day in Europe/Bucharest; copy promises a daily question without claiming an unlimited sequence of new questions. An in-progress answer keeps its original question across midnight. Whitespace is normalised, empty answers receive Romanian native validation, and text is inserted with `textContent` or drawn as canvas text. Answers remain in page memory and are not submitted or persisted.
+
+Submission reveals a result and moves focus to download. The actual locally generated 1080 × 1920 PNG becomes a data-URL image preview; while preparing it, or if conversion fails, an unclipped HTML text fallback remains available. The image uses notebook ruling, the question, adaptive answer type, the existing wordmark text and Instagram name. Its displayed image preserves the exported proportion. Editing restores the form and focuses the answer. Export disables both actions while preparing the file and reports completion/failure through a status region. Native file sharing is offered where the API is available; unsupported sharing or other sharing errors fall back to downloading the PNG. Cancelling native Share leaves the result available without triggering a download. Neither action posts to Instagram, uploads text, or confirms publication.
+
+### Countdown Motion
+
+Above 700px with no reduced-motion preference, the title underline draws once over 1.2s, the collage route over 1.8s, and the chapter stamp settles over 800ms. Entering the rehearsal state has a 500ms page-opening treatment. When native scroll timelines are supported, `scroll(root block)` from 0 to 110vh moves the squared-paper backing down 50px while rotating it from 5 to 9 degrees, and moves the decorative doodle up 65px. The founder photograph, reading text, clock and controls stay in normal flow. There is no idle-drift loop on this route.
+
+The desktop stop/start control disables route animations for the current page session and leaves finished strokes. Phones show the still composition. Reduced motion also removes transitions and smooth scrolling. Hidden tabs pause CSS animations and cancel scheduled ticks; returning recomputes the remaining time from the clock. These source behaviors do not establish physical-phone, native Share, performance, assistive-technology or dynamic scroll verification. Current review evidence, capture timing and verification limits belong in `docs/countdown-review.md`.
+
 ## Do's and Don'ts
 
 ### Do:
@@ -253,6 +306,7 @@ The hero clips decorative overflow. There is no pinning, scroll interception, Ja
 - **Do** retain keyboard access, visible focus, reduced-motion support, and HTML fallbacks.
 - **Do** keep the headline, buttons, labels, and caption still. Let the photograph and the paper planes move apart.
 - **Do** label forthcoming material honestly and explain the email handoff.
+- **Do** keep the countdown preview visibly provisional, its timer directly below the phone title, its seconds annotation clear of the label, and its result preview tied to the actual PNG.
 
 ### Don't:
 
@@ -263,3 +317,5 @@ The hero clips decorative overflow. There is no pinning, scroll interception, Ja
 - **Don't** use em dashes in new visible copy or supporting guidance.
 - **Don't** invent dates, prices, testimonials, affiliations, attendance figures, registration availability, or downloadable resources.
 - **Don't** imply that the auditorium photograph records a previous UnitED edition or that the AI-assisted cutout is untouched photography.
+- **Don't** turn the countdown's red cover, timer columns or larger numerals into global replacements for the main site's composition.
+- **Don't** publish or register a domain from the local-preview brief. Alex's date/hour and `.ro` price agreement remain separate inputs.

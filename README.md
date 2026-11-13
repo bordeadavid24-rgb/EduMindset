@@ -2,9 +2,9 @@
 
 Romanian landing page for the educational project created by Alexandru-Constantin Tulică. Current V5 combines the original red/charcoal identity, real photographs, an open founder letter, notebook/comic artwork, a three-stage recall exercise, and a visible illustrated hero with native CSS scroll depth.
 
-Latest planning update13 November2026: Alex approved the base site; an anniversary countdown is proposed but not implemented. Candidate25 November still needs date/year/hour confirmation. See `docs/ANNIVERSARY_LAUNCH_PLAN.md` for decisions, owner tasks and AI next steps.
+Latest update 13 November 2026: Alex approved the full website. A working, separately routed countdown preview is now implemented using mock 25 November 2026 at 00:00 Romania. No publishing today, and no domain registration: edumindset.ro awaits Alex's agreement to 12 EUR plus VAT/year. See `docs/ANNIVERSARY_LAUNCH_PLAN.md` for decisions and `docs/countdown-preview.md` for preview verification and limits. The exact deadline remains unconfirmed.
 
-Technical verification checkpoint12 November2026. Implementation and verification are distinct: read `HANDOFF.md` for the latest working-tree/synchronization state, `docs/verification-current.md` for current checks and limits, and `docs/verification-v5.md` for historical V5 evidence. The remaining user inputs are listed in `USER_TODO.md`.
+The accepted full-site evidence in `docs/verification-current.md` is historical 12 November. Read `HANDOFF.md` for current source/synchronization status and `USER_TODO.md` for owner tasks.
 
 ## Run locally
 
@@ -22,12 +22,15 @@ npm run build
 npm run preview
 ```
 
+Countdown route: `/countdown.html?theme=light` (or `?theme=dark`). The active review server is http://127.0.0.1:4176/countdown.html?theme=light . This is a local preview, not a public launch. Both HTML entries build together; index.html remains the accepted website. Do not upload dist as a public countdown-first release without configuring that flow and replacing all mock-date labels.
+
 Default production preview: http://127.0.0.1:4173/. The existing review session may use `npm run preview -- --port 4175` and http://127.0.0.1:4175/?theme=light or ?theme=dark. Reuse a server only when it serves the current build.
 
 Deploy the contents of `dist/` to a static host. Relative asset paths support repository subpaths. No runtime secrets or database are required for the current page.
 
 ## Project map
 
+- `countdown.html`, `src/countdown.css`, `src/countdown.js`, `src/countdown-model.js`: separate anniversary preview, absolute mock clock, Romanian daily question and locally generated Story card.
 - `index.html`: Romanian content, native disclosures, inline original SVG artwork, and contact fields.
 - `src/style.css`: responsive layouts, colour tokens, light/dark themes, drawing and scroll motion, and reduced-motion/mobile fallbacks.
 - `src/main.js`: active recall, theme choice, workshop deep links, compact navigation, and email-app handoff.

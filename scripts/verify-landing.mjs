@@ -7,17 +7,23 @@ import { hostHeaders } from './release.mjs';
 
 const root = resolve('dist');
 const html = await readFile(resolve(root, 'index.html'), 'utf8');
+const countdown = await readFile(resolve(root, 'countdown.html'), 'utf8');
 const policy = contentSecurityPolicy(html);
 const checks = [];
 function check(condition, message) { assert.ok(condition, message); checks.push(message); }
 check(html.includes(`http-equiv="Content-Security-Policy" content="${policy}"`), 'built theme script matches its CSP hash');
+check(contentSecurityPolicy(countdown) === policy, 'both pages use the same hashed theme policy');
+check(countdown.includes(`http-equiv="Content-Security-Policy" content="${policy}"`), 'countdown meta policy matches the host policy');
+check(countdown.includes('content="noindex, nofollow"'), 'mock countdown remains marked as an unindexed preview');
 check(await readFile(resolve(root, '_headers'), 'utf8') === hostHeaders(policy), 'deployment headers match the exact build policy');
 check(!(await readdir(root)).some(name => name.startsWith('.motion-check')), 'release contains no QA fixture');
 const published = await readdir(resolve(root, 'images'));
 check(!published.some(name => name.endsWith('.json') || name.endsWith('.jpeg')), 'source masters and prompt sidecars are outside the website bundle');
 const assets = new Set();
-for (const match of html.matchAll(/(?:src|href)="(\.\/(?:assets|images)\/[^"?#]+)"/g)) assets.add(match[1]);
-for (const match of html.matchAll(/srcset="([^"]+)"/g)) for (const entry of match[1].split(',')) assets.add(entry.trim().split(/\s+/)[0]);
+for (const page of [html, countdown]) {
+  for (const match of page.matchAll(/(?:src|href)="(\.\/(?:assets|images)\/[^"?#]+)"/g)) assets.add(match[1]);
+  for (const match of page.matchAll(/srcset="([^"]+)"/g)) for (const entry of match[1].split(',')) assets.add(entry.trim().split(/\s+/)[0]);
+}
 for (const asset of assets) {
   check(!relative(root, resolve(root, asset)).startsWith('..'), `asset remains inside the release: ${asset}`);
   await stat(resolve(root, asset));
@@ -46,6 +52,10 @@ const home = await fetch(origin + '/', { signal: AbortSignal.timeout(5000) });
 check(home.status === 200, 'production preview responds');
 check(home.headers.get('content-security-policy') === `${policy}; frame-ancestors 'none'`, 'HTTP content policy matches the release');
 check(home.headers.get('x-frame-options') === 'DENY', 'framing protection remains enabled');
+const mock = await fetch(origin + '/countdown.html', { signal: AbortSignal.timeout(5000) });
+check(mock.status === 200, 'separate countdown preview responds');
+check(mock.headers.get('content-security-policy') === `${policy}; frame-ancestors 'none'`, 'countdown HTTP policy matches both built pages');
+check(await mock.text() === countdown, 'countdown response serves the current production build');
 for (const asset of assets) {
   const response = await fetch(new URL(asset, origin + '/'), { signal: AbortSignal.timeout(5000) });
   check(response.ok, `published asset responds: ${asset}`);

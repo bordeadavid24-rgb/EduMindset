@@ -1,62 +1,59 @@
 # EDU MindSet anniversary launch plan
 
-Authoritative planning checkpoint:13 November2026. This records the user's new decisions and separates confirmed facts from a proposed countdown. No countdown UI, domain registration, purchase or public deployment has been performed in this checkpoint.
+Authoritative checkpoint: 13 November 2026, countdown preview implementation.
 
-## Confirmed by the user
+## Latest user decisions
 
-- Alex has agreed to the current base website. Do not ask for the same base-design signoff again or restart its design.
-- Alex wants the website release to coincide with EDU MindSet's first anniversary.
-- The user is fairly sure the anniversary is25 November. This is tentative, not a verified deadline.
-- The user will verify the contact details tomorrow:14 November2026, relative to the message on13 November. This is a project note, not a scheduled reminder.
-- First-choice public address:edumindset.ro. Alternatives:edumindset.com, edumindset.app or another address retaining edumindset, with strong preference for no cost.
-- Workshop details/registration, film, UnitED, resources and other remaining optional work will be handled after the website is published.
-- The user asks for a short creative concept first, then discussion of what is needed. Do not build or publish the new countdown before that concept/scope discussion.
+- Alex approved the existing full website. Preserve it at index.html.
+- The user now authorizes building a working countdown preview with a mock launch time while waiting for Alex's preference. Use **25 November 2026 at 00:00 Europe/Bucharest** (2026-11-25T00:00:00+02:00). This is a visual demonstration, NOT the confirmed anniversary deadline.
+- **Do not publish today.** Alex must first agree to the preferred edumindset.ro domain cost, currently 12 EUR plus VAT/year directly from RoTLD. No domain purchase, registration or public deployment is authorized in this checkpoint.
+- The user will verify contacts on **14 November 2026**, relative to the message on 13 November. This is a note, not a scheduled reminder.
+- Workshop details/registration, film, UnitED scheduling, downloadable resources and other optional content remain deferred until after website publication.
 
-## Proposed concept, not yet approved
+## Implemented preview
 
-**Un an. Un nou capitol.** A living educational sketchbook that opens into the accepted website.
+**Un an. Un nou capitol.** A red and paper educational sketchbook cover, with founder collage, original pen drawings, live countdown, and a short daily question producing a personal Story image.
 
-A large editorial countdown uses the exact logo red#e85448, charcoal, paper layers and original pen drawings. The central paper/ink composition develops as the launch approaches, with restrained depth and parallax matching the existing site. Avoid the generic four identical countdown cards or a new luxury/tech aesthetic.
+- Separate route: **countdown.html**. The accepted website remains **index.html**. Both are built by Vite. The preview does not replace the homepage.
+- Current local review server: http://127.0.0.1:4176/countdown.html?theme=light . Dark preview uses ?theme=dark. A local URL is not a published website.
+- Exact logo red #e85448, established Bricolage type, charcoal/paper, source-derived Alex cutout with its existing provenance. No new generated photograph or font dependency.
+- Phone composition places the timer directly below the title. Desktop pen entrance, restrained native scroll depth, manual pause and reduced-motion fallback. Functional text/digits stay still.
+- Timer uses an absolute timestamp and recalculates against the current clock. Hidden tabs suspend scheduled updates and recover on return. No negative countdown or invented new deadline after expiry.
+- **Vezi momentul lansării** previews the ready state and can return to counting. The ready state links to the full website. No automatic public deployment, redirect or site access restriction is configured.
+- Daily questions are selected by the Romanian calendar day. The visitor's answer stays in memory, with no account, collection, submission or persistence. A 1080 × 1920 PNG is generated locally. Native file sharing is progressive enhancement; download remains the fallback. The website does not post to Instagram.
+- The page is explicitly marked as a design preview with a demonstrative date, and has noindex/nofollow. Before any public launch, replace mock labels/date, finalize copy and metadata and select the actual publication flow.
 
-Give visitors a reason to return: one short learning/observation challenge each day, producing a personal notebook-style card they can share or download for an Instagram story. The challenge is useful on its own, with no sign-up requirement, fabricated community statistics, fake leaderboard or promised follower growth. The AI should prepare the proposed challenge content; owner approval of scope comes first.
+## Unresolved before publication
 
-At the confirmed deadline, the notebook cover unfolds into the existing full website. Refreshing after the deadline should also show the released site. Reduced-motion users receive a direct, still transition; phones get a readable composition without desktop parallax. A calendar-reminder download can be considered if useful, but it has not been requested or approved as a separate feature.
+The candidate anniversary is 25 November. Confirm the original anniversary date, target year and exact launch hour with Alex. The mock time does not settle these decisions or prove a founding date of 25 November 2025.
 
-The proposed release flow is a public countdown experience before the full-site anniversary reveal. Confirm that interpretation with the user; an inline countdown on the already-public full site is a different option, not an agreed implementation.
+Confirm whether public visitors should see the countdown first and open the full site at the deadline, or whether the countdown should accompany an already-public full site. The current side-by-side local preview deliberately keeps both available for review. It is not a production release gate. Client-side timers alone do not protect unreleased content.
 
-## Date and time: unresolved
+Review the visual concept, daily question wording and Story-card interaction. No follower-growth guarantee, fake audience counts, testimonials, live activity or leaderboard has been added.
 
-Candidate only:25 November2026, Europe/Bucharest. The year follows the current project timeline; the user has not independently confirmed it. A first anniversary on that date would imply an original launch on25 November2025, which must not be published as an established fact without confirmation.
+## Domain and hosting
 
-Required before configuring the timer: confirm the original launch/anniversary date, target year, exact launch hour and time zone with Alex. Do not assume midnight or claim the countdown is exact while those are unknown. No launch timestamp or automatic publication has been configured.
+- First choice: **edumindset.ro**. Availability/ownership have not been checked or reserved.
+- Official direct RoTLD registration and renewal price checked 13 November 2026: **12 EUR plus VAT per year**, not a free domain. Alex's agreement is pending. Source: https://www.rotld.ro/prices/
+- Alternatives .com/.app also need paid availability/pricing checks; no zero-cost custom domain has been promised.
+- Free static hosting is possible through Cloudflare Pages. A branded pages.dev subdomain may avoid a domain fee if its project name is available. No hostname is reserved. Sources: https://www.cloudflare.com/products/pages/ and https://developers.cloudflare.com/pages/get-started/direct-upload/
+- Domain ownership should remain in the user's chosen account. Do not buy, transfer, register or publish merely because a preferred name is recorded here.
 
-## Domain and cost: keep these distinct
-
-- edumindset.ro is the preference, not a registered/available/owned address. Availability has not been confirmed.
-- Custom domains usually require paid registration and renewal; changing .ro to .com or .app does not establish a zero-cost option.
-- On13 November2026, [RoTLD's direct price page](https://www.rotld.ro/prices/) lists standard .ro registration and renewal at12 EUR plus VAT per year. This is not a live checkout quote or an availability check for edumindset.ro.
-- [Cloudflare Pages](https://www.cloudflare.com/products/pages/) offers a free hosting option. A branded host-provided subdomain such as edumindset.pages.dev could avoid a custom-domain fee if that project name is available. No exact hostname has been reserved or promised. [Cloudflare's documentation](https://developers.cloudflare.com/pages/get-started/direct-upload/) explains project-name.pages.dev addressing.
-- [Cloudflare Registrar](https://www.cloudflare.com/domains/) describes paid registration/renewal at registry cost for supported extensions, including .com and .app. This does not establish .ro registrar support, name availability or exact prices for the user's alternatives.
-- The AI may check availability and compare standard registration/renewal costs. No paid purchase, account setup, transfer or domain selection is authorized merely by the preference above. Keep ownership in the user's chosen account.
-
-## Responsibilities and next steps
+## Responsibilities
 
 | Owner | Next action | Status |
 | --- | --- | --- |
-| User/Alex | Confirm anniversary date, target year, launch hour and Romanian time zone. | Needed before configuring the countdown. |
-| User | React to the short concept and confirm public countdown-first versus an inline countdown. | Concept discussion next. |
-| User | Verify monitored email/Instagram on14 November2026 and report any correction. | User intends to do tomorrow. |
-| User | Choose zero-cost hosted subdomain versus paid custom domain after availability/cost results. | edumindset.ro preferred; no budget/purchase approved. |
-| Next AI | Preserve the accepted full-site design and current source/history. Read HANDOFF, this plan and USER_TODO before editing. | Required continuity. |
-| Next AI | After scope agreement, design/implement the countdown and proposed interaction, draft the challenge content and validate the real absolute deadline. | Not started; do not present it as built. |
-| Next AI | Check expiry/reload/background-tab behavior, Romania time conversion, phone/reduced-motion paths, share/download fallback, pause control, CSP and performance. | Implementation-stage checks. |
-| Next AI | Once host/address is chosen, configure actual metadata/DNS/HTTPS, create the correct release archive, publish the agreed prelaunch experience and verify the deployed result. | No deployment yet. |
-| User + next AI | Add workshop/film/UnitED/resources/optional direct form delivery after full website publication, as real material arrives. | Explicitly deferred by user. |
+| User/Alex | Review the local countdown preview and choose any design/content adjustments. | Preview now implemented; review next. |
+| User/Alex | Confirm anniversary date, year and exact Romanian launch hour. | Mock midnight is only for demonstration. |
+| User/Alex | Agree to .ro cost including VAT and renewal, then choose host/account and confirm name availability. | No publication today. |
+| User | Verify email/Instagram on 14 November 2026 and provide corrections. | Tomorrow's owner task, not an automation. |
+| Next AI | Preserve the accepted full site and this separate preview; read HANDOFF and USER_TODO. | Required continuity. |
+| Next AI | Act on the user's preview feedback, update the single mock timestamp plus visible date copy together after confirmation. | No guessed final deadline. |
+| Next AI | After publication is explicitly resumed, configure the selected release flow, actual public URL/metadata, DNS/HTTPS and host headers; build the correct artifact and verify live. | Deferred. |
+| User + next AI | Add workshop/film/UnitED/resources and optional form service when real material arrives after publication. | Deferred by user. |
 
-## Continuity safeguards
+## Artifacts and verification
 
-The12 November ZIP is the accepted full website, not an anniversary countdown build. Do not accidentally upload it as the new prelaunch experience. Keep its preview available and rebuild release artifacts after the new experience is implemented and agreed.
+The 12 November release ZIP is the accepted full website only. New dist contains both index.html and countdown.html. Neither archive is a countdown-first deployment package. Do not upload it as the planned public reveal without first configuring that flow and clearing the mock labels.
 
-The latest technical verification remains docs/verification-current.md dated12 November:8 tests and55 release/file/HTTP checks passed then, with explicit browser/network limits. This planning-only update does not revalidate or alter application behavior. GitHub sync, fresh browser/performance testing and npm audit should be retried when the environment permits them; do not carry old results forward as new claims.
-
-No MINA video/render files or processes should be modified. No private personality descriptions should appear on the public site. Preserve the real source photography and transparent edited-cutout provenance.
+Current implementation/test/review evidence belongs in docs/countdown-preview.md and docs/countdown-review.md. Historical 12 November full-site verification remains docs/verification-current.md. No fresh Lighthouse or physical-phone certification is implied. Preserve the MINA video/render projects and all photographic provenance.

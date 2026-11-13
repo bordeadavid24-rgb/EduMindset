@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "countdown.html"
+        ],
+        "createdAt": "2026-11-13T21:38:31.174Z",
+        "reason": "Agent review: timer text is centered inside padded grid cells; Story fallback has percent padding. Valid 393px and 1280px captures show clear insets. Narrow parser false positive."
+      },
+      {
+        "rule": "codex-grid-background",
+        "value": "*",
+        "files": [
+          "countdown.html"
+        ],
+        "createdAt": "2026-11-13T21:38:31.230Z",
+        "reason": "User pinned the high-school notebook and comic collage identity. The learning-paper grid is part of that approved visual world."
+      },
+      {
+        "rule": "codex-grid-background",
+        "value": "*",
+        "files": [
+          "src/countdown.css"
+        ],
+        "createdAt": "2026-11-13T21:38:31.283Z",
+        "reason": "User pinned the high-school notebook and comic collage identity. The learning-paper grid is part of that approved visual world."
+      }
+    ]
+  }
+}

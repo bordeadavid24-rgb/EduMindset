@@ -1,5 +1,25 @@
 # EDU MindSet - live work log and handoff
 
+## Current authoritative state: working countdown preview, 13 November 2026
+
+The latest user explicitly authorized a mock countdown to see the concept while waiting for Alex's time preference. Implemented **countdown.html**, with mock **25 November 2026 at 00:00 Europe/Bucharest**. This supersedes older instructions below to wait before any countdown implementation. The date/hour remains provisional, not confirmed. The accepted full website remains index.html and its source was preserved.
+
+**No publishing today. No domain registration or purchase.** edumindset.ro awaits Alex's agreement to the direct RoTLD price of **12 EUR plus VAT/year**, and availability/ownership are still unchecked. No push, upload or deployment was attempted for this preview. The last known upstream checkpoint remains 99cbade; do not assume local commits reached GitHub or trigger a Git-connected host before publication is resumed.
+
+Preview: http://127.0.0.1:4176/countdown.html?theme=light . The active production preview process uses port4176; full site is /index.html. A local address is not a public domain. New dist builds both HTML entries; it is NOT a countdown-first release package or a gate protecting the full site. The 12 November ZIP remains unchanged and contains only the accepted full-site version.
+
+Implemented: red/charcoal notebook cover, real-source-derived Alex collage, original SVG marks, inline clock, phone timer immediately below the title, desktop native paper parallax/pen entrance, pause/reduced-motion behavior, reversible launch rehearsal, Romanian daily questions, safe memory-only answers and local 1080×1920 Story PNG with an actual image preview. No account, data collection, remote sharing service, fake activity or automatic Instagram posting. Seven prompts rotate; wording does not promise a never-repeating sequence.
+
+Verification: **21 test groups**, build and **70 file/HTTP checks** pass. Both page CSP hashes/headers and configured HTTPS subpath metadata checked. Native Chrome countdown/form/download and rehearsal exercised; fresh complete 1280CSS and393CSS captures reviewed independently. All four review findings resolved in one bounded fix batch. A160-character unbroken answer was generated/downloaded and its PNG opened without clipping. No fresh Lighthouse, physical phone, screen-reader, native Share success, dark/320px capture or live-host certification. See docs/countdown-preview.md and docs/countdown-review.md for exact scope. The small later image sizes hint correction matches the112px phone collage and does not change layout.
+
+User tasks: review preview; confirm exact anniversary date/year/hour; obtain Alex's .ro price agreement; verify contacts on **14 November2026**. Workshop/registration, approved film, UnitED, resources and optional features stay deferred until after publication. Contact is still an email-app draft, no backend. Keep private personality descriptions off the site and preserve source-edit provenance. Do not touch the separate MINA render/video projects.
+
+Read docs/ANNIVERSARY_LAUNCH_PLAN.md and USER_TODO.md for owner/AI split. GROK_PROMPT.md contains the current handoff prompt. Source synchronization/bundle receipt is recorded at the end of this file after the local commit.
+
+## Historical checkpoints below
+
+Older planning and technical notes describe their own date/version. Where they conflict with the current preview state above, the current state wins.
+
 Updated: 2026-11-13, anniversary planning checkpoint. Project root: `/Users/lilianab/Desktop/MINA TLC/edumindset`.
 
 ## Authoritative latest decisions, 13 November2026
