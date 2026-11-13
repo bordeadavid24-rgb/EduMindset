@@ -205,3 +205,13 @@ Reviewed in headless Chrome on 8 November 2026 against `http://127.0.0.1:5173/` 
 - git push origin main failed DNS (Could not resolve host: github.com). These new decisions are saved locally, not confirmed on GitHub.
 - Offline source/history backup with this plan: /Users/lilianab/Desktop/MINA TLC/EDUMINDSET-2026-11-13.bundle, including the follow-up notes commit and verified before delivery. The Nov12 full-site ZIP was deliberately left unchanged.
 - Next conversation: user reaction to the short countdown concept; Alex confirmation of the tentative25 November anniversary/year and exact Romanian launch hour; contacts verification14 November; domain availability/cost choice. Other content/features wait until publication.
+
+
+## Countdown preview synchronization receipt, 13 November 2026
+
+- Implementation and durable plan committed locally as **729e549**: separate countdown, mock timestamp, safe daily-question/Story flow, responsive drawing layout, review fixes, tests, build/header/metadata changes and handoff documentation.
+- No Git push, public upload, domain purchase/registration or deployment attempted in this preview checkpoint. The user's instruction is to wait for Alex's price agreement; the actual launch time is also pending.
+- Complete offline source-history bundle: **/Users/lilianab/Desktop/MINA TLC/EDUMINDSET-COUNTDOWN-PREVIEW-2026-11-13.bundle**. This is the preview checkpoint bundle, separate from the earlier planning-only EDUMINDSET-2026-11-13.bundle. It includes the implementation and this follow-up receipt. Git bundle verification is performed after the receipt commit; the tool transcript records the final included HEAD.
+- Existing full-site ZIP from12 November is unchanged. No new deployment ZIP is prepared because the current build contains both local-review pages and a clearly provisional timer.
+- Native review captures and generated test PNGs live under ignored .impeccable/review/countdown in this workspace and are not included in the Git bundle. Their review records and verification limits ARE tracked. Regenerate fresh evidence on another machine rather than claiming those local image files travelled with the bundle.
+- Current review: http://127.0.0.1:4176/countdown.html?theme=light . Browser was left on a clean countdown with test answer cleared. Accepted full website remains /index.html. Preview needs to be restarted if its local process is stopped.
