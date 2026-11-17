@@ -225,3 +225,10 @@ Reviewed in headless Chrome on 8 November 2026 against `http://127.0.0.1:5173/` 
 - Existing full-site ZIP from12 November is unchanged. No new deployment ZIP is prepared because the current build contains both local-review pages and a clearly provisional timer.
 - Native review captures and generated test PNGs live under ignored .impeccable/review/countdown in this workspace and are not included in the Git bundle. Their review records and verification limits ARE tracked. Regenerate fresh evidence on another machine rather than claiming those local image files travelled with the bundle.
 - Current review: http://127.0.0.1:4176/countdown.html?theme=light . Browser was left on a clean countdown with test answer cleared. Accepted full website remains /index.html. Preview needs to be restarted if its local process is stopped.
+
+## Synchronization receipt, 17 November 2026
+
+- Local checks and the countdown logo-name fix are commit `7c2772f`.
+- `git push origin main` succeeded. GitHub `main` moved from `99cbade` (10 November) to `7c2772f`. No force-push. The eight commits since 10 November, including the 12 November release work and the 13 November countdown, are now on the public source repository.
+- GitHub Pages remains off. No domain was registered and no deployment was created. A Git-connected host can now build this commit, but it still needs `EDUMINDSET_SITE_URL` and an explicit decision to publish.
+- The local preview used for the checks was http://127.0.0.1:4175 . It serves the production build, not a public address.
