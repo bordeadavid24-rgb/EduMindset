@@ -1,6 +1,6 @@
 # Countdown preview: implementation and verification
 
-Checkpoint: 13 November 2026. Working preview only, not published.
+Checkpoint: 13 November 2026. Working preview only, not published. A 17 November recheck is recorded in HANDOFF.md and docs/verification-current.md. The logo link now keeps its visible EDU MindSet text and adds “, site-ul complet” for assistive technology. Local review on that date used http://127.0.0.1:4175/countdown.html?theme=light.
 
 ## Open it
 

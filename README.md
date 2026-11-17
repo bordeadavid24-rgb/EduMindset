@@ -2,9 +2,7 @@
 
 Romanian landing page for the educational project created by Alexandru-Constantin Tulică. Current V5 combines the original red/charcoal identity, real photographs, an open founder letter, notebook/comic artwork, a three-stage recall exercise, and a visible illustrated hero with native CSS scroll depth.
 
-Latest update 13 November 2026: Alex approved the full website. A working, separately routed countdown preview is now implemented using mock 25 November 2026 at 00:00 Romania. No publishing today, and no domain registration: edumindset.ro awaits Alex's agreement to 12 EUR plus VAT/year. See `docs/ANNIVERSARY_LAUNCH_PLAN.md` for decisions and `docs/countdown-preview.md` for preview verification and limits. The exact deadline remains unconfirmed.
-
-The accepted full-site evidence in `docs/verification-current.md` is historical 12 November. Read `HANDOFF.md` for current source/synchronization status and `USER_TODO.md` for owner tasks.
+Latest update 17 November 2026: the accepted full website and the separate mock countdown were checked again locally. Alex approved the full website. The countdown uses mock 25 November 2026 at 00:00 Romania and is not published. edumindset.ro awaits Alex's agreement to 12 EUR plus VAT/year. See `docs/ANNIVERSARY_LAUNCH_PLAN.md` for decisions, `HANDOFF.md` for the latest checks, and `USER_TODO.md` for owner tasks. The exact deadline remains unconfirmed.
 
 ## Run locally
 

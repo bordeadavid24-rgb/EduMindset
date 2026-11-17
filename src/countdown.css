@@ -23,7 +23,8 @@ p{line-height:1.65}
 .skip-link{position:fixed;z-index:20;top:12px;left:12px;background:var(--paper);color:var(--ink);padding:16px;transform:translateY(-200%)}
 .skip-link:focus{transform:none}
 .launch-header{display:flex;justify-content:space-between;gap:20px;align-items:center;min-height:94px;color:#171615}
-.brand{display:inline-flex;align-items:center;gap:5px;text-decoration:none}
+.brand{position:relative;display:inline-flex;align-items:center;gap:5px;text-decoration:none}
+.brand-note{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .brand-edu{font-size:44px;font-weight:800;letter-spacing:-.06em;line-height:1}
 .brand-mind{writing-mode:vertical-rl;transform:rotate(180deg);font-size:12px;font-weight:800;letter-spacing:-.04em}
 .plain-link{display:inline-flex;align-items:center;gap:15px;min-height:44px;font-size:14px;font-weight:650;text-decoration:none}

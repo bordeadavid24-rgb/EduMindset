@@ -56,8 +56,8 @@ The MINA video/render work was not modified by this website audit. The website d
 
 ## Technical follow-ups that do not require you to fix code
 
-The countdown preview is implemented and checked locally:21 test groups, production build and70 file/HTTP checks. Fresh native Chrome screenshots at1280 and393CSS widths were reviewed and four bounded findings resolved. Actual PNG downloads worked, including a160-character unbroken answer. See docs/countdown-preview.md for evidence and limits. You do not need to fix code to review the preview.
+The countdown preview is implemented. On 17 November 2026 the local checks were run again: 21 test groups, a clean dependency audit, the production build, and 70 file/HTTP checks. Headless Chrome covered both pages, including the story download. Lighthouse on the full site scored 100 for performance, accessibility and best practices on desktop and mobile. SEO scored 92 because the measurement could not read robots.txt through the strict page policy; the file is valid. See HANDOFF.md. You do not need to fix code to review the preview.
 
-No public launch or push was attempted for this preview, respecting your instruction to wait. Earlier GitHub/npm audit attempts failed DNS; the last known upstream sync was10 November. Source is kept locally and in the latest offline bundle recorded in HANDOFF.md. Physical-phone, native Share and current performance/live-host checks remain future validation. Historical Lighthouse results are not fresh scores.
+No public launch was made. The site is still waiting on your domain, host and date decisions. Physical-phone, native Share and the eventual live-host check remain future validation. GitHub synchronization from this pass is recorded in HANDOFF.md.
 
 After you choose the hosting address, final metadata, deployment and hosted checks can be completed against that actual destination. You do not need to redesign the site or manually edit its source to provide these decisions.

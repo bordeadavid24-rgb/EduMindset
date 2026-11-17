@@ -1,6 +1,21 @@
 # Current project verification
 
-12 November2026. Authoritative current-state record; earlier V1–V5 reports are historical measurements, not fresh certification of this build.
+17 November 2026. This section is the current record. The 12 November notes below remain the earlier inspection.
+
+## 17 November checks
+
+- `npm test`: 21 groups pass.
+- `npm audit --omit=optional`: 0 vulnerabilities. Node v24.22.1.
+- `npm run build` succeeds for index.html and countdown.html.
+- `node scripts/verify-landing.mjs`: 70 checks pass on http://127.0.0.1:4175. Index HTML SHA256 `680d304112eddafa3d028652da0c72a1e1f72351ab99dab3bd6497666e8d37ca`. No public canonical is configured.
+- Headless Chrome on the production preview: both pages, light and dark, at 320, 390, 768 and 1280, with no horizontal overflow. Full-site images decode, there is one heading level one, and the footer is last. Recall, theme, motion pause, phone-menu Escape, empty and invalid contact fields, and the long-message copy path behave as specified. The countdown clock, reversible rehearsal, phone timer order, and a 160-character PNG download succeed. The downloaded file is 1080×1920.
+- Lighthouse 13 on the full site, uncached local preview: desktop and mobile performance 100, accessibility 100, best practices 100, SEO 92. Desktop LCP 0.4s, CLS 0, TBT 0. Mobile LCP 1.7s, CLS 0.001, TBT 0. SEO loses the robots.txt audit because Lighthouse’s own fetch is blocked by `connect-src 'none'`. `public/robots.txt` is a valid allow-all file and is served as text/plain.
+- Countdown accessibility is 100 after the logo’s accessible name was aligned with its visible text. The page stays `noindex, nofollow`, so its SEO score is not a launch defect.
+- Not claimed: a physical phone, a screen reader, a successful native share sheet, or a deployed host.
+
+## 12 November record
+
+12 November 2026. Earlier inspection; V1–V5 reports are historical measurements.
 
 ## Inspection and completed work
 

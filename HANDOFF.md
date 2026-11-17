@@ -1,6 +1,16 @@
 # EDU MindSet - live work log and handoff
 
-## Current authoritative state: working countdown preview, 13 November 2026
+## Current authoritative state: checked locally, 17 November 2026
+
+The accepted website is still index.html. The countdown remains a separate mock preview for 25 November 2026 at 00:00 Europe/Bucharest, marked noindex, and it is not a public launch gate. No domain was bought and no host was connected. GitHub Pages is off. edumindset.ro still has no RoTLD registration.
+
+Local checks on this date: 21 test groups pass, `npm audit --omit=optional` reports 0 vulnerabilities, the production build succeeds, and `node scripts/verify-landing.mjs` passes 70 file and preview checks against http://127.0.0.1:4175. Headless Chrome exercised the full site and the countdown at 320, 390, 768 and 1280 in light and dark: images decode, the footer is last, recall and the phone menu work, the long contact message stays on the page, the countdown rehearsal returns without navigation, and a 160-character story downloads as a real 1080×1920 PNG. Lighthouse on the full site, desktop and mobile: performance 100, accessibility 100, best practices 100, SEO 92. The SEO deduction is Lighthouse failing to fetch robots.txt through the page CSP (`connect-src 'none'`); the file itself is valid `User-agent` / `Allow`. Countdown accessibility is 100 after the logo name fix below. Its lower SEO score is the intentional noindex. No physical phone, screen reader, or native Share success is claimed. No fresh public URL exists, so social metadata stays relative.
+
+One code change: the countdown logo link no longer replaces its visible text with a different accessible name. The extra words “, site-ul complet” stay available to assistive technology without changing the drawn logo.
+
+Owner decisions are unchanged and still block publication: Alex’s real date and hour, the countdown-first or full-site-first choice, agreement to the .ro price, a host account, and confirmation that edumindset8@gmail.com and @edu.mind.set are monitored. Workshop, film, UnitED, resources and server-side mail stay deferred. The film on the Desktop is unchanged and is not embedded.
+
+## Previous authoritative state: working countdown preview, 13 November 2026
 
 The latest user explicitly authorized a mock countdown to see the concept while waiting for Alex's time preference. Implemented **countdown.html**, with mock **25 November 2026 at 00:00 Europe/Bucharest**. This supersedes older instructions below to wait before any countdown implementation. The date/hour remains provisional, not confirmed. The accepted full website remains index.html and its source was preserved.
 
