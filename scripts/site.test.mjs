@@ -9,14 +9,16 @@ import { normalizeSiteUrl, publicMetadata, hostHeaders } from './release.mjs';
 const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const mailSource = readFileSync(new URL('../src/mail.js', import.meta.url), 'utf8').replaceAll('export ', '');
 const motionSource = readFileSync(new URL('../src/motion.js', import.meta.url), 'utf8').replaceAll('export ', '');
+const labSource = readFileSync(new URL('../src/lab.js', import.meta.url), 'utf8').replaceAll('export ', '');
 const script = readFileSync(new URL('../src/main.js', import.meta.url), 'utf8')
   .replace("import './icons.css';\n", '')
   .replace("import { buildDraft, RECIPIENT } from './mail.js';\n", '')
-  .replace("import { setupHeroMotion } from './motion.js';\n", '');
+  .replace("import { setupHeroMotion } from './motion.js';\n", '')
+  .replace("import { setupMethodLab } from './lab.js';\n", '');
 function page() {
   const dom = new JSDOM(html, { url: 'https://edumindset.test/', runScripts: 'outside-only', pretendToBeVisual: true });
   dom.window.matchMedia = () => ({ matches: false, addEventListener() {} });
-  dom.window.eval(`${mailSource}\n${motionSource}\n${script}`);
+  dom.window.eval(`${mailSource}\n${motionSource}\n${labSource}\n${script}`);
   return { window: dom.window, $: (selector) => dom.window.document.querySelector(selector), close: () => dom.window.close() };
 }
 
@@ -92,6 +94,65 @@ test('all section links and supplied images resolve, with no duplicate IDs or em
   }
   assert.equal(html.includes('\u2014'), false);
   assert.equal(script.includes('\u2014'), false);
+  close();
+});
+
+test('learning lab keeps one method open and builds the study tools', () => {
+  const { $, window, close } = page();
+  assert.equal($('#method-placeholder').hidden, false);
+  assert.equal($('#pomodoro-tool').hidden, true);
+  $('#method-pomodoro').click();
+  assert.equal($('#pomodoro-tool').hidden, false);
+  assert.equal($('#cornell-tool').hidden, true);
+  assert.equal($('#method-pomodoro').getAttribute('aria-pressed'), 'true');
+  $('#lab-minutes').value = '25';
+  $('#lab-minutes').dispatchEvent(new window.Event('change'));
+  assert.equal($('#lab-clock').textContent, '25:00');
+  $('#lab-start').click();
+  assert.match($('#lab-timer-message').textContent, /desfășurare/);
+  $('#lab-pause').click();
+  assert.match($('#lab-timer-message').textContent, /pauză/);
+  $('#method-review').click();
+  $('#lab-review-make').click();
+  assert.match($('#lab-review-result').textContent, /Alege data/);
+  $('#lab-study-date').value = '2026-11-17';
+  $('#lab-review-topic').value = 'Celula eucariotă';
+  $('#lab-review-make').click();
+  assert.match($('#lab-review-result').textContent, /18\.11\.2026/);
+  assert.match($('#lab-review-result').textContent, /24\.11\.2026/);
+  $('#method-cornell').click();
+  $('#lab-topic').value = '<img src=x onerror=alert(1)>';
+  $('#lab-cornell-make').click();
+  assert.equal($('#lab-cornell-result').querySelector('img'), null);
+  assert.match($('#lab-cornell-result').textContent, /<img/);
+  $('#method-feynman').click();
+  $('#lab-explanation').value = 'scurt';
+  $('#lab-feynman-check').click();
+  assert.match($('#lab-feynman-result').textContent, /Dezvoltă explicația/);
+  $('#method-split').click();
+  $('#lab-study-time').value = '60';
+  $('#lab-split-topic').value = 'Fotosinteza';
+  $('#lab-split-make').click();
+  assert.match($('#lab-split-result').textContent, /Bloc 1: 27 minute\. Fotosinteza/);
+  assert.match($('#lab-split-result').textContent, /Pauză: 5 minute/);
+  $('#method-pdca').click();
+  for (const answer of ['un obicei', 'o încercare', 'o verificare', 'păstrez pasul']) {
+    $('#lab-pdca-answer').value = answer;
+    $('#lab-pdca-next').click();
+  }
+  assert.match($('#lab-pdca-result').textContent, /PLAN\. Ce vrei/);
+  assert.match($('#lab-pdca-result').textContent, /păstrez pasul/);
+  assert.equal($('#lab-pdca-title').textContent.startsWith('PLAN'), true);
+  $('#method-teacher').click();
+  $('#lab-lesson-topic').value = '<b>Fizica</b>';
+  $('#lab-lesson-goal').value = 'Despre fizica cuantică';
+  $('#lab-lesson-example').value = 'Ipoteza lui de Broglie';
+  $('#lab-lesson-question').value = 'Care este ipoteza?';
+  $('#lab-lesson-make').click();
+  assert.equal($('#lab-lesson-result').querySelectorAll('.lesson-sheet div').length, 4);
+  assert.equal($('#lab-lesson-result').querySelector('b'), null);
+  assert.match($('#lab-lesson-result').textContent, /<b>Fizica<\/b>/);
+  assert.match($('#lab-lesson-result dd').textContent, /Fizica/);
   close();
 });
 

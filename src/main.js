@@ -1,8 +1,10 @@
 import './icons.css';
 import { buildDraft, RECIPIENT } from './mail.js';
 import { setupHeroMotion } from './motion.js';
+import { setupMethodLab } from './lab.js';
 
 setupHeroMotion();
+setupMethodLab();
 
 const themeButton = document.querySelector('#theme-toggle');
 const systemTheme = matchMedia('(prefers-color-scheme: dark)');
