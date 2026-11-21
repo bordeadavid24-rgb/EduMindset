@@ -1,6 +1,12 @@
 # EDU MindSet - live work log and handoff
 
-## Current authoritative state: checked locally, 17 November 2026
+## Current authoritative state: laboratory saved, Vercel prepared, 21 November 2026
+
+The learning laboratory is a section of index.html, linked as Laborator. Eight tools run in the browser and keep what a visitor types on that device. The lesson result shows each answer on its own row. The countdown remains the separate mock page for 25 November 2026 at 00:00 Europe/Bucharest and stays noindex.
+
+Vercel is the intended host. `vercel.json` sets the Vite build, `dist` output, Node 24, and the static security headers. The hashed content-security policy remains in the built HTML so the script hash cannot go stale in a copied header. `EDUMINDSET_SITE_URL` stays unset until Alex and the owner choose `edumindset.ro` or a `vercel.app` address on 22 November 2026. No domain was bought and no Vercel project was created.
+
+## Previous authoritative state: checked locally, 17 November 2026
 
 The accepted website is still index.html. The countdown remains a separate mock preview for 25 November 2026 at 00:00 Europe/Bucharest, marked noindex, and it is not a public launch gate. No domain was bought and no host was connected. GitHub Pages is off. edumindset.ro still has no RoTLD registration.
 

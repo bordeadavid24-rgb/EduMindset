@@ -171,6 +171,18 @@ test('mail handoff stays on the real address and drops header breaks', () => {
   assert.equal(draft.tooLong, false);
 });
 
+test('Vercel config publishes the Vite build and static security headers', () => {
+  const config = JSON.parse(readFileSync(new URL('../vercel.json', import.meta.url), 'utf8'));
+  assert.equal(config.buildCommand, 'npm run build');
+  assert.equal(config.outputDirectory, 'dist');
+  const headers = new Map(config.headers[0].headers.map((item) => [item.key, item.value]));
+  assert.equal(headers.get('X-Content-Type-Options'), 'nosniff');
+  assert.equal(headers.get('X-Frame-Options'), 'DENY');
+  assert.equal(headers.get('Referrer-Policy'), 'strict-origin-when-cross-origin');
+  assert.match(headers.get('Permissions-Policy'), /camera=\(\)/);
+  assert.equal(headers.has('Content-Security-Policy'), false);
+});
+
 test('published files do not expose prompts, source masters, or loose links', () => {
   const published = readdirSync(new URL('../public/images', import.meta.url));
   assert.equal(published.some((name) => name.endsWith('.json')), false);

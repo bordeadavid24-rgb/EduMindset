@@ -1,6 +1,25 @@
 # EDU MindSet: your remaining checklist
 
-Updated 13 November 2026 after mock-countdown authorization. Alex approved the full website. A separate countdown preview is now implemented for review, using mock 25 November 2026 at 00:00 Romania. **Do not publish today.** Alex must first agree to the preferred .ro domain cost, and the exact deadline remains unconfirmed. See docs/ANNIVERSARY_LAUNCH_PLAN.md. Later workshop, film, UnitED and resource work remains deferred until after publication.
+Updated 21 November 2026. The laboratory is part of the website and the source is prepared for Vercel. Nothing has been published, and no domain has been bought.
+
+## Decide with Alex on 22 November 2026
+
+Bring these four choices. The site can go live after them. No redesign is needed.
+
+- [ ] **Address.** `edumindset.ro` is still unregistered. The last quoted price was 12 EUR plus VAT per year at RoTLD. The free alternative is a `vercel.app` name. Either one can be connected later. Do not pay during the meeting unless Alex agrees.
+- [ ] **What visitors see first.** The full website, or the countdown until a real hour. The countdown is still a mock of 25 November 2026 at 00:00 Europe/Bucharest.
+- [ ] **The real date, year, and hour** if you keep the countdown. Europe/Bucharest.
+- [ ] **Contacts.** Confirm that `edumindset8@gmail.com` and `@edu.mind.set` are the addresses you both watch.
+
+## After those answers, the publish steps
+
+The GitHub project is https://github.com/bordeadavid24-rgb/EduMindset. Import that repository in Vercel with the GitHub account that owns it. The repository already contains `vercel.json`: Vite, `npm run build`, output `dist`, Node 24. Do not upload the 12 November ZIP.
+
+When the address exists, set the Vercel production variable `EDUMINDSET_SITE_URL` to that exact HTTPS address, including the trailing slash, and redeploy. Examples: `https://edumindset.ro/` or `https://edu-mindset.vercel.app/`. Then check the live site on a phone and put the address in the Instagram bio.
+
+Workshop details, the film, UnitED, downloadable resources, and a form that sends mail by itself stay for after publication.
+
+Updated 13 November 2026 after mock-countdown authorization. Alex approved the full website. A separate countdown preview is now implemented for review, using mock 25 November 2026 at 00:00 Romania. The exact deadline remains unconfirmed. See docs/ANNIVERSARY_LAUNCH_PLAN.md. Later workshop, film, UnitED and resource work remains deferred until after publication.
 
 ## Immediate decisions for the anniversary launch
 
