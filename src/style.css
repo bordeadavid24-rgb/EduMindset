@@ -339,7 +339,7 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; fon
 .recall-instruction { font-size: 14px; line-height: 1.6; min-height: 45px; font-weight: 500; }
 .recall-stage { min-height: 180px; display: flex; align-items: center; padding-block: 20px; }
 .recall-words { display: grid; gap: 5px; font-size: clamp(30px, 3vw, 40px); line-height: 1.16; font-weight: 550; letter-spacing: -.02em; }
-.recall-question { font-size: 36px; line-height: 1.15; letter-spacing: -.025em; }
+.recall-question { font-size: clamp(28px, 3.2vw, 36px); line-height: 1.15; letter-spacing: -.025em; }
 .recall-controls { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; }
 .button-ink { --button: #242323; color: #fff; }
 .recall-controls .button { font-size: 13px; gap: 14px; padding-inline: 17px; }
